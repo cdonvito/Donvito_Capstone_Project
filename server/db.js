@@ -6,14 +6,14 @@ const JWT_SECRET = process.env.JWT_SECRET || "safe";
 
 const connection = {
   connectionString:
-    process.env.DATABASE_URL || "postgres://localhost/career_sim_block37",
+    process.env.DATABASE_URL || "postgres://localhost/donvito_capstone",
   ssl: { rejectUnauthorized: false },
 };
 
 const client = new pg.Client(
   process.env.DATABASE_URL
     ? connection
-    : "postgres://localhost/career_sim_block37"
+    : "postgres://localhost/donvito_capstone"
 );
 
 async function createTables() {
