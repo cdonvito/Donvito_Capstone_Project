@@ -57,9 +57,9 @@ async function seed() {
         "",
         ""
       ),
-      createProduct("Bone", "bone.jpg", 12, 100),
-      createProduct("Dental Treat", "dental_treat.jpg", 3, 150),
-      createProduct("Large Dog Bed", "dog_bed_large.jpg", 40, 10),
+      createProduct("Bone", "bone.jpg", "Large", "1 Large Dog Bone", "Treats", 12, 100),
+      createProduct("Dental Treat", "dental_treat.jpg", "Large", "1 Large Dental Treat", 3, 150),
+      createProduct("Dog Bed", "dog_bed_large.jpg", "Large", "1 Large Dog Bed", 40, 10),
     ]);
 
   console.log("users created");

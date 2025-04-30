@@ -160,8 +160,11 @@ server.post("/api/product", async (req, res, next) => {
     const product = await createProduct(
       req.body.description,
       req.body.img_url,
+      req.body.size,
+      req.body.includes,
+      req.body.category,
       req.body.price,
-      req.body.quantity_available
+      req.body.stock,
     );
     res.status(201).send(product);
   } catch (error) {
@@ -184,8 +187,11 @@ server.patch("/api/product/:id", async (req, res, next) => {
       req.params.id,
       req.body.description,
       req.body.img_url,
+      req.body.size,
+      req.body.includes,
+      req.body.category,
       req.body.price,
-      req.body.quantity_available
+      req.body.stock,
     );
     res.send(product);
   } catch (error) {

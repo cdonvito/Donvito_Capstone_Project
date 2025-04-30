@@ -28,8 +28,11 @@ async function createTables() {
       id UUID PRIMARY KEY,
       description VARCHAR(255) NOT NULL,
       img_url VARCHAR(255) NOT NULL,
+      size VARCHAR(255),
+      includes VARCHAR(255),
+      category VARCHAR(255),
       price FLOAT NOT NULL,
-      quantity_available INTEGER NOT NULL CHECK (quantity_available >= 0)
+      stock INTEGER NOT NULL CHECK (stock >= 0)
     );
 
     CREATE TABLE users(
@@ -115,14 +118,17 @@ async function fetchUser(id) {
   return response.rows[0];
 }
 
-async function createProduct(description, img_url, price, quantity_available) {
-  const SQL = `INSERT INTO products(id, description, img_url, price, quantity_available) VALUES($1, $2, $3, $4, $5) RETURNING *;`;
+async function createProduct(description, img_url, size, includes, category, price, stock) {
+  const SQL = `INSERT INTO products(id, description, img_url, size, includes, category, price, stock) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`;
   const response = await client.query(SQL, [
     uuid.v4(),
     description,
     img_url,
+    size,
+    includes,
+    category,
     price,
-    quantity_available,
+    stock,
   ]);
   return response.rows[0];
 }
@@ -131,16 +137,22 @@ async function modifyProduct(
   id,
   description,
   img_url,
+  size,
+  includes,
+  category,
   price,
-  quantity_available
+  stock,
 ) {
-  const SQL = `UPDATE products SET description = $2, img_url = $3, price = $4, quantity_available = $5 WHERE id = $1 RETURNING *;`;
+  const SQL = `UPDATE products SET description = $2, img_url = $3, size = $4, includes = $5, category = $6, price = $7, stock = $8 WHERE id = $1 RETURNING *;`;
   const response = await client.query(SQL, [
     id,
     description,
     img_url,
+    size,
+    includes,
+    category,
     price,
-    quantity_available,
+    stock,
   ]);
   return response.rows[0];
 }
@@ -163,7 +175,7 @@ async function fetchAvailableProducts() {
 }
 
 async function fetchProduct(id) {
-  const SQL = `SELECT  * from products WHERE id = $1 AND quantity_available > 0`;
+  const SQL = `SELECT  * from products WHERE id = $1 AND stock > 0`;
   const response = await client.query(SQL, [id]);
   const product = response.rows[0];
   if (!product) {
@@ -226,11 +238,11 @@ async function checkoutProducts(order_id, user_id, product_id, quantity) {
   return response.rows[0];
 }
 
-async function checkoutProductQuantity(id, quantity_available) {
-  const SQL = `UPDATE products SET quantity_available = quantity_available - $2 WHERE id = $1 RETURNING *;`;
-  const response = await client.query(SQL, [id, quantity_available]);
+async function checkoutProductQuantity(id, quantity) {
+  const SQL = `UPDATE products SET stock = stock - $2 WHERE id = $1 RETURNING *;`;
+  const response = await client.query(SQL, [id, quantity]);
 
-  if (!response.rows[0] || response.rows[0].quantity_available < 0) {
+  if (!response.rows[0] || response.rows[0].stock < 0) {
     throw new Error(`Not enough stock for product ID ${id}`);
   }
 
