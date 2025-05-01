@@ -169,7 +169,7 @@ async function fetchProducts() {
 }
 
 async function fetchAvailableProducts() {
-  const SQL = `SELECT  * from products WHERE quantity_available > 0;`;
+  const SQL = `SELECT  * from products WHERE stock > 0;`;
   const response = await client.query(SQL);
   return response.rows;
 }

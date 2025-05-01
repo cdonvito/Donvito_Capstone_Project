@@ -8,6 +8,8 @@ const {
   createUserProduct,
   fetchUserProducts,
 } = require("./db");
+const { productsToCreate } = require("./productSeed");
+const { usersToCreate } = require("./userSeed");
 
 async function seed() {
   await client.connect();
@@ -57,9 +59,33 @@ async function seed() {
         "",
         ""
       ),
-      createProduct("Bone", "bone.jpg", "Large", "1 Large Dog Bone", "Treats", 12, 100),
-      createProduct("Dental Treat", "dental_treat.jpg", "Large", "1 Large Dental Treat", 3, 150),
-      createProduct("Dog Bed", "dog_bed_large.jpg", "Large", "1 Large Dog Bed", 40, 10),
+      createProduct(
+        "Bone",
+        "bone.jpg",
+        "Large",
+        "1 Large Dog Bone",
+        "Treats",
+        12,
+        100
+      ),
+      createProduct(
+        "Dental Treat",
+        "dental_treat.jpg",
+        "Large",
+        "1 Large Dental Treat",
+        "Treats",
+        3,
+        150
+      ),
+      createProduct(
+        "Dog Bed",
+        "dog_bed_large.jpg",
+        "Large",
+        "1 Large Dog Bed",
+        "Beds",
+        40,
+        10
+      ),
     ]);
 
   console.log("users created");
@@ -77,6 +103,35 @@ async function seed() {
 
   console.log("user products created");
   console.log(await fetchUserProducts(craig.id));
+
+  // Seed full list of products
+  for (i = 0; i < productsToCreate.length; i++) {
+    console.log(productsToCreate[i]);
+    await createProduct(
+      productsToCreate[i].description,
+      productsToCreate[i].img_url,
+      productsToCreate[i].size,
+      productsToCreate[i].includes,
+      productsToCreate[i].category,
+      productsToCreate[i].price,
+      productsToCreate[i].stock
+    );
+  }
+
+  // Seed full list of users
+  for (i = 0; i < usersToCreate.length; i++) {
+    console.log(usersToCreate[i]);
+    await createUser(
+      usersToCreate[i].username,
+      usersToCreate[i].password,
+      usersToCreate[i].is_admin,
+      usersToCreate[i].name,
+      usersToCreate[i].email_address,
+      usersToCreate[i].mailing_address,
+      usersToCreate[i].phone_number,
+      usersToCreate[i].billing_address
+    );
+  }
 
   await client.end();
 }
