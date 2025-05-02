@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/cdonvito/Donvito_Block37#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.7.0",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -30,6 +31,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.10",
     "pg": "^8.15.5",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.5.3",
     "uuid": "^11.1.0"
   }
 }
