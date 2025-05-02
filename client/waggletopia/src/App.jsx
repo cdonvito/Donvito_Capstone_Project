@@ -8,9 +8,12 @@ import CategoryHome from './Components/CategoryHome';
 import FooterBar from './Components/FooterBar';
 import HeaderBar from './Components/HeaderBar';
 import Home from './Components/Home';
+import Login from './Components/Login'; 
 import OrdersPage from './Components/OrdersPage';
 import PrivacyPolicy from './Components/PrivacyPolicy';
+import ProductHome from './Components/ProductHome';
 import ProductPage from './Components/ProductPage';
+import Register from './Components/Register';
 import TermsOfUse from './Components/TermsOfUse';
 
 function App() {
@@ -29,7 +32,10 @@ function App() {
         <Route path='/Checkout' element={<Cart />} />
         <Route path='/About' element={<About />} />
         <Route path='/Privacy-Policy' element={<PrivacyPolicy />} />
-        <Route path='/TermsOfUse' element={<TermsOfUse />} />
+        <Route path='/Product-Home' element={<ProductHome />} />
+        <Route path='/Terms-Of-Use' element={<TermsOfUse />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/Register' element={<Register />} />
       </Routes>
 
       <FooterBar />
