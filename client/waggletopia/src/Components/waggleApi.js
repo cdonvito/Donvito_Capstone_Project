@@ -5,13 +5,13 @@ export const waggleApi = createApi({
 
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3000/api",
-    // prepareHeaders: (headers, { getState }) => {
-    //   const token = getState().user.token;
-    //   if (token) {
-    //     headers.set("Authorization", `Bearer ${token}`);
-    //   }
-    //   return headers;
-    // },
+    prepareHeaders: (headers, { getState }) => {
+      const token = getState().user.token;
+      if (token) {
+        headers.set("Authorization", `Bearer ${token}`);
+      }
+      return headers;
+    },
   }),
   endpoints: (builder) => ({
     // fetch All Products Available
@@ -19,9 +19,27 @@ export const waggleApi = createApi({
       query: () => "/products/available",
       providesTags: ["Products"],
     }),
+
+    login: builder.mutation({
+      query: (loginCred) => ({
+        url: "/auth/login",
+        method: "POST",
+        body: loginCred,
+      }),
+    }),
+
+    fetchUser: builder.mutation({
+      query: () => "/users/me",
+    }),
+
   }),
+
+  
+
+
 });
 
 export const {
   useProductsAvailableQuery,
+  useLoginMutation,
 } = waggleApi

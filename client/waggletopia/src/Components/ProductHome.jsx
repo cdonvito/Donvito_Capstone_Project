@@ -44,7 +44,7 @@ function ProductHome() {
             <div key={product.id} className="ProductsAvailableList">
               <p>{product.img_url}</p>
               <p>{product.description}</p>
-              <p>{product.price}</p>
+              <p>{`$${product.price}`}</p>
               <button>Add to Cart</button>
             </div>
           );

@@ -2,7 +2,7 @@ function Register() {
   return (
     <div>
       <h2>Register</h2>
-      <div>
+      <form>
         <label>
           Username
           <input type="text" placeholder="Username" name="username" required />
@@ -48,7 +48,8 @@ function Register() {
             name="billing_address"
           ></input>
         </label>
-      </div>
+        <button type="submit">Register</button>
+      </form>
     </div>
   );
 }

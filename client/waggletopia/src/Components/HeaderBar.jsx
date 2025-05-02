@@ -6,13 +6,12 @@ import headerText from "../assets/WaggleTopia_Header.png";
 function HeaderBar() {
   return (
     <div id="header_bar">
-      <img src={dogBanner} id="dogBanner"/>
       <nav className="navigation-bar">
         <Link to="/">
           <img src={logo} alt="Home" id="logo" />
         </Link>
 
-        <img src={headerText} id="header_text_img"/>
+        <img src={headerText} id="header_text_img" />
 
         <div>
           <Link to="/Product-Home">Shop Products</Link>
@@ -23,6 +22,7 @@ function HeaderBar() {
           <Link to="/Checkout">Cart</Link>
         </div>
       </nav>
+      <img src={dogBanner} id="dogBanner" />
     </div>
   );
 }
