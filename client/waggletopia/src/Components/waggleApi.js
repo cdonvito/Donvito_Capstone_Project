@@ -15,9 +15,12 @@ export const waggleApi = createApi({
   }),
   endpoints: (builder) => ({
     // fetch All Products Available
-    productsAvailable: builder.query({
-      query: () => "/products/available",
-      providesTags: ["Products"],
+    register: builder.mutation({
+      query: (loginCred) => ({
+        url: "/auth/register",
+        method: "POST",
+        body: loginCred,
+      }),
     }),
 
     login: builder.mutation({
@@ -28,12 +31,90 @@ export const waggleApi = createApi({
       }),
     }),
 
+    deleteUser: builder.mutation({
+      query: () => ({
+        url: "/user",
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Users"],
+    }),
+
+    fetchUsers: builder.query({
+      query: () => "/users",
+      providesTags: ["Users"],
+    }),
+
     fetchUser: builder.query({
       query: () => "/users/me",
     }),
 
-    addToCart: builder.mutation({
-      query: ({product_id, quantity}) => ({
+    createProduct: builder.mutation({
+      query: ({
+        description,
+        img_url,
+        size,
+        includes,
+        category,
+        price,
+        stock,
+      }) => ({
+        url: "/product",
+        method: "POST",
+        body: { description, img_url, size, includes, category, price, stock },
+      }),
+    }),
+
+    modifyProduct: builder.mutation({
+      query: ({
+        id,
+        description,
+        img_url,
+        size,
+        includes,
+        category,
+        price,
+        stock,
+      }) => ({
+        url: "/product/:id",
+        method: "PUT",
+        body: {
+          id,
+          description,
+          img_url,
+          size,
+          includes,
+          category,
+          price,
+          stock,
+        },
+      }),
+    }),
+
+    deleteProduct: builder.mutation({
+      query: () => ({
+        url: "/product/:id",
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Products"],
+    }),
+
+    fetchProducts: builder.query({
+      query: () => "/products/all",
+      providesTags: ["Products"],
+    }),
+
+    fetchProductsAvailable: builder.query({
+      query: () => "/products/available",
+      providesTags: ["Products"],
+    }),
+
+    fetchSingleProduct: builder.query({
+      query: () => "/product/:id",
+      providesTags: ["Products"],
+    }),
+
+    createUserProduct: builder.mutation({
+      query: ({ product_id, quantity }) => ({
         url: "/user/userProduct",
         method: "POST",
         body: { product_id, quantity },
@@ -43,18 +124,77 @@ export const waggleApi = createApi({
 
     fetchUserProducts: builder.query({
       query: () => "/user/userProducts",
-      providesTags: ["UserProducts"]
+      providesTags: ["UserProducts"],
     }),
-    
 
+    deleteUserProduct: builder.mutation({
+      query: () => ({
+        url: "/user/userProduct/:id",
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Products", "UserProducts"],
+    }),
+
+    subtractUserQty: builder.mutation({
+      query: ({ quantity }) => ({
+        url: "/user/userProduct/subtract/:id",
+        method: "PUT",
+        body: { quantity },
+      }),
+      invalidatesTags: ["Products", "UserProducts"],
+    }),
+
+    addUserQty: builder.mutation({
+      query: ({ quantity }) => ({
+        url: "/user/userProduct/add/:id",
+        method: "PUT",
+        body: { quantity },
+      }),
+      invalidatesTags: ["Products", "UserProducts"],
+    }),
+
+    userCheckout: builder.mutation({
+      query: () => ({
+        url: "/user/checkout",
+        method: "POST",
+      }),
+      invalidatesTags: ["Products", "UserProducts"],
+    }),
+
+    fetchOrderHistory: builder.query({
+      query: () => "/user/orders",
+      providesTags: ["UserProducts"],
+    }),
+
+    fetchOrderSummary: builder.mutation({
+      query: () => ({
+        url: "/user/order/summary",
+        method: "POST",
+        body: { order_id },
+        providesTags: ["UserProducts"],
+      }),
+    }),
   }),
-
 });
 
 export const {
-  useProductsAvailableQuery,
-  useLoginMutation,
-  useFetchUserQuery,
-  useAddToCartMutation,
-  useFetchUserProductsQuery,
-} = waggleApi
+ useRegisterMutation,
+ useLoginMutation,
+ useDeleteUserMutation,
+ useFetchUsersQuery,
+ useFetchUserQuery,
+ useCreateProductMutation,
+ useModifyProductMutation,
+ useDeleteProductMutation,
+ useFetchProductsQuery,
+ useFetchProductsAvailableQuery,
+ useFetchSingleProductQuery,
+useCreateUserProductMutation,
+usefetchUserProducts,
+useDeleteUserProductMutation,
+useSubtractUserQtyMutation,
+useAddUserQtyMutation,
+useUserCheckoutMutation,
+useFetchOrderHistoryQuery,
+useFetchOrderSummaryMutation,
+} = waggleApi;

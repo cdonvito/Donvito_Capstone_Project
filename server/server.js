@@ -391,6 +391,7 @@ server.post("/api/user/checkout", async (req, res, next) => {
   }
 });
 
+// Get the user's order history
 server.get("/api/user/orders", async (req, res, next) => {
   try {
     if (!req.user) {
@@ -405,7 +406,8 @@ server.get("/api/user/orders", async (req, res, next) => {
   }
 });
 
-server.get("/api/user/order/summary", async (req, res, next) => {
+// Get a specific order's summary
+server.post("/api/user/order/summary", async (req, res, next) => {
   try {
     if (!req.user) {
       return res
