@@ -20,6 +20,7 @@ export const waggleApi = createApi({
         url: "/auth/register",
         method: "POST",
         body: loginCred,
+        providesTags: ["Users"],
       }),
     }),
 
@@ -28,6 +29,7 @@ export const waggleApi = createApi({
         url: "/auth/login",
         method: "POST",
         body: loginCred,
+        providesTags: ["Users"],
       }),
     }),
 
@@ -109,7 +111,7 @@ export const waggleApi = createApi({
     }),
 
     fetchSingleProduct: builder.query({
-      query: () => "/product/:id",
+      query: () => `/product/${id}`,
       providesTags: ["Products"],
     }),
 
@@ -178,23 +180,23 @@ export const waggleApi = createApi({
 });
 
 export const {
- useRegisterMutation,
- useLoginMutation,
- useDeleteUserMutation,
- useFetchUsersQuery,
- useFetchUserQuery,
- useCreateProductMutation,
- useModifyProductMutation,
- useDeleteProductMutation,
- useFetchProductsQuery,
- useFetchProductsAvailableQuery,
- useFetchSingleProductQuery,
-useCreateUserProductMutation,
-usefetchUserProducts,
-useDeleteUserProductMutation,
-useSubtractUserQtyMutation,
-useAddUserQtyMutation,
-useUserCheckoutMutation,
-useFetchOrderHistoryQuery,
-useFetchOrderSummaryMutation,
+  useRegisterMutation,
+  useLoginMutation,
+  useDeleteUserMutation,
+  useFetchUsersQuery,
+  useFetchUserQuery,
+  useCreateProductMutation,
+  useModifyProductMutation,
+  useDeleteProductMutation,
+  useFetchProductsQuery,
+  useFetchProductsAvailableQuery,
+  useFetchSingleProductQuery,
+  useCreateUserProductMutation,
+  useFetchUserProductsQuery,
+  useDeleteUserProductMutation,
+  useSubtractUserQtyMutation,
+  useAddUserQtyMutation,
+  useUserCheckoutMutation,
+  useFetchOrderHistoryQuery,
+  useFetchOrderSummaryMutation,
 } = waggleApi;

@@ -36,6 +36,7 @@ function App() {
         <Route path='/Terms-Of-Use' element={<TermsOfUse />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Register' element={<Register />} />
+        <Route path='/Product/:id' element={<ProductPage />} />
       </Routes>
 
       <FooterBar />

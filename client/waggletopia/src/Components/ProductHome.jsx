@@ -1,7 +1,8 @@
-import { useAddToCartMutation, useProductsAvailableQuery } from "./waggleApi";
+import { useCreateUserProductMutation, useFetchProductsAvailableQuery } from "./waggleApi";
 import { useNavigate } from "react-router-dom";
 
 function ProductHome() {
+  const navigate = useNavigate();
   const categories = [
     "Food",
     "Treats",
@@ -16,11 +17,11 @@ function ProductHome() {
 
   const sizes = ["Small", "Medium", "Large", "XLarge"];
 
-  const { data: productsObj = {}, error, isLoading } = useProductsAvailableQuery();
+  const { data: productsObj = {}, error, isLoading } = useFetchProductsAvailableQuery();
   const products = Object.values(productsObj);
   console.log(products);
 
-  const [productToCart, { error: cartError, isLoading: cartLoading }] = useAddToCartMutation();
+  const [productToCart, { error: cartError, isLoading: cartLoading }] = useCreateUserProductMutation();
 
   async function handleAddtoCart(product_id, name) {
     try {
@@ -59,6 +60,7 @@ function ProductHome() {
               <p>{product.img_url}</p>
               <p>{product.description}</p>
               <p>{`$${product.price}`}</p>
+              <button onClick={() => navigate(``)}>View Details</button>
               <button onClick={() => handleAddtoCart(product.id, product.description)}>Add to Cart</button>
             </div>
           );
