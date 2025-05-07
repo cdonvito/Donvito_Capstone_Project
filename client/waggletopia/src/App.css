@@ -50,4 +50,27 @@ html, body {
   padding-top: 3rem;
 }
 
+#ProductsAvailableList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.ProductsAvailable {
+  margin: 0;
+  width: 20rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 2rem;
+  background-color: white;
+}
+
 

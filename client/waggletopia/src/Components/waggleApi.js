@@ -8,7 +8,7 @@ export const waggleApi = createApi({
     prepareHeaders: (headers, { getState }) => {
       const token = getState().user.token;
       if (token) {
-        headers.set("Authorization", `Bearer ${token}`);
+        headers.set("Authorization", token);
       }
       return headers;
     },
@@ -32,6 +32,21 @@ export const waggleApi = createApi({
       query: () => "/users/me",
     }),
 
+    addToCart: builder.mutation({
+      query: ({product_id, quantity}) => ({
+        url: "/user/userProduct",
+        method: "POST",
+        body: { product_id, quantity },
+      }),
+      invalidatesTags: ["Products", "UserProducts"],
+    }),
+
+    fetchUserProducts: builder.query({
+      query: () => "/user/userProducts",
+      providesTags: ["UserProducts"]
+    }),
+    
+
   }),
 
 });
@@ -40,4 +55,6 @@ export const {
   useProductsAvailableQuery,
   useLoginMutation,
   useFetchUserQuery,
+  useAddToCartMutation,
+  useFetchUserProductsQuery,
 } = waggleApi

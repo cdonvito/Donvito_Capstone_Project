@@ -1,4 +1,4 @@
-import { useProductsAvailableQuery } from "./waggleApi";
+import { useAddToCartMutation, useProductsAvailableQuery } from "./waggleApi";
 import { useNavigate } from "react-router-dom";
 
 function ProductHome() {
@@ -20,6 +20,20 @@ function ProductHome() {
   const products = Object.values(productsObj);
   console.log(products);
 
+  const [productToCart, { error: cartError, isLoading: cartLoading }] = useAddToCartMutation();
+
+  async function handleAddtoCart(product_id, name) {
+    try {
+      const quantity = 1;
+      console.log(product_id);
+      console.log(name);
+      await productToCart({ product_id, quantity }).unwrap();
+      //setSuccessMessage(`${name} was successfully added to cart!`);
+    } catch (error) {
+      console.log("Error while adding product to cart", error);
+    }
+  };
+
   return (
     <div>
       <div>
@@ -38,14 +52,14 @@ function ProductHome() {
         </div>
       </div>
 
-      <div>
+      <div id="ProductsAvailableList">
         {products.map((product) => {
           return (
-            <div key={product.id} className="ProductsAvailableList">
+            <div key={product.id} className="ProductsAvailable">
               <p>{product.img_url}</p>
               <p>{product.description}</p>
               <p>{`$${product.price}`}</p>
-              <button>Add to Cart</button>
+              <button onClick={() => handleAddtoCart(product.id, product.description)}>Add to Cart</button>
             </div>
           );
         })}

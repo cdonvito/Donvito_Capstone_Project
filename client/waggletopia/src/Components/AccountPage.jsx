@@ -4,7 +4,7 @@ import { getToken } from "../Users/userSlice";
 
 function AccountPage() {
   const token = useSelector(getToken);
-  const { data: user, error, isLoading } = useFetchUserQuery(token);
+  const { data: user = {} , error, isLoading } = useFetchUserQuery();
   
   // Show a loading message while data is being fetched
   if (isLoading) {
@@ -28,12 +28,12 @@ function AccountPage() {
 
   return token ? (
     <div>
-      <p>{user.username}</p>
-      <p>{user.password}</p>
-      <p>{user.name}</p>
-      <p>{user.email_address}</p>
-      <p>{user.mailing_address}</p>
-      <p>{user.billing_address}</p>
+      <p>Username: {user.username}</p>
+      <p>Password: {user.password}</p>
+      <p>Name: {user.name}</p>
+      <p>Email Address: {user.email_address}</p>
+      <p>Mailing Address: {user.mailing_address}</p>
+      <p>Billing Address: {user.billing_address}</p>
     </div>
   ) : null;
 }
