@@ -1,13 +1,11 @@
 import { useSelector } from "react-redux";
-import { useFetchUserMutation } from "./waggleApi";
+import { useFetchUserQuery } from "./waggleApi";
 import { getToken } from "../Users/userSlice";
 
 function AccountPage() {
-  const [userDetails, { error, isLoading, isSuccess }] = useFetchUserMutation();
   const token = useSelector(getToken);
-
-
-
+  const { data: user, error, isLoading } = useFetchUserQuery(token);
+  
   // Show a loading message while data is being fetched
   if (isLoading) {
     return (
@@ -26,11 +24,18 @@ function AccountPage() {
     );
   }
 
-  return (
+  console.log(user);
+
+  return token ? (
     <div>
-      <p>Account Page</p>
+      <p>{user.username}</p>
+      <p>{user.password}</p>
+      <p>{user.name}</p>
+      <p>{user.email_address}</p>
+      <p>{user.mailing_address}</p>
+      <p>{user.billing_address}</p>
     </div>
-  );
+  ) : null;
 }
 
 export default AccountPage;

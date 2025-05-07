@@ -28,19 +28,16 @@ export const waggleApi = createApi({
       }),
     }),
 
-    fetchUser: builder.mutation({
+    fetchUser: builder.query({
       query: () => "/users/me",
     }),
 
   }),
-
-  
-
 
 });
 
 export const {
   useProductsAvailableQuery,
   useLoginMutation,
-  useFetchUserMutation,
+  useFetchUserQuery,
 } = waggleApi

@@ -9,6 +9,20 @@ html, body {
   background-color: #FFF9EF;
 }
 
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navigation-link {
+  padding: 0.7rem;
+  text-decoration: none;
+  color: rgb(50, 50, 255);
+}
+
 #logo {
   height: 5rem;
   width: auto;
@@ -24,8 +38,16 @@ html, body {
 
 #header_text_img {
   height: auto;
-  width: 50%;
+  width: 30%;
   cursor: pointer;
+}
+
+.footer-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
 }
 
 

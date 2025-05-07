@@ -2,8 +2,12 @@ import logo from "../assets/WaggleTopia_logo.png";
 import { Link } from "react-router-dom";
 import dogBanner from "../assets/dogs_playing.jpg";
 import headerText from "../assets/WaggleTopia_Header.png";
+import { useSelector } from "react-redux";
+import { getToken } from "../Users/userSlice";
 
 function HeaderBar() {
+  const token = useSelector(getToken);
+
   return (
     <div id="header_bar">
       <nav className="navigation-bar">
@@ -14,12 +18,13 @@ function HeaderBar() {
         <img src={headerText} id="header_text_img" />
 
         <div>
-          <Link to="/Product-Home">Shop Products</Link>
-          <Link to="/Account-Page">Account</Link>
-          <Link to="/About">About Us</Link>
-          <Link to="/Login">Login</Link>
-          <Link to="/Register">Register</Link>
-          <Link to="/Checkout">Cart</Link>
+          <Link to="/Product-Home" className="navigation-link">Shop Products</Link>
+          {token ? <Link to="/Account-Page" className="navigation-link">Account</Link> : ""}
+          <Link to="/About" className="navigation-link">About Us</Link>
+          {!token ? <Link to="/Login" className="navigation-link">Login</Link> : ""}
+          {!token ? <Link to="/Register" className="navigation-link">Register</Link> : ""}
+          {token ? <Link to="/Logout" className="navigation-link">Logout</Link> : ""}
+          {token ? <Link to="/Checkout" className="navigation-link">Cart</Link> : ""}
         </div>
       </nav>
       <img src={dogBanner} id="dogBanner" />

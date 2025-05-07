@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 function FooterBar () {
   return (
     <div>
-      <nav className="navigation-bar">
+      <nav className="footer-bar">
 
         <div>
-          <Link to="/About">About Us</Link>
-          <Link to="/Terms-Of-Use">Terms of Use</Link>
-          <Link to="/Privacy-Policy">Privacy Policy</Link>
+          <Link to="/About" className="navigation-link">About Us</Link>
+          <Link to="/Terms-Of-Use" className="navigation-link">Terms of Use</Link>
+          <Link to="/Privacy-Policy" className="navigation-link">Privacy Policy</Link>
         </div>
       </nav>
     </div>
