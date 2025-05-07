@@ -111,7 +111,7 @@ export const waggleApi = createApi({
     }),
 
     fetchSingleProduct: builder.query({
-      query: () => `/product/${id}`,
+      query: (id) => `/product/${id}`,
       providesTags: ["Products"],
     }),
 
@@ -130,8 +130,8 @@ export const waggleApi = createApi({
     }),
 
     deleteUserProduct: builder.mutation({
-      query: () => ({
-        url: "/user/userProduct/:id",
+      query: (id) => ({
+        url: `/user/userProduct/${id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["Products", "UserProducts"],

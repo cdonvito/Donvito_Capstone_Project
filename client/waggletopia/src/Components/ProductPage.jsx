@@ -9,7 +9,11 @@ import { useParams } from "react-router-dom";
 function ProductPage() {
   const token = useSelector(getToken);
   const { id } = useParams();
-  const { data: product = {}, error, isLoading } = useFetchSingleProductQuery(id);
+  const {
+    data: product = {},
+    error,
+    isLoading,
+  } = useFetchSingleProductQuery(id);
   //const product = Object.values(productObj)
 
   const [productToCart, { error: cartError, isLoading: cartLoading }] =
@@ -17,7 +21,7 @@ function ProductPage() {
 
   async function handleAddtoCart() {
     try {
-      await addToCart({ product_id: product.id, quantity: 1 }).unwrap();
+      await productToCart({ product_id: product.id, quantity: 1 }).unwrap();
       //setSuccessMessage(`${name} was successfully added to cart!`);
     } catch (error) {
       console.log("Error while adding product to cart", error);
@@ -42,7 +46,6 @@ function ProductPage() {
           ""
         )}
       </div>
-      );
     </div>
   );
 }

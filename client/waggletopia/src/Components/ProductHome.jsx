@@ -1,7 +1,13 @@
-import { useCreateUserProductMutation, useFetchProductsAvailableQuery } from "./waggleApi";
+import { useSelector } from "react-redux";
+import {
+  useCreateUserProductMutation,
+  useFetchProductsAvailableQuery,
+} from "./waggleApi";
 import { useNavigate } from "react-router-dom";
+import { getToken } from "../Users/userSlice";
 
 function ProductHome() {
+  const token = useSelector(getToken);
   const navigate = useNavigate();
   const categories = [
     "Food",
@@ -17,11 +23,16 @@ function ProductHome() {
 
   const sizes = ["Small", "Medium", "Large", "XLarge"];
 
-  const { data: productsObj = {}, error, isLoading } = useFetchProductsAvailableQuery();
+  const {
+    data: productsObj = {},
+    error,
+    isLoading,
+  } = useFetchProductsAvailableQuery();
   const products = Object.values(productsObj);
   console.log(products);
 
-  const [productToCart, { error: cartError, isLoading: cartLoading }] = useCreateUserProductMutation();
+  const [productToCart, { error: cartError, isLoading: cartLoading }] =
+    useCreateUserProductMutation();
 
   async function handleAddtoCart(product_id, name) {
     try {
@@ -33,7 +44,7 @@ function ProductHome() {
     } catch (error) {
       console.log("Error while adding product to cart", error);
     }
-  };
+  }
 
   return (
     <div>
@@ -60,8 +71,20 @@ function ProductHome() {
               <p>{product.img_url}</p>
               <p>{product.description}</p>
               <p>{`$${product.price}`}</p>
-              <button onClick={() => navigate(``)}>View Details</button>
-              <button onClick={() => handleAddtoCart(product.id, product.description)}>Add to Cart</button>
+              <button onClick={() => navigate(`/Product/${product.id}`)}>
+                View Details
+              </button>
+              {token ? (
+                <button
+                  onClick={() =>
+                    handleAddtoCart(product.id, product.description)
+                  }
+                >
+                  Add to Cart
+                </button>
+              ) : (
+                ""
+              )}
             </div>
           );
         })}

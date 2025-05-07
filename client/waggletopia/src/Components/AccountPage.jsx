@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function AccountPage() {
   const navigate = useNavigate();
   const token = useSelector(getToken);
-  const { data: user = {} , isLoading, error } = useFetchUserQuery();
+  const { data: user = {} , error, isLoading } = useFetchUserQuery();
   const [ deleteUser, { isLoading: deletionLoading, error: deletionError }] = useDeleteUserMutation();
   const [successMessage, setSuccessMessage] = useState("");
   
