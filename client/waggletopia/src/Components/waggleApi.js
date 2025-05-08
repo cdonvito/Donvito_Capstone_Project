@@ -77,8 +77,8 @@ export const waggleApi = createApi({
         price,
         stock,
       }) => ({
-        url: "/product/:id",
-        method: "PUT",
+        url: `/product/${id}`,
+        method: "PATCH",
         body: {
           id,
           description,
@@ -90,11 +90,12 @@ export const waggleApi = createApi({
           stock,
         },
       }),
+      invalidatesTags: ["Products"],
     }),
 
     deleteProduct: builder.mutation({
-      query: () => ({
-        url: "/product/:id",
+      query: (id) => ({
+        url: `/product/${id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["Products"],
