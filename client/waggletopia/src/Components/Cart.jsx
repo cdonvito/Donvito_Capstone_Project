@@ -5,13 +5,15 @@ import {
   useFetchProductsAvailableQuery,
   useFetchUserProductsQuery,
   useSubtractUserQtyMutation,
+  useUserCheckoutMutation,
 } from "./waggleApi";
 import { getToken } from "../Users/userSlice";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Cart() {
   const token = useSelector(getToken);
-  const { id } = useParams();
+  const navigate = useNavigate();
 
   const {
     data: userProducts = [],
@@ -34,6 +36,25 @@ function Cart() {
   const [subQty, { error: subQtyError, isLoading: subQtyLoading }] =
     useSubtractUserQtyMutation();
 
+  const [
+    checkout,
+    {
+      error: checkoutError,
+      isLoading: checkoutLoading,
+      isSuccess: checkoutSuccess,
+    },
+  ] = useUserCheckoutMutation();
+
+  const [successMessage, setSuccessMessage] = useState("");
+
+  // Checkout success message
+  useEffect(() => {
+    if (checkoutSuccess) {
+      setSuccessMessage(`You have successfully checked out.`);
+      setTimeout(() => navigate("/"), 3000);
+    }
+  }, [checkoutSuccess, navigate]);
+
   // Show a loading message while data is being fetched
   if (isLoading) {
     return (
@@ -54,11 +75,6 @@ function Cart() {
 
   console.log(userProducts);
 
-  // const cartProducts = userProducts.map((userProduct) => {
-  //   const prodList = products.find((p) => p.id === userProduct.product_id);
-  //   return prodList ? { ...prodList, quantity: userProduct.quantity } : null;
-  // });
-
   const cartProducts = userProducts
     .map((userProduct) => {
       const prod = products.find((p) => p.id === userProduct.product_id);
@@ -77,6 +93,14 @@ function Cart() {
   console.log(cartProducts);
 
   if (!cartProducts.length) {
+    if (checkoutSuccess) {
+      return (
+        <div>
+          <h2>{successMessage}</h2>
+        </div>
+      );
+    }
+
     return (
       <section>
         <h2>Your cart is empty.</h2>
@@ -111,6 +135,14 @@ function Cart() {
       await subQty({ id: id, quantity: 1 }).unwrap();
     } catch (error) {
       console.log("Error while subtracting Qty of Item", error);
+    }
+  }
+
+  async function handleCheckout() {
+    try {
+      await checkout().unwrap();
+    } catch (error) {
+      console.log("Error while checking out", error);
     }
   }
 
@@ -156,7 +188,7 @@ function Cart() {
         );
       })}
       <h2>Sum Total: ${totalAmount.toFixed(2)}</h2>
-      <button>Checkout</button>
+      <button onClick={() => handleCheckout()}>Checkout</button>
     </div>
   );
 }
