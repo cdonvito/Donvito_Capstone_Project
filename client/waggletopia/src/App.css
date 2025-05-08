@@ -73,4 +73,9 @@ html, body {
   background-color: white;
 }
 
+#temp_img {
+  width: 80%;
+  height: auto;
+}
+
 

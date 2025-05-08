@@ -13,8 +13,7 @@ function HeaderBar() {
   const { data: user = {}, error, isLoading } = useFetchUserQuery();
 
   function handleLogout() {
-    dispatch(logout());
-    
+    dispatch(logout());  
   }
 
   return (

@@ -1,14 +1,16 @@
+
 import { useDispatch } from "react-redux";
-import { useFetchOrderHistoryQuery } from "./waggleApi";
+import { useFetchOrderSummaryQuery } from "./waggleApi";
 import { getToken } from "../Users/userSlice";
 
 function OrdersPage() {
   const token = useDispatch(getToken);
+
   const {
-    data: orders = [],
-    error: ordersError,
-    isLoading: ordersLoading,
-  } = useFetchOrderHistoryQuery();
+    data: orderProducts = [],
+    error: orderProductsError,
+    isLoading: orderProductsLoading,
+  } = useFetchOrderSummaryQuery();
 
   return (
     <div id="orders">
@@ -20,7 +22,7 @@ function OrdersPage() {
             <p>ID: {order.id}</p>
             <p>Date: {formattedDate}</p>
 
-            <button onClick={() => navigate(`/Orders/${order.id}`)}>
+            <button onClick={() => navigate(`/Product/${product.id}`)}>
               View Details
             </button>
           </div>
@@ -31,3 +33,4 @@ function OrdersPage() {
 }
 
 export default OrdersPage;
+

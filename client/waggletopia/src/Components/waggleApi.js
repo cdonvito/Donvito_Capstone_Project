@@ -161,20 +161,18 @@ export const waggleApi = createApi({
         url: "/user/checkout",
         method: "POST",
       }),
-      invalidatesTags: ["Products", "UserProducts"],
+      invalidatesTags: ["Products", "UserProducts", "Orders"],
     }),
 
     fetchOrderHistory: builder.query({
       query: () => "/user/orders",
-      providesTags: ["UserProducts"],
+      providesTags: ["Orders"],
     }),
 
-    fetchOrderSummary: builder.mutation({
-      query: () => ({
-        url: "/user/order/summary",
-        method: "POST",
-        body: { order_id },
-        providesTags: ["UserProducts"],
+    fetchOrderSummary: builder.query({
+      query: (order_id) => ({
+        url: "/user/orders/${order_id}/summary",
+        providesTags: ["Orders"],
       }),
     }),
   }),
@@ -199,5 +197,5 @@ export const {
   useAddUserQtyMutation,
   useUserCheckoutMutation,
   useFetchOrderHistoryQuery,
-  useFetchOrderSummaryMutation,
+  useFetchOrderSummaryQuery,
 } = waggleApi;

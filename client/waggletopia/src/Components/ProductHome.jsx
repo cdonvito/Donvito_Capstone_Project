@@ -5,6 +5,7 @@ import {
 } from "./waggleApi";
 import { useNavigate } from "react-router-dom";
 import { getToken } from "../Users/userSlice";
+import tempImg from "../assets/Coming_soon.jpg";
 
 function ProductHome() {
   const token = useSelector(getToken);
@@ -68,9 +69,11 @@ function ProductHome() {
         {products.map((product) => {
           return (
             <div key={product.id} className="ProductsAvailable">
-              <p>{product.img_url}</p>
+              <img src={tempImg} id="temp_img"></img>
+              {/* <p>{product.img_url}</p> */}
               <p>{product.description}</p>
               <p>{`$${product.price}`}</p>
+              
               <button onClick={() => navigate(`/Product/${product.id}`)}>
                 View Details
               </button>
@@ -85,6 +88,7 @@ function ProductHome() {
               ) : (
                 ""
               )}
+              {product.stock <= 10 ? (<p>Only {product.stock} left</p>) : ""}
             </div>
           );
         })}

@@ -1,12 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useDeleteUserMutation, useFetchUserQuery } from "./waggleApi";
-import { getToken } from "../Users/userSlice";
+import { getToken, logout } from "../Users/userSlice";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function AccountPage() {
   const navigate = useNavigate();
   const token = useSelector(getToken);
+  const dispatch = useDispatch();
   const { data: user = {} , error, isLoading } = useFetchUserQuery();
   const [ deleteUser, { isLoading: deletionLoading, error: deletionError }] = useDeleteUserMutation();
   const [successMessage, setSuccessMessage] = useState("");
@@ -37,7 +38,8 @@ function AccountPage() {
 
       await deleteUser(user.id).unwrap();
       setSuccessMessage(`Your account has been successfully deleted.`)
-      setTimeout(() => navigate("/"), 1500);
+      setTimeout(() => navigate("/"), 2000);
+      setTimeout(() => dispatch(logout()), 2000); 
     } catch (error) {
       console.log("Error while deleting your account", error);
     }
@@ -45,6 +47,10 @@ function AccountPage() {
 
   return token ? (
     <div>
+      <div>
+        <button onClick={() => navigate("/Orders")}>Order History</button>
+      </div>
+
       <p>Username: {user.username}</p>
       <p>Name: {user.name}</p>
       <p>Email Address: {user.email_address}</p>

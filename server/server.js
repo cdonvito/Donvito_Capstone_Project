@@ -407,14 +407,14 @@ server.get("/api/user/orders", async (req, res, next) => {
 });
 
 // Get a specific order's summary
-server.post("/api/user/order/summary", async (req, res, next) => {
+server.get("/api/user/orders/:orderId/summary", async (req, res, next) => {
   try {
     if (!req.user) {
       return res
         .status(401)
         .send({ message: "You must be logged in to do that" });
     }
-    const orderSummary = await fetchOrderProducts(req.body.order_id, req.user.id);
+    const orderSummary = await fetchOrderProducts(req.params, req.user.id);
     res.send(orderSummary);
   } catch (error) {
     next(error);

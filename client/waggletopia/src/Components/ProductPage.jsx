@@ -5,6 +5,7 @@ import {
   useFetchSingleProductQuery,
 } from "./waggleApi";
 import { useParams } from "react-router-dom";
+import tempImg from "../assets/Coming_soon.jpg";
 
 function ProductPage() {
   const token = useSelector(getToken);
@@ -33,9 +34,14 @@ function ProductPage() {
   return (
     <div id="ProductsAvailableList">
       <div key={product.id} className="ProductsAvailable">
-        <p>{product.img_url}</p>
+        <img src={tempImg} id="temp_img"></img>
+        {/* <p>{product.img_url}</p> */}
         <p>{product.description}</p>
+        <p>{`Size: ${product.size}`}</p>
+        <p>{`Includes: ${product.includes}`}</p>
+        <p>{`Category: ${product.category}`}</p>
         <p>{`$${product.price}`}</p>
+        {product.stock <= 10 ? (<p>Only {product.stock} left</p>) : ""}
         {token ? (
           <button
             onClick={() => handleAddtoCart(product.id, product.description)}
