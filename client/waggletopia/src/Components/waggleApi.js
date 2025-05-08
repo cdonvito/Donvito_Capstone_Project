@@ -138,18 +138,18 @@ export const waggleApi = createApi({
     }),
 
     subtractUserQty: builder.mutation({
-      query: ({ quantity }) => ({
-        url: "/user/userProduct/subtract/:id",
-        method: "PUT",
+      query: ({ id, quantity }) => ({
+        url: `/user/userProduct/subtract/${id}`,
+        method: "PATCH",
         body: { quantity },
       }),
       invalidatesTags: ["Products", "UserProducts"],
     }),
 
     addUserQty: builder.mutation({
-      query: ({ quantity }) => ({
-        url: "/user/userProduct/add/:id",
-        method: "PUT",
+      query: ({ id, quantity }) => ({
+        url: `/user/userProduct/add/${id}`,
+        method: "PATCH",
         body: { quantity },
       }),
       invalidatesTags: ["Products", "UserProducts"],

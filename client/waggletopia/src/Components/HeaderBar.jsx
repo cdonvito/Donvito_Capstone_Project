@@ -4,9 +4,11 @@ import dogBanner from "../assets/dogs_playing.jpg";
 import headerText from "../assets/WaggleTopia_Header.png";
 import { useSelector } from "react-redux";
 import { getToken } from "../Users/userSlice";
+import { useFetchUserQuery } from "./waggleApi";
 
 function HeaderBar() {
   const token = useSelector(getToken);
+  const { data: user = {} , error, isLoading } = useFetchUserQuery();
 
   return (
     <div id="header_bar">
@@ -25,6 +27,7 @@ function HeaderBar() {
           {!token ? <Link to="/Register" className="navigation-link">Register</Link> : ""}
           {token ? <Link to="/Logout" className="navigation-link">Logout</Link> : ""}
           {token ? <Link to="/Checkout" className="navigation-link">Cart</Link> : ""}
+          {token && user.is_admin ? <Link to="/Admin-Page" className="navigation-link">Admin</Link> : ""}
         </div>
       </nav>
       <img src={dogBanner} id="dogBanner" />
