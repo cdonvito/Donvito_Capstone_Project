@@ -28,9 +28,9 @@ async function createTables() {
       id UUID PRIMARY KEY,
       description VARCHAR(255) NOT NULL,
       img_url VARCHAR(255) NOT NULL,
-      size VARCHAR(255),
-      includes VARCHAR(255),
-      category VARCHAR(255),
+      size VARCHAR(255) NOT NULL,
+      includes VARCHAR(255) NOT NULL,
+      category VARCHAR(255) NOT NULL,
       price FLOAT NOT NULL,
       stock INTEGER NOT NULL CHECK (stock >= 0)
     );
