@@ -414,12 +414,7 @@ server.get("/api/user/orders/:order_id/summary", async (req, res, next) => {
         .status(401)
         .send({ message: "You must be logged in to do that" });
     }
-    const { order_id } = req.params;
-    const user_id = req.user.id;
-    console.log("[SUMMARY] order_id=", order_id, " user_id=", user_id);
-
-    const orderSummary = await fetchOrderProducts(order_id, user_id);
-    console.log("[SUMMARY] rows returned:", orderSummary);
+    const orderSummary = await fetchOrderProducts(req.params, req.user.id);
     res.send(orderSummary);
   } catch (error) {
     next(error);

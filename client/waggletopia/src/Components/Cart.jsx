@@ -82,6 +82,7 @@ function Cart() {
         description: prod.description,
         price: prod.price,
         img_url: prod.img_url,
+        stock: prod.stock,
         quantity: userProduct.quantity,
         userProductId: userProduct.id,
       };
@@ -170,7 +171,7 @@ function Cart() {
 
               <button
                 onClick={() => handleQtyAddition(product.userProductId)}
-                disabled={product.quantity < 1}
+                disabled={product.stock <= product.quantity}
               >
                 +
               </button>

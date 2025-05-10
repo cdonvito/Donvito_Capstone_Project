@@ -27,6 +27,11 @@ function OrderSummary() {
 
   console.log(products);
 
+  const totalAmount = orderProducts.reduce(
+    (sum, item) => sum + item.unit_price * item.quantity,
+    0
+  );
+
   if (!token) {
     return <p>Please log in to view your orders.</p>;
   }
@@ -49,15 +54,17 @@ function OrderSummary() {
         return (
           <div key={orderProduct.id} className="orders">
               <p>Name: {product.description}</p>
-              <p>Item Price: {orderProduct.unit_price}</p>
               <p>Quantity: {orderProduct.quantity}</p>
-              <p>Total Price: {orderProduct.quantity * orderProduct.unit_price}</p>
+              <p>Item Price: ${orderProduct.unit_price}</p>
+              <p>Total Price: ${orderProduct.quantity * orderProduct.unit_price}</p>
               <button onClick={() => navigate(`/Product/${product.id}`)}>
                 View Details
-              </button> : "";
+              </button>
           </div>
         );
       })}
+
+      <h2>Sum Total: ${totalAmount.toFixed(2)}</h2>
     </div>
   )
 }

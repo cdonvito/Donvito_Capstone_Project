@@ -4,7 +4,6 @@ import About from './Components/About';
 import AccountPage from './Components/AccountPage';
 import AdminPage from './Components/AdminPage';
 import Cart from './Components/Cart';
-import CategoryHome from './Components/CategoryHome';
 import FooterBar from './Components/FooterBar';
 import HeaderBar from './Components/HeaderBar';
 import Home from './Components/Home';
@@ -25,7 +24,6 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Category/Home' element={<CategoryHome />} />
         <Route path='/Product-Page' element={<ProductPage />} />
         <Route path='/Account-Page' element={<AccountPage />} />
         <Route path='/Orders' element={<OrdersPage />} />
