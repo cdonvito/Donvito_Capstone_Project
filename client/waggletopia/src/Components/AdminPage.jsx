@@ -289,7 +289,10 @@ function AdminPage() {
         return (
           <div key={user.id} className="User">
             <p>Username: {user.username}</p>
-            <p>Email: {user.email_address}</p>
+            <p>Name: {user.name}</p>
+            <p>Email: {user.email_address ? user.email_address : "N/A"}</p>
+            <p>Mailing Address: {user.mailing_address}</p>
+            <p>Phone Number: {user.phone_number ? user.phone_number : "N/A"}</p>
             <p>Is Admin: {user.is_admin ? "Yes" : "No"}</p>
           </div>
         );

@@ -7,6 +7,7 @@ import { useLoginMutation } from "./waggleApi";
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [successMessage, setSuccessMessage] = useState("");
   const [loginCred, setLoginCred] = useState({
     email: "",
     password: "",
@@ -21,7 +22,8 @@ function Login() {
         email: "",
         password: "",
       });
-      navigate("/");
+      setSuccessMessage(`Your have successfully logged in.`);
+      setTimeout(() => navigate("/"), 2000);
     }
   }, [isSuccess, navigate]);
 
@@ -54,6 +56,11 @@ function Login() {
         <>
           {" "}
           <h2 id="LoginHeader">Login</h2>
+          {successMessage != "" ? (
+            <h2 className="Success">{successMessage}</h2>
+          ) : (
+            ""
+          )}
           <form onSubmit={handleSubmit} id="LoginForm">
             <label>
               Username
@@ -78,7 +85,7 @@ function Login() {
             <button type="submit" id="LoginButton">Log in</button>
           </form>
           {loginError && (
-            <p style={{ color: "red" }}>
+            <p className="Error">
               Login failed. Check your credentials.
             </p>
           )}

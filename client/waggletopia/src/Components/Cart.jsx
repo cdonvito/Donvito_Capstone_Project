@@ -93,7 +93,7 @@ function Cart() {
     if (checkoutSuccess) {
       return (
         <div>
-          <h2>{successMessage}</h2>
+          <h2 className="Success">{successMessage}</h2>
         </div>
       );
     }

@@ -255,6 +255,17 @@ a:hover {
   width: 5%;
 }
 
+/* ================== ACCOUNT PAGE ================== */
+#AccountBody{
+  text-align: center;
+  margin: 1% 0 3% 0;
+}
+
+#AccountBody button {
+  width: 20%;
+  font-size: 15px;
+}
+
 /* ================== PRODUCTS HOME ================== */
 #ProductsAvailableList {
   display: flex;

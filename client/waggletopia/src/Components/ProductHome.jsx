@@ -35,29 +35,24 @@ function ProductHome() {
   } = useFetchProductsAvailableQuery();
   const products = Object.values(productsObj);
 
-  const [productToCart, { error: cartError, isLoading: cartLoading }] =
-    useCreateUserProductMutation();
-
   const {
     data: userProducts = [],
     userProductserror,
     userProductsisLoading,
-  } = useFetchUserProductsQuery();
+  } = useFetchUserProductsQuery(null, { skip: !token });
 
-  const [deleteProduct, { error: deleteError, isLoading: deleteLoading }] =
-    useDeleteUserProductMutation();
+  const [productToCart, { error: cartError, isLoading: cartLoading }] =
+    useCreateUserProductMutation();
 
-  const [addQty, { error: addQtyError, isLoading: addQtyLoading }] =
-    useAddUserQtyMutation();
+  const [deleteProduct] = useDeleteUserProductMutation();
 
-  const [subQty, { error: subQtyError, isLoading: subQtyLoading }] =
-    useSubtractUserQtyMutation();
+  const [addQty] = useAddUserQtyMutation();
+
+  const [subQty] = useSubtractUserQtyMutation();
 
   async function handleAddtoCart(product_id, name) {
     try {
       const quantity = 1;
-      console.log(product_id);
-      console.log(name);
       await productToCart({ product_id, quantity }).unwrap();
       //setSuccessMessage(`${name} was successfully added to cart!`);
     } catch (error) {
@@ -112,6 +107,7 @@ function ProductHome() {
           const userProduct = userProducts.find(
             (userProduct) => userProduct.product_id === product.id
           );
+
           return (
             <div key={product.id} className="ProductsAvailable">
               <img src={tempImg} id="temp_img"></img>

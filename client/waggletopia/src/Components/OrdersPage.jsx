@@ -13,7 +13,7 @@ function OrdersPage() {
   } = useFetchOrderHistoryQuery();
 
   if (!token) {
-    return <p>Please log in to view your orders.</p>;
+    return <p className="Error">Please log in to view your orders.</p>;
   }
 
   return (

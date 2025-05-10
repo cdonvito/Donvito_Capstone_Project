@@ -16,7 +16,7 @@ function AccountPage() {
   if (isLoading) {
     return (
       <section>
-        <h2>Loading...</h2>
+        <h2 className="Loading">Loading...</h2>
       </section>
     );
   }
@@ -25,7 +25,7 @@ function AccountPage() {
   if (error) {
     return (
       <section>
-        <h2>Error, please try again later.</h2>
+        <h2 className="Error">Error, please try again later.</h2>
       </section>
     );
   }
@@ -44,20 +44,20 @@ function AccountPage() {
   };
 
   return token ? (
-    <div>
+    <div id="AccountBody">
       <div>
         <button onClick={() => navigate("/Orders")}>Order History</button>
       </div>
 
-      <p>Username: {user.username}</p>
-      <p>Name: {user.name}</p>
-      <p>Email Address: {user.email_address}</p>
-      <p>Mailing Address: {user.mailing_address}</p>
-      <p>Phone Number: {user.phone_number}</p>
-      <p>Billing Address: {user.billing_address}</p>
+      <p><strong>Username:</strong> {user.username}</p>
+      <p><strong>Name:</strong> {user.name}</p>
+      <p><strong>Email Address:</strong> {user.email_address}</p>
+      <p><strong>Mailing Address:</strong> {user.mailing_address}</p>
+      <p><strong>Phone Number:</strong> {user.phone_number}</p>
+      <p><strong>Billing Address:</strong> {user.billing_address}</p>
 
-      {deletionError && <p style={{ color: "red" }}>Failed to delete account.</p>}
-      {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
+      {deletionError && <p className="Error">Failed to delete account.</p>}
+      {successMessage && <p className="Success">{successMessage}</p>}
 
       <button onClick={handleDeletion} disabled={deletionLoading}>
         {deletionLoading ? "Deleting…" : "DELETE ACCOUNT"}

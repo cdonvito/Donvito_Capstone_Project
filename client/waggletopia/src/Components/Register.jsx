@@ -60,14 +60,6 @@ function Register() {
     }));
   };
 
-  if (registerLoading) {
-    return (
-      <section>
-        <h2>Loading...</h2>
-      </section>
-    );
-  }
-
   return (
     <div>
       {registerLoading ? (

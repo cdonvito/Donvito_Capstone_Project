@@ -10,10 +10,13 @@ import { useFetchUserQuery } from "./waggleApi";
 function HeaderBar() {
   const token = useSelector(getToken);
   const dispatch = useDispatch();
-  const { data: user = {}, error, isLoading } = useFetchUserQuery();
+
+  const { data: user = {}, isLoading } = useFetchUserQuery(null, {
+    skip: !token,
+  });
 
   function handleLogout() {
-    dispatch(logout());  
+    dispatch(logout());
   }
 
   return (
