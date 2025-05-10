@@ -33,6 +33,8 @@ p,
 ul,
 ol,
 button,
+input,
+label,
 .navigation-bar,
 .footer-bar {
   font-family: 'Open Sans', sans-serif;
@@ -61,6 +63,26 @@ button:hover {
 a:hover {
   cursor: pointer;
   color: #00669a;
+}
+
+/* ================== STANDARD MESSAGES ================== */
+
+.Success {
+  color: greenyellow;
+  font-size: 40px;
+  text-align: center;
+}
+
+.Loading {
+  color: #00669a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.Error {
+  color: #e90a28;
+  font-size: 40px;
+  text-align: center;
 }
 
 /* ================== HEADER BAR ================== */
@@ -181,6 +203,56 @@ a:hover {
 #TermsOfUseList {
   width: 80%;
   margin: 0 0 0 8%;
+}
+
+/* ================== LOGIN PAGE ================== */
+#LoginHeader {
+  text-align: center;
+  margin: 1% 0 3% 0;
+}
+
+#LoginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+#LoginForm input{
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 0.8em;
+  border: 3px solid #00669a;
+}
+
+#LoginButton {
+  width: 5%;
+}
+
+/* ================== REGISTER PAGE ================== */
+#RegisterHeader, #RegisterRequired{
+  text-align: center;
+  margin: 1% 0 3% 0;
+}
+
+#RegisterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+#RegisterForm input{
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 0.8em;
+  border: 3px solid #00669a;
+}
+
+#RegisterButton {
+  width: 5%;
 }
 
 /* ================== PRODUCTS HOME ================== */

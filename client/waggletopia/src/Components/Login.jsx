@@ -49,12 +49,12 @@ function Login() {
   return (
     <div>
       {loginLoading ? (
-        <h2>Loading...</h2>
+        <h2 className="Loading">Loading...</h2>
       ) : (
         <>
           {" "}
-          <h2>Login</h2>
-          <form onSubmit={handleSubmit}>
+          <h2 id="LoginHeader">Login</h2>
+          <form onSubmit={handleSubmit} id="LoginForm">
             <label>
               Username
               <input
@@ -75,7 +75,7 @@ function Login() {
                 required
               />
             </label>
-            <button type="submit">Log in</button>
+            <button type="submit" id="LoginButton">Log in</button>
           </form>
           {loginError && (
             <p style={{ color: "red" }}>

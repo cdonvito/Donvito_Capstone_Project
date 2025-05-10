@@ -34,8 +34,8 @@ function Register() {
         phone_number: "",
         billing_address: "",
       });
-      setSuccessMessage(`Your have successfully created your account.`)
-      setTimeout(() => navigate("/"), 1500);
+      setSuccessMessage(`Your have successfully created your account.`);
+      setTimeout(() => navigate("/"), 2000);
     }
   }, [isSuccess, navigate]);
 
@@ -68,89 +68,98 @@ function Register() {
     );
   }
 
-  // Show an error message if the fetch failed
-  if (registerError) {
-    return (
-      <section>
-        <h2>Error, please try again later.</h2>
-      </section>
-    );
-  }
-
   return (
     <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Name
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            onChange={handleChange}
-            required
-          ></input>
-        </label>
-        <label>
-          E-mail Address
-          <input
-            type="email"
-            placeholder="email"
-            name="email_address"
-            onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          Mailing Address
-          <input
-            type="address"
-            placeholder="mailing address"
-            name="mailing_address"
-            onChange={handleChange}
-            required
-          ></input>
-        </label>
-        <label>
-          Phone Number
-          <input
-            type="tel"
-            placeholder="phone number"
-            name="phone_number"
-            onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          Billing Address
-          <input
-            type="text"
-            placehole="billing address"
-            name="billing_address"
-            onChange={handleChange}
-          ></input>
-        </label>
-        <button type="submit">Register</button>
-        
-      </form>
+      {registerLoading ? (
+        <h2 className="Loading">Loading...</h2>
+      ) : (
+        <>
+          <h2 id="RegisterHeader">Register</h2>
+          {successMessage != "" ? (
+            <h2 className="Success">{successMessage}</h2>
+          ) : (
+            ""
+          )}
+          <p id="RegisterRequired">* Indicates a required field</p>
+          <form onSubmit={handleSubmit} id="RegisterForm">
+            <label>
+              Username*
+              <input
+                type="text"
+                placeholder="Username"
+                name="username"
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Password*
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Name*
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                onChange={handleChange}
+                required
+              ></input>
+            </label>
+            <label>
+              E-mail Address
+              <input
+                type="email"
+                placeholder="Email"
+                name="email_address"
+                onChange={handleChange}
+              ></input>
+            </label>
+            <label>
+              Mailing Address*
+              <input
+                type="address"
+                placeholder="Mailing address"
+                name="mailing_address"
+                onChange={handleChange}
+                required
+              ></input>
+            </label>
+            <label>
+              Phone Number
+              <input
+                type="tel"
+                placeholder="Phone number"
+                name="phone_number"
+                onChange={handleChange}
+              ></input>
+            </label>
+            <label>
+              Billing Address
+              <input
+                type="text"
+                placeholder="Billing address"
+                name="billing_address"
+                onChange={handleChange}
+              ></input>
+            </label>
+            <button type="submit" id="RegisterButton">
+              Register
+            </button>
+          </form>
+          {registerError && (
+            <p className="Error">
+              Registration failed. Please verify your information
+            </p>
+          )}
+        </>
+      )}
     </div>
   );
 }
