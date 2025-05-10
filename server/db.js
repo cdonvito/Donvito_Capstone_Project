@@ -263,7 +263,7 @@ async function fetchOrders(user_id) {
 async function fetchOrderProducts(order_id, user_id) {
   const SQL = `SELECT * from order_products WHERE order_id = $1 AND user_id = $2;`;
   const response = await client.query(SQL, [order_id, user_id]);
-  return response.rows[0];
+  return response.rows;
 }
 
 const authenticate = async (username, password) => {

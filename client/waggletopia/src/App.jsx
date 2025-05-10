@@ -15,6 +15,7 @@ import ProductHome from './Components/ProductHome';
 import ProductPage from './Components/ProductPage';
 import Register from './Components/Register';
 import TermsOfUse from './Components/TermsOfUse';
+import OrderSummary from './Components/OrderSummary';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/Product-Page' element={<ProductPage />} />
         <Route path='/Account-Page' element={<AccountPage />} />
         <Route path='/Orders' element={<OrdersPage />} />
+        <Route path='/Orders/:order_id' element={<OrderSummary />} />
         <Route path='/Admin-Page' element={<AdminPage />} />
         <Route path='/Checkout' element={<Cart />} />
         <Route path='/About' element={<About />} />

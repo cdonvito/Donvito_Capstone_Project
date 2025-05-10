@@ -1,14 +1,20 @@
-import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useFetchOrderHistoryQuery } from "./waggleApi";
 import { getToken } from "../Users/userSlice";
+import { useNavigate } from "react-router-dom";
 
 function OrdersPage() {
-  const token = useDispatch(getToken);
+  const token = useSelector(getToken);
+  const navigate = useNavigate();
   const {
     data: orders = [],
     error: ordersError,
     isLoading: ordersLoading,
   } = useFetchOrderHistoryQuery();
+
+  if (!token) {
+    return <p>Please log in to view your orders.</p>;
+  }
 
   return (
     <div id="orders">

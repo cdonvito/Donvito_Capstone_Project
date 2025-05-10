@@ -73,8 +73,6 @@ function Cart() {
     );
   }
 
-  console.log(userProducts);
-
   const cartProducts = userProducts
     .map((userProduct) => {
       const prod = products.find((p) => p.id === userProduct.product_id);
@@ -89,8 +87,6 @@ function Cart() {
       };
     })
     .filter(Boolean);
-
-  console.log(cartProducts);
 
   if (!cartProducts.length) {
     if (checkoutSuccess) {
@@ -116,7 +112,6 @@ function Cart() {
   async function handleDeletion(userProductId) {
     try {
       await deleteProduct(userProductId).unwrap();
-      //setSuccessMessage(`Your cart item has successfully been deleted.`);
     } catch (error) {
       console.log("Error while deleting your account", error);
     }

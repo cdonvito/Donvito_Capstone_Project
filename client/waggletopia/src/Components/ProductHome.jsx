@@ -30,7 +30,6 @@ function ProductHome() {
     isLoading,
   } = useFetchProductsAvailableQuery();
   const products = Object.values(productsObj);
-  console.log(products);
 
   const [productToCart, { error: cartError, isLoading: cartLoading }] =
     useCreateUserProductMutation();

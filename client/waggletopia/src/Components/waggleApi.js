@@ -171,7 +171,7 @@ export const waggleApi = createApi({
 
     fetchOrderSummary: builder.query({
       query: (order_id) => ({
-        url: "/user/orders/${order_id}/summary",
+        url: `/user/orders/${order_id}/summary`,
         providesTags: ["Orders"],
       }),
     }),

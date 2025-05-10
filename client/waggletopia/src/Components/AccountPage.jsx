@@ -30,8 +30,6 @@ function AccountPage() {
     );
   }
 
-  console.log(user);
-
   async function handleDeletion () {
     try {
       if (!window.confirm("Are you sure you want to delete your account?")) return;
