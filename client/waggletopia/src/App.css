@@ -18,11 +18,11 @@ h1 {
 }
 
 h2 {
-  font-size: 55px;
+  font-size: 70px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 p {
@@ -146,6 +146,13 @@ a:hover {
   height: auto;
 }
 
+/* ================== ABOUT US PAGE ================== */
+
+#AboutBody {
+  text-align: center;
+  width: 80%;
+  margin: 0 0 0 10%;
+}
 
 
 /* ================== PRODUCTS HOME ================== */

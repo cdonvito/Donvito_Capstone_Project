@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div>
+    <div id="AboutBody">
       <div>
         <h2>About Us</h2>
         <p>
@@ -13,7 +13,7 @@ function About() {
       </div>
 
       <div>
-        <h2>Our Mission</h2>
+        <h3>Our Mission</h3>
         <p>At Waggle Topia, we believe this simple truth:</p>
         <p>
           “Happiness for a dog boils down to plenty of play, nutritious treats,
@@ -22,24 +22,24 @@ function About() {
         <p>
           Our goal makes that truth real by delivering top-quality items that
           keep dogs healthy, entertained, and convinced you are the ultimate
-          pup-parent.P
+          pup-parent.
         </p>
       </div>
 
       <div>
-        <h2>Who We Are</h2>
-        <p>Dog Lovers First</p>
-        <p>A small team with hands-on experience caring for dogs of all ages and sizes.</p>
-        <h2>Simple Selection</h2>
+        <h3>Who We Are</h3>
+        <p>-Dog Lovers First</p>
+        <p>-A small team with hands-on experience caring for dogs of all ages and sizes.</p>
+        <h3>Simple Selection</h3>
         <p>We choose only reliable, safe products that work—no gimmicks, just good gear.</p>
       </div>
 
       <div>
-        <h2>Our Promise</h2>
-        <p>Durable & Dependable</p>
-        <p>If an item fails under normal use, we'll replace it—no fine print.</p>
-        <p>Easy Buying</p>
-        <p>Fast shipping & clear pricing.</p>
+        <h3>Our Promise</h3>
+        <p>-Durable & Dependable</p>
+        <p>-If an item fails under normal use, we'll replace it—no fine print.</p>
+        <p>-Easy Buying</p>
+        <p>-Fast shipping & clear pricing.</p>
       </div>
     </div>
   );
