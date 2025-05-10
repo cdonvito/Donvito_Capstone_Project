@@ -164,7 +164,7 @@ server.post("/api/product", async (req, res, next) => {
       req.body.includes,
       req.body.category,
       req.body.price,
-      req.body.stock,
+      req.body.stock
     );
     res.status(201).send(product);
   } catch (error) {
@@ -191,7 +191,7 @@ server.patch("/api/product/:id", async (req, res, next) => {
       req.body.includes,
       req.body.category,
       req.body.price,
-      req.body.stock,
+      req.body.stock
     );
     res.send(product);
   } catch (error) {
@@ -371,7 +371,7 @@ server.post("/api/user/checkout", async (req, res, next) => {
           order.id,
           req.user.id,
           item.product_id,
-          item.quantity,
+          item.quantity
         );
         await checkoutProductQuantity(item.product_id, item.quantity);
         return orderProduct;
@@ -414,8 +414,12 @@ server.get("/api/user/orders/:order_id/summary", async (req, res, next) => {
         .status(401)
         .send({ message: "You must be logged in to do that" });
     }
-    const { order_Id } = req.params;
-    const orderSummary = await fetchOrderProducts(order_Id, req.user.id);
+    const { order_id } = req.params;
+    const user_id = req.user.id;
+    console.log("[SUMMARY] order_id=", order_id, " user_id=", user_id);
+
+    const orderSummary = await fetchOrderProducts(order_id, user_id);
+    console.log("[SUMMARY] rows returned:", orderSummary);
     res.send(orderSummary);
   } catch (error) {
     next(error);
