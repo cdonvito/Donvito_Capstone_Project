@@ -31,6 +31,7 @@ p {
 
 p,
 ul,
+ol,
 button,
 .navigation-bar,
 .footer-bar {
@@ -38,6 +39,10 @@ button,
   font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #00669a;
+}
+
+ol {
+  font-size: 22px;
 }
 
 img {
@@ -154,6 +159,29 @@ a:hover {
   margin: 0 0 0 10%;
 }
 
+/* ================== TERMS OF USE PAGE ================== */
+#PrivacyHeader {
+  text-align: center;
+  width: 80%;
+  margin: 3% 0 3% 8%;
+}
+
+#PrivacyList {
+  width: 80%;
+  margin: 0 0 0 8%;
+}
+
+/* ================== PRIVACY POLICY PAGE ================== */
+#TermsOfUseHeader {
+  text-align: center;
+  width: 80%;
+  margin: 3% 0 3% 8%;
+}
+
+#TermsOfUseList {
+  width: 80%;
+  margin: 0 0 0 8%;
+}
 
 /* ================== PRODUCTS HOME ================== */
 #ProductsAvailableList {

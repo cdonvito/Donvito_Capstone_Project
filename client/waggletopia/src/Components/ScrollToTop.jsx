@@ -6,6 +6,7 @@ function ScrollToTop(page) {
   async function navigatePage (){
     await navigate(page);
   }
+  navigatePage();
   
   return () => {
     const header = document.getElementById("header_bar");
@@ -14,9 +15,6 @@ function ScrollToTop(page) {
     } else {
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 1000);
     }
-
-    // setTimeout(() => navigate(page), 20);
-    
   };
 }
 

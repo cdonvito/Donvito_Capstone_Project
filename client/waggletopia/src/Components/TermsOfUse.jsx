@@ -1,9 +1,10 @@
 function TermsOfUse() {
   return (
     <div>
-      <ol>
+      <h2 id="TermsOfUseHeader">Terms of Use</h2>
+      <ol id="TermsOfUseList">
         <li>
-          Acceptance of Terms
+          <strong>Acceptance of Terms</strong>
           <p>
             By accessing or using WaggleTopia's website (the “Site”), you agree
             to be bound by these Terms of Use and all applicable laws. If you do
@@ -11,7 +12,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Changes to Terms
+          <strong>Changes to Terms</strong>
           <p>
             We reserve the right to modify these Terms at any time. When changes
             are made, we will update the “Effective Date” above. Your continued
@@ -19,7 +20,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Use of the Site
+          <strong>Use of the Site</strong>
           <p>
             You agree to use the Site only for lawful purposes. You may not
             upload or transmit viruses, spam, or any material that infringes on
@@ -27,7 +28,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Intellectual Property
+          <strong>Intellectual Property</strong>
           <p>
             All content on this Site—including text, graphics, logos, and
             images—is the property of WaggleTopia or its licensors and is
@@ -37,7 +38,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Third-Party Links
+          <strong>Third-Party Links</strong>
           <p>
             The Site may contain links to third-party websites. We do not
             control and are not responsible for their content or practices.
@@ -45,7 +46,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Disclaimers
+          <strong>Disclaimers</strong>
           <p>
             THE SITE IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES
             OF ANY KIND, EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES,
@@ -54,7 +55,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Limitation of Liability
+          <strong>Limitation of Liability</strong>
           <p>
             IN NO EVENT SHALL WAGGLETOPIA BE LIABLE FOR ANY INDIRECT,
             INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN
@@ -62,7 +63,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Indemnification
+          <strong>Indemnification</strong>
           <p>
             You agree to indemnify and hold harmless WaggleTopia and its
             officers, directors, employees, and agents from any claim, loss,
@@ -71,7 +72,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Governing Law
+          <strong>Governing Law</strong>
           <p>
             These Terms shall be governed by the laws of the State of Michigan,
             without regard to its conflict of law principles. Any dispute must
@@ -80,7 +81,7 @@ function TermsOfUse() {
           </p>
         </li>
         <li>
-          Contact
+          <strong>Contact</strong>
           <p>
             If you have questions about these Terms, please contact us at
             support@waggletopia.com.
