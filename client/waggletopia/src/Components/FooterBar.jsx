@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
+
 
 function FooterBar () {
+  const scrollToTop = ScrollToTop();
+
+
   return (
     <div>
       <nav className="footer-bar">
 
         <div>
-          <Link to="/About" className="navigation-link">About Us</Link>
-          <Link to="/Terms-Of-Use" className="navigation-link">Terms of Use</Link>
-          <Link to="/Privacy-Policy" className="navigation-link">Privacy Policy</Link>
+          <a onClick={() => scrollToTop("/About")} className="navigation-link">About Us</a>
+          <a to="/Terms-Of-Use" className="navigation-link">Terms of Use</a>
+          <a to="/Privacy-Policy" className="navigation-link">Privacy Policy</a>
         </div>
       </nav>
     </div>

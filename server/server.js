@@ -416,7 +416,8 @@ server.get("/api/user/orders/:order_id/summary", async (req, res, next) => {
         .status(401)
         .send({ message: "You must be logged in to do that" });
     }
-    const orderSummary = await fetchOrderProducts(req.params, req.user.id);
+    const { order_id } = req.params;
+    const orderSummary = await fetchOrderProducts(order_id, req.user.id);
     res.send(orderSummary);
   } catch (error) {
     next(error);
