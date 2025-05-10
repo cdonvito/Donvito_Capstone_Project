@@ -6,7 +6,7 @@ html, body {
 }
 
 #header_bar {
-  background-color: #FFF9EF;
+  background-color: rgb(169, 218, 234);
 }
 
 .navigation-bar {
@@ -20,7 +20,7 @@ html, body {
 .navigation-link {
   padding: 0.7rem;
   text-decoration: none;
-  color: rgb(50, 50, 255);
+  color: rgb(231, 166, 1);
 }
 
 #logo {
