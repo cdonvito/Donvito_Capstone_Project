@@ -116,7 +116,7 @@ function ProductHome() {
             <div key={product.id} className="ProductsAvailable">
               <img src={tempImg} id="temp_img"></img>
               {/* <p>{product.img_url}</p> */}
-              <p>{product.description}</p>
+              <p>{product.name}</p>
               <p>{`$${product.price}`}</p>
 
               <button onClick={() => navigate(`/Product/${product.id}`)}>

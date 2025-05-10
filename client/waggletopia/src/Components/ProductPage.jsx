@@ -82,6 +82,7 @@ function ProductPage() {
       <div key={product.id} className="ProductsAvailable">
         <img src={tempImg} id="temp_img"></img>
         {/* <p>{product.img_url}</p> */}
+        <p>{product.name}</p>
         <p>{product.description}</p>
         <p>{`Size: ${product.size}`}</p>
         <p>{`Includes: ${product.includes}`}</p>
@@ -89,7 +90,7 @@ function ProductPage() {
         <p>{`$${product.price}`}</p>
         {token && !userProduct && (
           <button
-            onClick={() => handleAddtoCart(product.id, product.description)}
+            onClick={() => handleAddtoCart(product.id, product.name)}
           >
             Add to Cart
           </button>

@@ -52,6 +52,7 @@ export const waggleApi = createApi({
 
     createProduct: builder.mutation({
       query: ({
+        name,
         description,
         img_url,
         size,
@@ -62,13 +63,14 @@ export const waggleApi = createApi({
       }) => ({
         url: "/product",
         method: "POST",
-        body: { description, img_url, size, includes, category, price, stock },
+        body: { name, description, img_url, size, includes, category, price, stock },
       }),
     }),
 
     modifyProduct: builder.mutation({
       query: ({
         id,
+        name,
         description,
         img_url,
         size,
@@ -81,6 +83,7 @@ export const waggleApi = createApi({
         method: "PATCH",
         body: {
           id,
+          name,
           description,
           img_url,
           size,

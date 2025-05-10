@@ -158,6 +158,7 @@ server.post("/api/product", async (req, res, next) => {
       return res.status(401).send({ message: "Unauthorized" });
     }
     const product = await createProduct(
+      req.body.name,
       req.body.description,
       req.body.img_url,
       req.body.size,
@@ -185,6 +186,7 @@ server.patch("/api/product/:id", async (req, res, next) => {
     }
     const product = await modifyProduct(
       req.params.id,
+      req.body.name,
       req.body.description,
       req.body.img_url,
       req.body.size,

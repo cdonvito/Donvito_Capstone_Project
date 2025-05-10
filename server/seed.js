@@ -17,7 +17,7 @@ async function seed() {
   await createTables();
   console.log("tables created");
 
-  const [craig, madie, penny, scooby, bone, dentalTreat, dogBedLarge] =
+  const [craig, madie, penny, scooby, comb, spray, bag] =
     await Promise.all([
       createUser(
         "craigdonvito",
@@ -60,31 +60,34 @@ async function seed() {
         ""
       ),
       createProduct(
-        "Bone",
-        "bone.jpg",
-        "Large",
-        "1 Large Dog Bone",
-        "Treats",
-        12,
-        100
+        "Comb Set",
+        "Our professional-grade comb set keeps your dog looking its best.",
+        "comb_set.jpg",
+        "Small",
+        "1 Small 8 oz",
+        "Grooming",
+        9.67,
+        115,
       ),
       createProduct(
-        "Dental Treat",
-        "dental_treat.jpg",
+        "Deodorizing Spray",
+        "Our professional-grade deodorizing spray keeps your dog looking its best.",
+        "deodorizing_spray.jpg",
         "Large",
-        "1 Large Dental Treat",
-        "Treats",
-        3,
-        150
+        "1 Large 32 oz",
+        "Grooming",
+        19.84,
+        75,
       ),
       createProduct(
-        "Dog Bed",
-        "dog_bed_large.jpg",
-        "Large",
-        "1 Large Dog Bed",
-        "Beds",
-        40,
-        10
+        "Waterproof Bag",
+        "Our professional-grade waterproof bag keeps your dog looking its best.",
+        "waterproof_bag.jpg",
+        "Medium",
+        "1 Medium 16 oz",
+        "Grooming",
+        16.25,
+        2,
       ),
     ]);
 
@@ -95,10 +98,10 @@ async function seed() {
   console.log(await fetchProducts());
 
   const [user_product] = await Promise.all([
-    createUserProduct(craig.id, bone.id, 3),
-    createUserProduct(madie.id, dentalTreat.id, 2),
-    createUserProduct(penny.id, dogBedLarge.id, 1),
-    createUserProduct(scooby.id, dentalTreat.id, 4),
+    createUserProduct(craig.id, comb.id, 3),
+    createUserProduct(madie.id, spray.id, 2),
+    createUserProduct(penny.id, bag.id, 1),
+    createUserProduct(scooby.id, spray.id, 4),
   ]);
 
   console.log("user products created");
@@ -108,6 +111,7 @@ async function seed() {
   for (i = 0; i < productsToCreate.length; i++) {
     console.log(productsToCreate[i]);
     await createProduct(
+      productsToCreate[i].name,
       productsToCreate[i].description,
       productsToCreate[i].img_url,
       productsToCreate[i].size,

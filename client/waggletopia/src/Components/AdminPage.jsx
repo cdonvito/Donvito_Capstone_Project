@@ -142,6 +142,7 @@ function AdminPage() {
   function handleEditClick(product) {
     setEditingId(product.id);
     setProdInfo({
+      name: product.name,
       description: product.description,
       img_url: product.img_url,
       size: product.size,
@@ -169,16 +170,17 @@ function AdminPage() {
     <div>
       <h2>Admin Page</h2>
       <form onSubmit={editingId ? handleUpdate : handleCreate}>
-        {/* <label>
+        <label>
           Name
           <input
             type="text"
             placeholder="Product Name"
             name="name"
+            value={prodInfo.name}
             onChange={handleChange}
             required
           />
-        </label> */}
+        </label>
         <label>
           Description
           <input
@@ -296,6 +298,7 @@ function AdminPage() {
       {products.map((product) => {
         return (
           <div key={product.id} className="User">
+            <p>Name: {product.name}</p>
             <p>Description: {product.description}</p>
             <p>Image URL: {product.img_url}</p>
             <p>Size: {product.size}</p>
