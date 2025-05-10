@@ -26,6 +26,7 @@ async function createTables() {
 
     CREATE TABLE products(
       id UUID PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
       description VARCHAR(255) NOT NULL,
       img_url VARCHAR(255) NOT NULL,
       size VARCHAR(255) NOT NULL,
@@ -118,10 +119,11 @@ async function fetchUser(id) {
   return response.rows[0];
 }
 
-async function createProduct(description, img_url, size, includes, category, price, stock) {
-  const SQL = `INSERT INTO products(id, description, img_url, size, includes, category, price, stock) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`;
+async function createProduct(name, description, img_url, size, includes, category, price, stock) {
+  const SQL = `INSERT INTO products(id, name, description, img_url, size, includes, category, price, stock) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;`;
   const response = await client.query(SQL, [
     uuid.v4(),
+    name,
     description,
     img_url,
     size,
@@ -135,6 +137,7 @@ async function createProduct(description, img_url, size, includes, category, pri
 
 async function modifyProduct(
   id,
+  name,
   description,
   img_url,
   size,
@@ -143,9 +146,10 @@ async function modifyProduct(
   price,
   stock,
 ) {
-  const SQL = `UPDATE products SET description = $2, img_url = $3, size = $4, includes = $5, category = $6, price = $7, stock = $8 WHERE id = $1 RETURNING *;`;
+  const SQL = `UPDATE products SET name = $2, description = $3, img_url = $4, size = $5, includes = $6, category = $7, price = $8, stock = $9 WHERE id = $1 RETURNING *;`;
   const response = await client.query(SQL, [
     id,
+    name,
     description,
     img_url,
     size,
