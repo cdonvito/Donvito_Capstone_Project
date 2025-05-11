@@ -1,152 +1,9 @@
 const productsToCreate = [
   {
-    name: "Salmon & Sweet Potato Kibble",
-    description:
-      "Our salmon & sweet potato kibble blends premium salmon and wholesome sweet potato for balanced nutrition.",
-    img_url: "salmon_sweet_potato_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 16.44,
-    stock: 21,
-  },
-  {
-    name: "Chicken & Brown Rice Kibble",
-    description:
-      "Our chicken & brown rice kibble blends premium chicken and wholesome brown rice for balanced nutrition.",
-    img_url: "chicken_brown_rice_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 22.18,
-    stock: 91,
-  },
-  {
-    name: "Beef & Quinoa Kibble",
-    description:
-      "Our beef & quinoa kibble blends premium beef and wholesome quinoa for balanced nutrition.",
-    img_url: "beef_quinoa_kibble.jpg",
-    size: "Large",
-    includes: "1 Large bag (20 lb)",
-    category: "Food",
-    price: 38.76,
-    stock: 171,
-  },
-  {
-    name: "Turkey & Pea Kibble",
-    description:
-      "Our turkey & pea kibble blends premium turkey and wholesome pea for balanced nutrition.",
-    img_url: "turkey_pea_kibble.jpg",
-    size: "XLarge",
-    includes: "1 XLarge bag (30 lb)",
-    category: "Food",
-    price: 61.09,
-    stock: 180,
-  },
-  {
-    name: "Duck & Pumpkin Kibble",
-    description:
-      "Our duck & pumpkin kibble blends premium duck and wholesome pumpkin for balanced nutrition.",
-    img_url: "duck_pumpkin_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 18.3,
-    stock: 24,
-  },
-  {
     name: "Lamb & Oatmeal Kibble",
     description:
       "Our lamb & oatmeal kibble blends premium lamb and wholesome oatmeal for balanced nutrition.",
-    img_url: "lamb_oatmeal_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 32.31,
-    stock: 51,
-  },
-  {
-    name: "Venison & Barley Kibble",
-    description:
-      "Our venison & barley kibble blends premium venison and wholesome barley for balanced nutrition.",
-    img_url: "venison_barley_kibble.jpg",
-    size: "Large",
-    includes: "1 Large bag (20 lb)",
-    category: "Food",
-    price: 40.4,
-    stock: 160,
-  },
-  {
-    name: "Rabbit & Cranberry Kibble",
-    description:
-      "Our rabbit & cranberry kibble blends premium rabbit and wholesome cranberry for balanced nutrition.",
-    img_url: "rabbit_cranberry_kibble.jpg",
-    size: "XLarge",
-    includes: "1 XLarge bag (30 lb)",
-    category: "Food",
-    price: 63.23,
-    stock: 22,
-  },
-  {
-    name: "Salmon & Sweet Potato Kibble",
-    description:
-      "Our salmon & sweet potato kibble blends premium salmon and wholesome sweet potato for balanced nutrition.",
-    img_url: "salmon_sweet_potato_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 17.96,
-    stock: 41,
-  },
-  {
-    name: "Chicken & Brown Rice Kibble",
-    description:
-      "Our chicken & brown rice kibble blends premium chicken and wholesome brown rice for balanced nutrition.",
-    img_url: "chicken_brown_rice_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 25.13,
-    stock: 1,
-  },
-  {
-    name: "Beef & Quinoa Kibble",
-    description:
-      "Our beef & quinoa kibble blends premium beef and wholesome quinoa for balanced nutrition.",
-    img_url: "beef_quinoa_kibble.jpg",
-    size: "Large",
-    includes: "1 Large bag (20 lb)",
-    category: "Food",
-    price: 40.77,
-    stock: 123,
-  },
-  {
-    name: "Turkey & Pea Kibble",
-    description:
-      "Our turkey & pea kibble blends premium turkey and wholesome pea for balanced nutrition.",
-    img_url: "turkey_pea_kibble.jpg",
-    size: "XLarge",
-    includes: "1 XLarge bag (30 lb)",
-    category: "Food",
-    price: 50.74,
-    stock: 102,
-  },
-  {
-    name: "Duck & Pumpkin Kibble",
-    description:
-      "Our duck & pumpkin kibble blends premium duck and wholesome pumpkin for balanced nutrition.",
-    img_url: "duck_pumpkin_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 19.91,
-    stock: 52,
-  },
-  {
-    name: "Lamb & Oatmeal Kibble",
-    description:
-      "Our lamb & oatmeal kibble blends premium lamb and wholesome oatmeal for balanced nutrition.",
-    img_url: "lamb_oatmeal_kibble.jpg",
+    img_url: "lamb_oatmeal_kibble.png",
     size: "Medium",
     includes: "1 Medium bag (12 lb)",
     category: "Food",
@@ -157,7 +14,7 @@ const productsToCreate = [
     name: "Venison & Barley Kibble",
     description:
       "Our venison & barley kibble blends premium venison and wholesome barley for balanced nutrition.",
-    img_url: "venison_barley_kibble.jpg",
+    img_url: "venison_barley_kibble.png",
     size: "Large",
     includes: "1 Large bag (20 lb)",
     category: "Food",
@@ -165,21 +22,10 @@ const productsToCreate = [
     stock: 63,
   },
   {
-    name: "Rabbit & Cranberry Kibble",
-    description:
-      "Our rabbit & cranberry kibble blends premium rabbit and wholesome cranberry for balanced nutrition.",
-    img_url: "rabbit_cranberry_kibble.jpg",
-    size: "XLarge",
-    includes: "1 XLarge bag (30 lb)",
-    category: "Food",
-    price: 60.7,
-    stock: 169,
-  },
-  {
     name: "Salmon & Sweet Potato Kibble",
     description:
       "Our salmon & sweet potato kibble blends premium salmon and wholesome sweet potato for balanced nutrition.",
-    img_url: "salmon_sweet_potato_kibble.jpg",
+    img_url: "salmon_sweet_potato_kibble.png",
     size: "Small",
     includes: "1 Small bag (4 lb)",
     category: "Food",
@@ -187,109 +33,10 @@ const productsToCreate = [
     stock: 173,
   },
   {
-    name: "Chicken & Brown Rice Kibble",
-    description:
-      "Our chicken & brown rice kibble blends premium chicken and wholesome brown rice for balanced nutrition.",
-    img_url: "chicken_brown_rice_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 25.51,
-    stock: 157,
-  },
-  {
     name: "Beef & Quinoa Kibble",
     description:
       "Our beef & quinoa kibble blends premium beef and wholesome quinoa for balanced nutrition.",
-    img_url: "beef_quinoa_kibble.jpg",
-    size: "Large",
-    includes: "1 Large bag (20 lb)",
-    category: "Food",
-    price: 36.84,
-    stock: 181,
-  },
-  {
-    name: "Turkey & Pea Kibble",
-    description:
-      "Our turkey & pea kibble blends premium turkey and wholesome pea for balanced nutrition.",
-    img_url: "turkey_pea_kibble.jpg",
-    size: "XLarge",
-    includes: "1 XLarge bag (30 lb)",
-    category: "Food",
-    price: 63.08,
-    stock: 2,
-  },
-  {
-    name: "Duck & Pumpkin Kibble",
-    description:
-      "Our duck & pumpkin kibble blends premium duck and wholesome pumpkin for balanced nutrition.",
-    img_url: "duck_pumpkin_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 16.55,
-    stock: 81,
-  },
-  {
-    name: "Lamb & Oatmeal Kibble",
-    description:
-      "Our lamb & oatmeal kibble blends premium lamb and wholesome oatmeal for balanced nutrition.",
-    img_url: "lamb_oatmeal_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 22.38,
-    stock: 30,
-  },
-  {
-    name: "Venison & Barley Kibble",
-    description:
-      "Our venison & barley kibble blends premium venison and wholesome barley for balanced nutrition.",
-    img_url: "venison_barley_kibble.jpg",
-    size: "Large",
-    includes: "1 Large bag (20 lb)",
-    category: "Food",
-    price: 35.52,
-    stock: 86,
-  },
-  {
-    name: "Rabbit & Cranberry Kibble",
-    description:
-      "Our rabbit & cranberry kibble blends premium rabbit and wholesome cranberry for balanced nutrition.",
-    img_url: "rabbit_cranberry_kibble.jpg",
-    size: "XLarge",
-    includes: "1 XLarge bag (30 lb)",
-    category: "Food",
-    price: 62.6,
-    stock: 170,
-  },
-  {
-    name: "Salmon & Sweet Potato Kibble",
-    description:
-      "Our salmon & sweet potato kibble blends premium salmon and wholesome sweet potato for balanced nutrition.",
-    img_url: "salmon_sweet_potato_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 18.85,
-    stock: 27,
-  },
-  {
-    name: "Chicken & Brown Rice Kibble",
-    description:
-      "Our chicken & brown rice kibble blends premium chicken and wholesome brown rice for balanced nutrition.",
-    img_url: "chicken_brown_rice_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 27.21,
-    stock: 45,
-  },
-  {
-    name: "Beef & Quinoa Kibble",
-    description:
-      "Our beef & quinoa kibble blends premium beef and wholesome quinoa for balanced nutrition.",
-    img_url: "beef_quinoa_kibble.jpg",
+    img_url: "beef_quinoa_kibble.png",
     size: "Large",
     includes: "1 Large bag (20 lb)",
     category: "Food",
@@ -300,7 +47,7 @@ const productsToCreate = [
     name: "Turkey & Pea Kibble",
     description:
       "Our turkey & pea kibble blends premium turkey and wholesome pea for balanced nutrition.",
-    img_url: "turkey_pea_kibble.jpg",
+    img_url: "turkey_pea_kibble.png",
     size: "XLarge",
     includes: "1 XLarge bag (30 lb)",
     category: "Food",
@@ -311,7 +58,7 @@ const productsToCreate = [
     name: "Duck & Pumpkin Kibble",
     description:
       "Our duck & pumpkin kibble blends premium duck and wholesome pumpkin for balanced nutrition.",
-    img_url: "duck_pumpkin_kibble.jpg",
+    img_url: "duck_pumpkin_kibble.png",
     size: "Small",
     includes: "1 Small bag (4 lb)",
     category: "Food",
@@ -319,32 +66,10 @@ const productsToCreate = [
     stock: 83,
   },
   {
-    name: "Lamb & Oatmeal Kibble",
-    description:
-      "Our lamb & oatmeal kibble blends premium lamb and wholesome oatmeal for balanced nutrition.",
-    img_url: "lamb_oatmeal_kibble.jpg",
-    size: "Medium",
-    includes: "1 Medium bag (12 lb)",
-    category: "Food",
-    price: 34.4,
-    stock: 8,
-  },
-  {
-    name: "Venison & Barley Kibble",
-    description:
-      "Our venison & barley kibble blends premium venison and wholesome barley for balanced nutrition.",
-    img_url: "venison_barley_kibble.jpg",
-    size: "Large",
-    includes: "1 Large bag (20 lb)",
-    category: "Food",
-    price: 43.43,
-    stock: 52,
-  },
-  {
     name: "Rabbit & Cranberry Kibble",
     description:
       "Our rabbit & cranberry kibble blends premium rabbit and wholesome cranberry for balanced nutrition.",
-    img_url: "rabbit_cranberry_kibble.jpg",
+    img_url: "rabbit_cranberry_kibble.png",
     size: "XLarge",
     includes: "1 XLarge bag (30 lb)",
     category: "Food",
@@ -352,21 +77,10 @@ const productsToCreate = [
     stock: 51,
   },
   {
-    name: "Salmon & Sweet Potato Kibble",
-    description:
-      "Our salmon & sweet potato kibble blends premium salmon and wholesome sweet potato for balanced nutrition.",
-    img_url: "salmon_sweet_potato_kibble.jpg",
-    size: "Small",
-    includes: "1 Small bag (4 lb)",
-    category: "Food",
-    price: 16.52,
-    stock: 154,
-  },
-  {
     name: "Chicken & Brown Rice Kibble",
     description:
       "Our chicken & brown rice kibble blends premium chicken and wholesome brown rice for balanced nutrition.",
-    img_url: "chicken_brown_rice_kibble.jpg",
+    img_url: "chicken_brown_rice_kibble.png",
     size: "Medium",
     includes: "1 Medium bag (12 lb)",
     category: "Food",
@@ -377,7 +91,7 @@ const productsToCreate = [
     name: "Beef Bone Chew",
     description:
       "Our irresistible beef bone chew are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "beef_bone_chew.jpg",
+    img_url: "beef_bone_chew.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -388,7 +102,7 @@ const productsToCreate = [
     name: "Chicken Jerky Strips",
     description:
       "Our irresistible chicken jerky strips are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "chicken_jerky_strips.jpg",
+    img_url: "chicken_jerky_strips.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -399,7 +113,7 @@ const productsToCreate = [
     name: "Peanut Butter Biscuits",
     description:
       "Our irresistible peanut butter biscuits are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "peanut_butter_biscuits.jpg",
+    img_url: "peanut_butter_biscuits.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -410,7 +124,7 @@ const productsToCreate = [
     name: "Salmon Skin Rolls",
     description:
       "Our irresistible salmon skin rolls are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "salmon_skin_rolls.jpg",
+    img_url: "salmon_skin_rolls.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -421,7 +135,7 @@ const productsToCreate = [
     name: "Dental Sticks",
     description:
       "Our irresistible dental sticks are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "dental_sticks.jpg",
+    img_url: "dental_sticks.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -432,7 +146,7 @@ const productsToCreate = [
     name: "Yogurt Drops",
     description:
       "Our irresistible yogurt drops are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "yogurt_drops.jpg",
+    img_url: "yogurt_drops.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -443,7 +157,7 @@ const productsToCreate = [
     name: "Duck Tenders",
     description:
       "Our irresistible duck tenders are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "duck_tenders.jpg",
+    img_url: "duck_tenders.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -454,7 +168,7 @@ const productsToCreate = [
     name: "Lamb Lung Cubes",
     description:
       "Our irresistible lamb lung cubes are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "lamb_lung_cubes.jpg",
+    img_url: "lamb_lung_cubes.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -465,7 +179,7 @@ const productsToCreate = [
     name: "Venison Bites",
     description:
       "Our irresistible venison bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "venison_bites.jpg",
+    img_url: "venison_bites.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -476,7 +190,7 @@ const productsToCreate = [
     name: "Sweet Potato Chews",
     description:
       "Our irresistible sweet potato chews are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "sweet_potato_chews.jpg",
+    img_url: "sweet_potato_chews.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -487,7 +201,7 @@ const productsToCreate = [
     name: "Rabbit Ears",
     description:
       "Our irresistible rabbit ears are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "rabbit_ears.jpg",
+    img_url: "rabbit_ears.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -498,7 +212,7 @@ const productsToCreate = [
     name: "Pork Puffs",
     description:
       "Our irresistible pork puffs are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "pork_puffs.jpg",
+    img_url: "pork_puffs.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -509,7 +223,7 @@ const productsToCreate = [
     name: "Turkey Twists",
     description:
       "Our irresistible turkey twists are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "turkey_twists.jpg",
+    img_url: "turkey_twists.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -520,7 +234,7 @@ const productsToCreate = [
     name: "Cheese Bites",
     description:
       "Our irresistible cheese bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "cheese_bites.jpg",
+    img_url: "cheese_bites.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -531,7 +245,7 @@ const productsToCreate = [
     name: "Bacon Sausages",
     description:
       "Our irresistible bacon sausages are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "bacon_sausages.jpg",
+    img_url: "bacon_sausages.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -542,7 +256,7 @@ const productsToCreate = [
     name: "Fish Crunchies",
     description:
       "Our irresistible fish crunchies are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "fish_crunchies.jpg",
+    img_url: "fish_crunchies.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -553,7 +267,7 @@ const productsToCreate = [
     name: "Chicken Liver Treats",
     description:
       "Our irresistible chicken liver treats are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "chicken_liver_treats.jpg",
+    img_url: "chicken_liver_treats.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -564,7 +278,7 @@ const productsToCreate = [
     name: "Beef Tendon Chews",
     description:
       "Our irresistible beef tendon chews are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "beef_tendon_chews.jpg",
+    img_url: "beef_tendon_chews.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -575,7 +289,7 @@ const productsToCreate = [
     name: "Peanut Butter Cookies",
     description:
       "Our irresistible peanut butter cookies are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "peanut_butter_cookies.jpg",
+    img_url: "peanut_butter_cookies.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -586,7 +300,7 @@ const productsToCreate = [
     name: "Apple Cinnamon Bites",
     description:
       "Our irresistible apple cinnamon bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "apple_cinnamon_bites.jpg",
+    img_url: "apple_cinnamon_bites.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -597,7 +311,7 @@ const productsToCreate = [
     name: "Coconut Bites",
     description:
       "Our irresistible coconut bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "coconut_bites.jpg",
+    img_url: "coconut_bites.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -608,7 +322,7 @@ const productsToCreate = [
     name: "Pumpkin Biscuits",
     description:
       "Our irresistible pumpkin biscuits are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "pumpkin_biscuits.jpg",
+    img_url: "pumpkin_biscuits.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -619,7 +333,7 @@ const productsToCreate = [
     name: "Blueberry Drops",
     description:
       "Our irresistible blueberry drops are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "blueberry_drops.jpg",
+    img_url: "blueberry_drops.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -630,7 +344,7 @@ const productsToCreate = [
     name: "Banana Chips",
     description:
       "Our irresistible banana chips are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "banana_chips.jpg",
+    img_url: "banana_chips.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -641,7 +355,7 @@ const productsToCreate = [
     name: "Carrot Sticks",
     description:
       "Our irresistible carrot sticks are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "carrot_sticks.jpg",
+    img_url: "carrot_sticks.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -652,7 +366,7 @@ const productsToCreate = [
     name: "Coconut Chews",
     description:
       "Our irresistible coconut chews are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "coconut_chews.jpg",
+    img_url: "coconut_chews.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -663,7 +377,7 @@ const productsToCreate = [
     name: "Salmon Treat Bites",
     description:
       "Our irresistible salmon treat bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "salmon_treat_bites.jpg",
+    img_url: "salmon_treat_bites.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -674,7 +388,7 @@ const productsToCreate = [
     name: "Turkey Jerky Bites",
     description:
       "Our irresistible turkey jerky bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "turkey_jerky_bites.jpg",
+    img_url: "turkey_jerky_bites.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -685,7 +399,7 @@ const productsToCreate = [
     name: "Duck Liver Drops",
     description:
       "Our irresistible duck liver drops are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "duck_liver_drops.jpg",
+    img_url: "duck_liver_drops.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -696,7 +410,7 @@ const productsToCreate = [
     name: "Lamb Trachea Chews",
     description:
       "Our irresistible lamb trachea chews are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "lamb_trachea_chews.jpg",
+    img_url: "lamb_trachea_chews.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -707,7 +421,7 @@ const productsToCreate = [
     name: "Rabbit Heart Treats",
     description:
       "Our irresistible rabbit heart treats are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "rabbit_heart_treats.jpg",
+    img_url: "rabbit_heart_treats.png",
     size: "Large",
     includes: "1 Large pack (60 treats)",
     category: "Treats",
@@ -718,7 +432,7 @@ const productsToCreate = [
     name: "Beef Liver Bites",
     description:
       "Our irresistible beef liver bites are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "beef_liver_bites.jpg",
+    img_url: "beef_liver_bites.png",
     size: "XLarge",
     includes: "1 XLarge pack (100 treats)",
     category: "Treats",
@@ -729,7 +443,7 @@ const productsToCreate = [
     name: "Venison Jerky Strips",
     description:
       "Our irresistible venison jerky strips are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "venison_jerky_strips.jpg",
+    img_url: "venison_jerky_strips.png",
     size: "Small",
     includes: "1 Small pack (10 treats)",
     category: "Treats",
@@ -740,7 +454,7 @@ const productsToCreate = [
     name: "Sweet Potato Crisps",
     description:
       "Our irresistible sweet potato crisps are crafted from top-quality ingredients for a tasty reward.",
-    img_url: "sweet_potato_crisps.jpg",
+    img_url: "sweet_potato_crisps.png",
     size: "Medium",
     includes: "1 Medium pack (30 treats)",
     category: "Treats",
@@ -748,20 +462,9 @@ const productsToCreate = [
     stock: 82,
   },
   {
-    name: "Squeaky Ball",
-    description:
-      "Our engaging squeaky ball provides hours of fun and enrichment.",
-    img_url: "squeaky_ball.jpg",
-    size: "Small",
-    includes: "1 Small 1 toy",
-    category: "Toys",
-    price: 8.9,
-    stock: 112,
-  },
-  {
     name: "Tug Rope",
     description: "Our engaging tug rope provides hours of fun and enrichment.",
-    img_url: "tug_rope.jpg",
+    img_url: "tug_rope.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -772,7 +475,7 @@ const productsToCreate = [
     name: "Plush Bone",
     description:
       "Our engaging plush bone provides hours of fun and enrichment.",
-    img_url: "plush_bone.jpg",
+    img_url: "plush_bone.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -783,7 +486,7 @@ const productsToCreate = [
     name: "Rubber Chew Toy",
     description:
       "Our engaging rubber chew toy provides hours of fun and enrichment.",
-    img_url: "rubber_chew_toy.jpg",
+    img_url: "rubber_chew_toy.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -794,7 +497,7 @@ const productsToCreate = [
     name: "Interactive Treat Maze",
     description:
       "Our engaging interactive treat maze provides hours of fun and enrichment.",
-    img_url: "interactive_treat_maze.jpg",
+    img_url: "interactive_treat_maze.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -804,7 +507,7 @@ const productsToCreate = [
   {
     name: "Frisbee",
     description: "Our engaging frisbee provides hours of fun and enrichment.",
-    img_url: "frisbee.jpg",
+    img_url: "frisbee.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -815,7 +518,7 @@ const productsToCreate = [
     name: "Plush Donut",
     description:
       "Our engaging plush donut provides hours of fun and enrichment.",
-    img_url: "plush_donut.jpg",
+    img_url: "plush_donut.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -826,7 +529,7 @@ const productsToCreate = [
     name: "Bounce Ball",
     description:
       "Our engaging bounce ball provides hours of fun and enrichment.",
-    img_url: "bounce_ball.jpg",
+    img_url: "bounce_ball.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -837,7 +540,7 @@ const productsToCreate = [
     name: "Squeaky Duck",
     description:
       "Our engaging squeaky duck provides hours of fun and enrichment.",
-    img_url: "squeaky_duck.jpg",
+    img_url: "squeaky_duck.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -847,7 +550,7 @@ const productsToCreate = [
   {
     name: "Chew Ring",
     description: "Our engaging chew ring provides hours of fun and enrichment.",
-    img_url: "chew_ring.jpg",
+    img_url: "chew_ring.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -858,7 +561,7 @@ const productsToCreate = [
     name: "Interactive Puzzle Cube",
     description:
       "Our engaging interactive puzzle cube provides hours of fun and enrichment.",
-    img_url: "interactive_puzzle_cube.jpg",
+    img_url: "interactive_puzzle_cube.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -869,7 +572,7 @@ const productsToCreate = [
     name: "Plush Hedgehog",
     description:
       "Our engaging plush hedgehog provides hours of fun and enrichment.",
-    img_url: "plush_hedgehog.jpg",
+    img_url: "plush_hedgehog.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -879,7 +582,7 @@ const productsToCreate = [
   {
     name: "Rope Ball",
     description: "Our engaging rope ball provides hours of fun and enrichment.",
-    img_url: "rope_ball.jpg",
+    img_url: "rope_ball.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -890,7 +593,7 @@ const productsToCreate = [
     name: "Squeaky Star",
     description:
       "Our engaging squeaky star provides hours of fun and enrichment.",
-    img_url: "squeaky_star.jpg",
+    img_url: "squeaky_star.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -900,7 +603,7 @@ const productsToCreate = [
   {
     name: "Maze Cube",
     description: "Our engaging maze cube provides hours of fun and enrichment.",
-    img_url: "maze_cube.jpg",
+    img_url: "maze_cube.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -911,7 +614,7 @@ const productsToCreate = [
     name: "Plush Squirrel",
     description:
       "Our engaging plush squirrel provides hours of fun and enrichment.",
-    img_url: "plush_squirrel.jpg",
+    img_url: "plush_squirrel.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -921,7 +624,7 @@ const productsToCreate = [
   {
     name: "Tug Torus",
     description: "Our engaging tug torus provides hours of fun and enrichment.",
-    img_url: "tug_torus.jpg",
+    img_url: "tug_torus.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -932,7 +635,7 @@ const productsToCreate = [
     name: "Chew Stick",
     description:
       "Our engaging chew stick provides hours of fun and enrichment.",
-    img_url: "chew_stick.jpg",
+    img_url: "chew_stick.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -943,7 +646,7 @@ const productsToCreate = [
     name: "Treat Cube",
     description:
       "Our engaging treat cube provides hours of fun and enrichment.",
-    img_url: "treat_cube.jpg",
+    img_url: "treat_cube.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -954,7 +657,7 @@ const productsToCreate = [
     name: "Squeezy Turtle",
     description:
       "Our engaging squeezy turtle provides hours of fun and enrichment.",
-    img_url: "squeezy_turtle.jpg",
+    img_url: "squeezy_turtle.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -965,7 +668,7 @@ const productsToCreate = [
     name: "Interactive Flipper",
     description:
       "Our engaging interactive flipper provides hours of fun and enrichment.",
-    img_url: "interactive_flipper.jpg",
+    img_url: "interactive_flipper.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -976,7 +679,7 @@ const productsToCreate = [
     name: "Plush Hamburger",
     description:
       "Our engaging plush hamburger provides hours of fun and enrichment.",
-    img_url: "plush_hamburger.jpg",
+    img_url: "plush_hamburger.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -987,7 +690,7 @@ const productsToCreate = [
     name: "Rubber Frisbee",
     description:
       "Our engaging rubber frisbee provides hours of fun and enrichment.",
-    img_url: "rubber_frisbee.jpg",
+    img_url: "rubber_frisbee.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -997,7 +700,7 @@ const productsToCreate = [
   {
     name: "Tug Stick",
     description: "Our engaging tug stick provides hours of fun and enrichment.",
-    img_url: "tug_stick.jpg",
+    img_url: "tug_stick.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -1007,7 +710,7 @@ const productsToCreate = [
   {
     name: "Chew Bar",
     description: "Our engaging chew bar provides hours of fun and enrichment.",
-    img_url: "chew_bar.jpg",
+    img_url: "chew_bar.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -1018,7 +721,7 @@ const productsToCreate = [
     name: "Tennis Ball Pack",
     description:
       "Our engaging tennis ball pack provides hours of fun and enrichment.",
-    img_url: "tennis_ball_pack.jpg",
+    img_url: "tennis_ball_pack.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -1029,7 +732,7 @@ const productsToCreate = [
     name: "Knotted Rope Duo",
     description:
       "Our engaging knotted rope duo provides hours of fun and enrichment.",
-    img_url: "knotted_rope_duo.jpg",
+    img_url: "knotted_rope_duo.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -1040,7 +743,7 @@ const productsToCreate = [
     name: "Treat-Dispensing Ball",
     description:
       "Our engaging treat-dispensing ball provides hours of fun and enrichment.",
-    img_url: "treat_dispensing_ball.jpg",
+    img_url: "treat_dispensing_ball.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -1051,7 +754,7 @@ const productsToCreate = [
     name: "Rubber Bone",
     description:
       "Our engaging rubber bone provides hours of fun and enrichment.",
-    img_url: "rubber_bone.jpg",
+    img_url: "rubber_bone.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -1062,7 +765,7 @@ const productsToCreate = [
     name: "Plush Donut Large",
     description:
       "Our engaging plush donut large provides hours of fun and enrichment.",
-    img_url: "plush_donut_large.jpg",
+    img_url: "plush_donut_large.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -1073,7 +776,7 @@ const productsToCreate = [
     name: "Flying Disc",
     description:
       "Our engaging flying disc provides hours of fun and enrichment.",
-    img_url: "flying_disc.jpg",
+    img_url: "flying_disc.png",
     size: "Large",
     includes: "1 Large 1 large toy",
     category: "Toys",
@@ -1083,7 +786,7 @@ const productsToCreate = [
   {
     name: "Water Toy",
     description: "Our engaging water toy provides hours of fun and enrichment.",
-    img_url: "water_toy.jpg",
+    img_url: "water_toy.png",
     size: "XLarge",
     includes: "1 XLarge 1 jumbo toy",
     category: "Toys",
@@ -1093,7 +796,7 @@ const productsToCreate = [
   {
     name: "Glow Wand",
     description: "Our engaging glow wand provides hours of fun and enrichment.",
-    img_url: "glow_wand.jpg",
+    img_url: "glow_wand.png",
     size: "Small",
     includes: "1 Small 1 toy",
     category: "Toys",
@@ -1104,7 +807,7 @@ const productsToCreate = [
     name: "Squeaky Ball",
     description:
       "Our engaging squeaky ball provides hours of fun and enrichment.",
-    img_url: "squeaky_ball.jpg",
+    img_url: "squeaky_ball.png",
     size: "Medium",
     includes: "1 Medium 1 interactive toy",
     category: "Toys",
@@ -1115,7 +818,7 @@ const productsToCreate = [
     name: "Chicken & Beef Gravy",
     description:
       "Our flavorful chicken & beef gravy enhances any meal for picky eaters.",
-    img_url: "chicken_beef_gravy.jpg",
+    img_url: "chicken_beef_gravy.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1126,7 +829,7 @@ const productsToCreate = [
     name: "Salmon & Veggie Mix",
     description:
       "Our flavorful salmon & veggie mix enhances any meal for picky eaters.",
-    img_url: "salmon_veggie_mix.jpg",
+    img_url: "salmon_veggie_mix.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1137,7 +840,7 @@ const productsToCreate = [
     name: "Yogurt Drizzle",
     description:
       "Our flavorful yogurt drizzle enhances any meal for picky eaters.",
-    img_url: "yogurt_drizzle.jpg",
+    img_url: "yogurt_drizzle.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1148,7 +851,7 @@ const productsToCreate = [
     name: "Pumpkin Pur\u00e9e",
     description:
       "Our flavorful pumpkin pur\u00e9e enhances any meal for picky eaters.",
-    img_url: "pumpkin_pur\u00e9e.jpg",
+    img_url: "pumpkin_pur\u00e9e.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1159,7 +862,7 @@ const productsToCreate = [
     name: "Peanut Butter Spread",
     description:
       "Our flavorful peanut butter spread enhances any meal for picky eaters.",
-    img_url: "peanut_butter_spread.jpg",
+    img_url: "peanut_butter_spread.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1170,7 +873,7 @@ const productsToCreate = [
     name: "Turkey & Cranberry Sauce",
     description:
       "Our flavorful turkey & cranberry sauce enhances any meal for picky eaters.",
-    img_url: "turkey_cranberry_sauce.jpg",
+    img_url: "turkey_cranberry_sauce.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1181,7 +884,7 @@ const productsToCreate = [
     name: "Beef & Liver Drippings",
     description:
       "Our flavorful beef & liver drippings enhances any meal for picky eaters.",
-    img_url: "beef_liver_drippings.jpg",
+    img_url: "beef_liver_drippings.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1192,7 +895,7 @@ const productsToCreate = [
     name: "Duck & Apple Topping",
     description:
       "Our flavorful duck & apple topping enhances any meal for picky eaters.",
-    img_url: "duck_apple_topping.jpg",
+    img_url: "duck_apple_topping.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1203,7 +906,7 @@ const productsToCreate = [
     name: "Lamb & Rice Broth",
     description:
       "Our flavorful lamb & rice broth enhances any meal for picky eaters.",
-    img_url: "lamb_rice_broth.jpg",
+    img_url: "lamb_rice_broth.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1214,7 +917,7 @@ const productsToCreate = [
     name: "Fish & Herb Mix",
     description:
       "Our flavorful fish & herb mix enhances any meal for picky eaters.",
-    img_url: "fish_herb_mix.jpg",
+    img_url: "fish_herb_mix.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1225,7 +928,7 @@ const productsToCreate = [
     name: "Chicken & Quinoa Blend",
     description:
       "Our flavorful chicken & quinoa blend enhances any meal for picky eaters.",
-    img_url: "chicken_quinoa_blend.jpg",
+    img_url: "chicken_quinoa_blend.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1236,7 +939,7 @@ const productsToCreate = [
     name: "Venison & Berry Sauce",
     description:
       "Our flavorful venison & berry sauce enhances any meal for picky eaters.",
-    img_url: "venison_berry_sauce.jpg",
+    img_url: "venison_berry_sauce.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1247,7 +950,7 @@ const productsToCreate = [
     name: "Salmon & Spinach",
     description:
       "Our flavorful salmon & spinach enhances any meal for picky eaters.",
-    img_url: "salmon_spinach.jpg",
+    img_url: "salmon_spinach.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1258,7 +961,7 @@ const productsToCreate = [
     name: "Turkey & Pumpkin",
     description:
       "Our flavorful turkey & pumpkin enhances any meal for picky eaters.",
-    img_url: "turkey_pumpkin.jpg",
+    img_url: "turkey_pumpkin.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1269,7 +972,7 @@ const productsToCreate = [
     name: "Beef & Sweet Potato",
     description:
       "Our flavorful beef & sweet potato enhances any meal for picky eaters.",
-    img_url: "beef_sweet_potato.jpg",
+    img_url: "beef_sweet_potato.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1279,7 +982,7 @@ const productsToCreate = [
   {
     name: "Duck & Pea",
     description: "Our flavorful duck & pea enhances any meal for picky eaters.",
-    img_url: "duck_pea.jpg",
+    img_url: "duck_pea.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1290,7 +993,7 @@ const productsToCreate = [
     name: "Lamb & Lentil",
     description:
       "Our flavorful lamb & lentil enhances any meal for picky eaters.",
-    img_url: "lamb_lentil.jpg",
+    img_url: "lamb_lentil.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1301,7 +1004,7 @@ const productsToCreate = [
     name: "Chicken & Barley",
     description:
       "Our flavorful chicken & barley enhances any meal for picky eaters.",
-    img_url: "chicken_barley.jpg",
+    img_url: "chicken_barley.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1312,7 +1015,7 @@ const productsToCreate = [
     name: "Salmon & Oatmeal",
     description:
       "Our flavorful salmon & oatmeal enhances any meal for picky eaters.",
-    img_url: "salmon_oatmeal.jpg",
+    img_url: "salmon_oatmeal.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1323,7 +1026,7 @@ const productsToCreate = [
     name: "Turkey & Rice",
     description:
       "Our flavorful turkey & rice enhances any meal for picky eaters.",
-    img_url: "turkey_rice.jpg",
+    img_url: "turkey_rice.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1334,7 +1037,7 @@ const productsToCreate = [
     name: "Beef & Veggie Mix",
     description:
       "Our flavorful beef & veggie mix enhances any meal for picky eaters.",
-    img_url: "beef_veggie_mix.jpg",
+    img_url: "beef_veggie_mix.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1345,7 +1048,7 @@ const productsToCreate = [
     name: "Duck & Carrot",
     description:
       "Our flavorful duck & carrot enhances any meal for picky eaters.",
-    img_url: "duck_carrot.jpg",
+    img_url: "duck_carrot.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1356,7 +1059,7 @@ const productsToCreate = [
     name: "Lamb & Peach",
     description:
       "Our flavorful lamb & peach enhances any meal for picky eaters.",
-    img_url: "lamb_peach.jpg",
+    img_url: "lamb_peach.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1367,7 +1070,7 @@ const productsToCreate = [
     name: "Fish & Kale",
     description:
       "Our flavorful fish & kale enhances any meal for picky eaters.",
-    img_url: "fish_kale.jpg",
+    img_url: "fish_kale.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1378,7 +1081,7 @@ const productsToCreate = [
     name: "Chicken & Cranberry",
     description:
       "Our flavorful chicken & cranberry enhances any meal for picky eaters.",
-    img_url: "chicken_cranberry.jpg",
+    img_url: "chicken_cranberry.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1389,7 +1092,7 @@ const productsToCreate = [
     name: "Venison & Pumpkin",
     description:
       "Our flavorful venison & pumpkin enhances any meal for picky eaters.",
-    img_url: "venison_pumpkin.jpg",
+    img_url: "venison_pumpkin.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1400,7 +1103,7 @@ const productsToCreate = [
     name: "Salmon & Banana",
     description:
       "Our flavorful salmon & banana enhances any meal for picky eaters.",
-    img_url: "salmon_banana.jpg",
+    img_url: "salmon_banana.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1411,7 +1114,7 @@ const productsToCreate = [
     name: "Turkey & Pea",
     description:
       "Our flavorful turkey & pea enhances any meal for picky eaters.",
-    img_url: "turkey_pea.jpg",
+    img_url: "turkey_pea.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1422,7 +1125,7 @@ const productsToCreate = [
     name: "Beef & Broccoli",
     description:
       "Our flavorful beef & broccoli enhances any meal for picky eaters.",
-    img_url: "beef_broccoli.jpg",
+    img_url: "beef_broccoli.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1433,7 +1136,7 @@ const productsToCreate = [
     name: "Duck & Sweet Potato",
     description:
       "Our flavorful duck & sweet potato enhances any meal for picky eaters.",
-    img_url: "duck_sweet_potato.jpg",
+    img_url: "duck_sweet_potato.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1444,7 +1147,7 @@ const productsToCreate = [
     name: "Lamb & Apple",
     description:
       "Our flavorful lamb & apple enhances any meal for picky eaters.",
-    img_url: "lamb_apple.jpg",
+    img_url: "lamb_apple.png",
     size: "Large",
     includes: "1 Large 16 oz jar",
     category: "Food Toppers",
@@ -1455,7 +1158,7 @@ const productsToCreate = [
     name: "Fish & Sweet Potato",
     description:
       "Our flavorful fish & sweet potato enhances any meal for picky eaters.",
-    img_url: "fish_sweet_potato.jpg",
+    img_url: "fish_sweet_potato.png",
     size: "XLarge",
     includes: "1 XLarge 32 oz jar",
     category: "Food Toppers",
@@ -1466,7 +1169,7 @@ const productsToCreate = [
     name: "Chicken & Spinach",
     description:
       "Our flavorful chicken & spinach enhances any meal for picky eaters.",
-    img_url: "chicken_spinach.jpg",
+    img_url: "chicken_spinach.png",
     size: "Small",
     includes: "1 Small 4 oz jar",
     category: "Food Toppers",
@@ -1477,7 +1180,7 @@ const productsToCreate = [
     name: "Turkey & Herb",
     description:
       "Our flavorful turkey & herb enhances any meal for picky eaters.",
-    img_url: "turkey_herb.jpg",
+    img_url: "turkey_herb.png",
     size: "Medium",
     includes: "1 Medium 8 oz jar",
     category: "Food Toppers",
@@ -1488,7 +1191,7 @@ const productsToCreate = [
     name: "Portable Wire Crate",
     description:
       "Our sturdy portable wire crate offers safety and comfort for travel or home use.",
-    img_url: "portable_wire_crate.jpg",
+    img_url: "portable_wire_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1499,7 +1202,7 @@ const productsToCreate = [
     name: "Plastic Travel Crate",
     description:
       "Our sturdy plastic travel crate offers safety and comfort for travel or home use.",
-    img_url: "plastic_travel_crate.jpg",
+    img_url: "plastic_travel_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1510,7 +1213,7 @@ const productsToCreate = [
     name: "Soft-Sided Crate",
     description:
       "Our sturdy soft-sided crate offers safety and comfort for travel or home use.",
-    img_url: "soft_sided_crate.jpg",
+    img_url: "soft_sided_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1521,7 +1224,7 @@ const productsToCreate = [
     name: "Heavy-Duty Metal Crate",
     description:
       "Our sturdy heavy-duty metal crate offers safety and comfort for travel or home use.",
-    img_url: "heavy_duty_metal_crate.jpg",
+    img_url: "heavy_duty_metal_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1532,7 +1235,7 @@ const productsToCreate = [
     name: "Foldable Crate",
     description:
       "Our sturdy foldable crate offers safety and comfort for travel or home use.",
-    img_url: "foldable_crate.jpg",
+    img_url: "foldable_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1543,7 +1246,7 @@ const productsToCreate = [
     name: "Deluxe Padded Crate",
     description:
       "Our sturdy deluxe padded crate offers safety and comfort for travel or home use.",
-    img_url: "deluxe_padded_crate.jpg",
+    img_url: "deluxe_padded_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1554,7 +1257,7 @@ const productsToCreate = [
     name: "Ventilated Crate",
     description:
       "Our sturdy ventilated crate offers safety and comfort for travel or home use.",
-    img_url: "ventilated_crate.jpg",
+    img_url: "ventilated_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1565,7 +1268,7 @@ const productsToCreate = [
     name: "Aluminum Travel Crate",
     description:
       "Our sturdy aluminum travel crate offers safety and comfort for travel or home use.",
-    img_url: "aluminum_travel_crate.jpg",
+    img_url: "aluminum_travel_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1576,7 +1279,7 @@ const productsToCreate = [
     name: "Rust-Resistant Crate",
     description:
       "Our sturdy rust-resistant crate offers safety and comfort for travel or home use.",
-    img_url: "rust_resistant_crate.jpg",
+    img_url: "rust_resistant_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1587,7 +1290,7 @@ const productsToCreate = [
     name: "Double-Door Crate",
     description:
       "Our sturdy double-door crate offers safety and comfort for travel or home use.",
-    img_url: "double_door_crate.jpg",
+    img_url: "double_door_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1598,7 +1301,7 @@ const productsToCreate = [
     name: "Compact Soft Crate",
     description:
       "Our sturdy compact soft crate offers safety and comfort for travel or home use.",
-    img_url: "compact_soft_crate.jpg",
+    img_url: "compact_soft_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1609,7 +1312,7 @@ const productsToCreate = [
     name: "Outdoor Crate",
     description:
       "Our sturdy outdoor crate offers safety and comfort for travel or home use.",
-    img_url: "outdoor_crate.jpg",
+    img_url: "outdoor_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1620,7 +1323,7 @@ const productsToCreate = [
     name: "Decorative Wood Crate",
     description:
       "Our sturdy decorative wood crate offers safety and comfort for travel or home use.",
-    img_url: "decorative_wood_crate.jpg",
+    img_url: "decorative_wood_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1631,7 +1334,7 @@ const productsToCreate = [
     name: "Mesh Crate",
     description:
       "Our sturdy mesh crate offers safety and comfort for travel or home use.",
-    img_url: "mesh_crate.jpg",
+    img_url: "mesh_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1642,7 +1345,7 @@ const productsToCreate = [
     name: "Adjustable Crate",
     description:
       "Our sturdy adjustable crate offers safety and comfort for travel or home use.",
-    img_url: "adjustable_crate.jpg",
+    img_url: "adjustable_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1653,7 +1356,7 @@ const productsToCreate = [
     name: "Stackable Crate",
     description:
       "Our sturdy stackable crate offers safety and comfort for travel or home use.",
-    img_url: "stackable_crate.jpg",
+    img_url: "stackable_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1664,7 +1367,7 @@ const productsToCreate = [
     name: "Cooling Crate",
     description:
       "Our sturdy cooling crate offers safety and comfort for travel or home use.",
-    img_url: "cooling_crate.jpg",
+    img_url: "cooling_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1675,7 +1378,7 @@ const productsToCreate = [
     name: "Insulated Crate",
     description:
       "Our sturdy insulated crate offers safety and comfort for travel or home use.",
-    img_url: "insulated_crate.jpg",
+    img_url: "insulated_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1686,7 +1389,7 @@ const productsToCreate = [
     name: "Chew-Proof Crate",
     description:
       "Our sturdy chew-proof crate offers safety and comfort for travel or home use.",
-    img_url: "chew_proof_crate.jpg",
+    img_url: "chew_proof_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1697,7 +1400,7 @@ const productsToCreate = [
     name: "Collapsible Crate",
     description:
       "Our sturdy collapsible crate offers safety and comfort for travel or home use.",
-    img_url: "collapsible_crate.jpg",
+    img_url: "collapsible_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1708,7 +1411,7 @@ const productsToCreate = [
     name: "Crate with Wheels",
     description:
       "Our sturdy crate with wheels offers safety and comfort for travel or home use.",
-    img_url: "crate_with_wheels.jpg",
+    img_url: "crate_with_wheels.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1719,7 +1422,7 @@ const productsToCreate = [
     name: "Eco-Friendly Crate",
     description:
       "Our sturdy eco-friendly crate offers safety and comfort for travel or home use.",
-    img_url: "eco_friendly_crate.jpg",
+    img_url: "eco_friendly_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1730,7 +1433,7 @@ const productsToCreate = [
     name: "Deluxe Wire Crate",
     description:
       "Our sturdy deluxe wire crate offers safety and comfort for travel or home use.",
-    img_url: "deluxe_wire_crate.jpg",
+    img_url: "deluxe_wire_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1741,7 +1444,7 @@ const productsToCreate = [
     name: "Concealable Cover",
     description:
       "Our sturdy concealable cover offers safety and comfort for travel or home use.",
-    img_url: "concealable_cover.jpg",
+    img_url: "concealable_cover.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1752,7 +1455,7 @@ const productsToCreate = [
     name: "Photo Crate",
     description:
       "Our sturdy photo crate offers safety and comfort for travel or home use.",
-    img_url: "photo_crate.jpg",
+    img_url: "photo_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1763,7 +1466,7 @@ const productsToCreate = [
     name: "Expandable Crate",
     description:
       "Our sturdy expandable crate offers safety and comfort for travel or home use.",
-    img_url: "expandable_crate.jpg",
+    img_url: "expandable_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1774,7 +1477,7 @@ const productsToCreate = [
     name: "Crate with Divider",
     description:
       "Our sturdy crate with divider offers safety and comfort for travel or home use.",
-    img_url: "crate_with_divider.jpg",
+    img_url: "crate_with_divider.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1785,7 +1488,7 @@ const productsToCreate = [
     name: "Puppy Starter Crate",
     description:
       "Our sturdy puppy starter crate offers safety and comfort for travel or home use.",
-    img_url: "puppy_starter_crate.jpg",
+    img_url: "puppy_starter_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1796,7 +1499,7 @@ const productsToCreate = [
     name: "XL Travel Crate",
     description:
       "Our sturdy xl travel crate offers safety and comfort for travel or home use.",
-    img_url: "xl_travel_crate.jpg",
+    img_url: "xl_travel_crate.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1807,7 +1510,7 @@ const productsToCreate = [
     name: "XXL Wire Crate",
     description:
       "Our sturdy xxl wire crate offers safety and comfort for travel or home use.",
-    img_url: "xxl_wire_crate.jpg",
+    img_url: "xxl_wire_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1818,7 +1521,7 @@ const productsToCreate = [
     name: "Steel Frame Crate",
     description:
       "Our sturdy steel frame crate offers safety and comfort for travel or home use.",
-    img_url: "steel_frame_crate.jpg",
+    img_url: "steel_frame_crate.png",
     size: "Large",
     includes: "1 Large Fits up to 50 lbs",
     category: "Crates",
@@ -1829,7 +1532,7 @@ const productsToCreate = [
     name: "Canvas Crate",
     description:
       "Our sturdy canvas crate offers safety and comfort for travel or home use.",
-    img_url: "canvas_crate.jpg",
+    img_url: "canvas_crate.png",
     size: "XLarge",
     includes: "1 XLarge Fits up to 70 lbs",
     category: "Crates",
@@ -1840,7 +1543,7 @@ const productsToCreate = [
     name: "Crate with Tray",
     description:
       "Our sturdy crate with tray offers safety and comfort for travel or home use.",
-    img_url: "crate_with_tray.jpg",
+    img_url: "crate_with_tray.png",
     size: "Small",
     includes: "1 Small Fits up to 15 lbs",
     category: "Crates",
@@ -1851,7 +1554,7 @@ const productsToCreate = [
     name: "Outdoor Mesh Crate",
     description:
       "Our sturdy outdoor mesh crate offers safety and comfort for travel or home use.",
-    img_url: "outdoor_mesh_crate.jpg",
+    img_url: "outdoor_mesh_crate.png",
     size: "Medium",
     includes: "1 Medium Fits up to 30 lbs",
     category: "Crates",
@@ -1861,7 +1564,7 @@ const productsToCreate = [
   {
     name: "Nylon Collar",
     description: "Our durable nylon collar combines style and functionality.",
-    img_url: "nylon_collar.jpg",
+    img_url: "nylon_collar.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1871,7 +1574,7 @@ const productsToCreate = [
   {
     name: "Leather Collar",
     description: "Our durable leather collar combines style and functionality.",
-    img_url: "leather_collar.jpg",
+    img_url: "leather_collar.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1882,7 +1585,7 @@ const productsToCreate = [
     name: "Reflective Harness",
     description:
       "Our durable reflective harness combines style and functionality.",
-    img_url: "reflective_harness.jpg",
+    img_url: "reflective_harness.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1892,7 +1595,7 @@ const productsToCreate = [
   {
     name: "Padded Harness",
     description: "Our durable padded harness combines style and functionality.",
-    img_url: "padded_harness.jpg",
+    img_url: "padded_harness.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1903,7 +1606,7 @@ const productsToCreate = [
     name: "Retractable Leash",
     description:
       "Our durable retractable leash combines style and functionality.",
-    img_url: "retractable_leash.jpg",
+    img_url: "retractable_leash.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1913,7 +1616,7 @@ const productsToCreate = [
   {
     name: "Rope Leash",
     description: "Our durable rope leash combines style and functionality.",
-    img_url: "rope_leash.jpg",
+    img_url: "rope_leash.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1923,7 +1626,7 @@ const productsToCreate = [
   {
     name: "Chain Leash",
     description: "Our durable chain leash combines style and functionality.",
-    img_url: "chain_leash.jpg",
+    img_url: "chain_leash.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1934,7 +1637,7 @@ const productsToCreate = [
     name: "Hands-Free Leash",
     description:
       "Our durable hands-free leash combines style and functionality.",
-    img_url: "hands_free_leash.jpg",
+    img_url: "hands_free_leash.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1945,7 +1648,7 @@ const productsToCreate = [
     name: "Martingale Collar",
     description:
       "Our durable martingale collar combines style and functionality.",
-    img_url: "martingale_collar.jpg",
+    img_url: "martingale_collar.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1956,7 +1659,7 @@ const productsToCreate = [
     name: "Breakaway Collar",
     description:
       "Our durable breakaway collar combines style and functionality.",
-    img_url: "breakaway_collar.jpg",
+    img_url: "breakaway_collar.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1967,7 +1670,7 @@ const productsToCreate = [
     name: "Step-In Harness",
     description:
       "Our durable step-in harness combines style and functionality.",
-    img_url: "step_in_harness.jpg",
+    img_url: "step_in_harness.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1978,7 +1681,7 @@ const productsToCreate = [
     name: "No-Pull Harness",
     description:
       "Our durable no-pull harness combines style and functionality.",
-    img_url: "no_pull_harness.jpg",
+    img_url: "no_pull_harness.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1989,7 +1692,7 @@ const productsToCreate = [
     name: "Adjustable Leash",
     description:
       "Our durable adjustable leash combines style and functionality.",
-    img_url: "adjustable_leash.jpg",
+    img_url: "adjustable_leash.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -1999,7 +1702,7 @@ const productsToCreate = [
   {
     name: "Bungee Leash",
     description: "Our durable bungee leash combines style and functionality.",
-    img_url: "bungee_leash.jpg",
+    img_url: "bungee_leash.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2009,7 +1712,7 @@ const productsToCreate = [
   {
     name: "Floral Collar",
     description: "Our durable floral collar combines style and functionality.",
-    img_url: "floral_collar.jpg",
+    img_url: "floral_collar.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2019,7 +1722,7 @@ const productsToCreate = [
   {
     name: "Studded Collar",
     description: "Our durable studded collar combines style and functionality.",
-    img_url: "studded_collar.jpg",
+    img_url: "studded_collar.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2030,7 +1733,7 @@ const productsToCreate = [
     name: "Personalized Collar",
     description:
       "Our durable personalized collar combines style and functionality.",
-    img_url: "personalized_collar.jpg",
+    img_url: "personalized_collar.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2041,7 +1744,7 @@ const productsToCreate = [
     name: "Glow-in-the-Dark Leash",
     description:
       "Our durable glow-in-the-dark leash combines style and functionality.",
-    img_url: "glow_in_the_dark_leash.jpg",
+    img_url: "glow_in_the_dark_leash.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2052,7 +1755,7 @@ const productsToCreate = [
     name: "Traffic Handle Leash",
     description:
       "Our durable traffic handle leash combines style and functionality.",
-    img_url: "traffic_handle_leash.jpg",
+    img_url: "traffic_handle_leash.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2063,7 +1766,7 @@ const productsToCreate = [
     name: "Double Clip Leash",
     description:
       "Our durable double clip leash combines style and functionality.",
-    img_url: "double_clip_leash.jpg",
+    img_url: "double_clip_leash.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2074,7 +1777,7 @@ const productsToCreate = [
     name: "Seatbelt Tether",
     description:
       "Our durable seatbelt tether combines style and functionality.",
-    img_url: "seatbelt_tether.jpg",
+    img_url: "seatbelt_tether.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2084,7 +1787,7 @@ const productsToCreate = [
   {
     name: "Safety Harness",
     description: "Our durable safety harness combines style and functionality.",
-    img_url: "safety_harness.jpg",
+    img_url: "safety_harness.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2094,7 +1797,7 @@ const productsToCreate = [
   {
     name: "Vest Harness",
     description: "Our durable vest harness combines style and functionality.",
-    img_url: "vest_harness.jpg",
+    img_url: "vest_harness.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2105,7 +1808,7 @@ const productsToCreate = [
     name: "Front-Clip Harness",
     description:
       "Our durable front-clip harness combines style and functionality.",
-    img_url: "front_clip_harness.jpg",
+    img_url: "front_clip_harness.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2116,7 +1819,7 @@ const productsToCreate = [
     name: "Back-Clip Harness",
     description:
       "Our durable back-clip harness combines style and functionality.",
-    img_url: "back_clip_harness.jpg",
+    img_url: "back_clip_harness.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2126,7 +1829,7 @@ const productsToCreate = [
   {
     name: "Padded Leash",
     description: "Our durable padded leash combines style and functionality.",
-    img_url: "padded_leash.jpg",
+    img_url: "padded_leash.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2136,7 +1839,7 @@ const productsToCreate = [
   {
     name: "Elastic Leash",
     description: "Our durable elastic leash combines style and functionality.",
-    img_url: "elastic_leash.jpg",
+    img_url: "elastic_leash.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2147,7 +1850,7 @@ const productsToCreate = [
     name: "Harness with Handle",
     description:
       "Our durable harness with handle combines style and functionality.",
-    img_url: "harness_with_handle.jpg",
+    img_url: "harness_with_handle.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2158,7 +1861,7 @@ const productsToCreate = [
     name: "Leash with Traffic Handle",
     description:
       "Our durable leash with traffic handle combines style and functionality.",
-    img_url: "leash_with_traffic_handle.jpg",
+    img_url: "leash_with_traffic_handle.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2169,7 +1872,7 @@ const productsToCreate = [
     name: "Reflective Collar",
     description:
       "Our durable reflective collar combines style and functionality.",
-    img_url: "reflective_collar.jpg",
+    img_url: "reflective_collar.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2180,7 +1883,7 @@ const productsToCreate = [
     name: "Waterproof Leash",
     description:
       "Our durable waterproof leash combines style and functionality.",
-    img_url: "waterproof_leash.jpg",
+    img_url: "waterproof_leash.png",
     size: "Large",
     includes: "1 Large Fits neck 18-24 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2190,7 +1893,7 @@ const productsToCreate = [
   {
     name: "Braided Collar",
     description: "Our durable braided collar combines style and functionality.",
-    img_url: "braided_collar.jpg",
+    img_url: "braided_collar.png",
     size: "XLarge",
     includes: "1 XLarge Fits neck 24-30 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2201,7 +1904,7 @@ const productsToCreate = [
     name: "Chain Choke Collar",
     description:
       "Our durable chain choke collar combines style and functionality.",
-    img_url: "chain_choke_collar.jpg",
+    img_url: "chain_choke_collar.png",
     size: "Small",
     includes: "1 Small Fits neck 8-12 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2212,7 +1915,7 @@ const productsToCreate = [
     name: "Choke-Free Collar",
     description:
       "Our durable choke-free collar combines style and functionality.",
-    img_url: "choke_free_collar.jpg",
+    img_url: "choke_free_collar.png",
     size: "Medium",
     includes: "1 Medium Fits neck 12-18 inches",
     category: "Collars, Harnesses & Leashes",
@@ -2220,20 +1923,9 @@ const productsToCreate = [
     stock: 50,
   },
   {
-    name: "Orthopedic Memory Foam Bed",
-    description:
-      "Our cozy orthopedic memory foam bed ensures restful sleep and support.",
-    img_url: "orthopedic_memory_foam_bed.jpg",
-    size: "Small",
-    includes: "1 Small 24 x 18 inches",
-    category: "Beds",
-    price: 21.97,
-    stock: 55,
-  },
-  {
     name: "Bolster Bed",
     description: "Our cozy bolster bed ensures restful sleep and support.",
-    img_url: "bolster_bed.jpg",
+    img_url: "bolster_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2243,7 +1935,7 @@ const productsToCreate = [
   {
     name: "Donut Bed",
     description: "Our cozy donut bed ensures restful sleep and support.",
-    img_url: "donut_bed.jpg",
+    img_url: "donut_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2253,7 +1945,7 @@ const productsToCreate = [
   {
     name: "Cooling Gel Bed",
     description: "Our cozy cooling gel bed ensures restful sleep and support.",
-    img_url: "cooling_gel_bed.jpg",
+    img_url: "cooling_gel_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2264,7 +1956,7 @@ const productsToCreate = [
     name: "Elevated Mesh Bed",
     description:
       "Our cozy elevated mesh bed ensures restful sleep and support.",
-    img_url: "elevated_mesh_bed.jpg",
+    img_url: "elevated_mesh_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2274,7 +1966,7 @@ const productsToCreate = [
   {
     name: "Heated Bed",
     description: "Our cozy heated bed ensures restful sleep and support.",
-    img_url: "heated_bed.jpg",
+    img_url: "heated_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2284,7 +1976,7 @@ const productsToCreate = [
   {
     name: "Waterproof Bed",
     description: "Our cozy waterproof bed ensures restful sleep and support.",
-    img_url: "waterproof_bed.jpg",
+    img_url: "waterproof_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2294,7 +1986,7 @@ const productsToCreate = [
   {
     name: "Nest-Style Bed",
     description: "Our cozy nest-style bed ensures restful sleep and support.",
-    img_url: "nest_style_bed.jpg",
+    img_url: "nest_style_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2304,7 +1996,7 @@ const productsToCreate = [
   {
     name: "Travel Bed",
     description: "Our cozy travel bed ensures restful sleep and support.",
-    img_url: "travel_bed.jpg",
+    img_url: "travel_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2314,7 +2006,7 @@ const productsToCreate = [
   {
     name: "Reversible Bed",
     description: "Our cozy reversible bed ensures restful sleep and support.",
-    img_url: "reversible_bed.jpg",
+    img_url: "reversible_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2325,7 +2017,7 @@ const productsToCreate = [
     name: "Orthopedic Pillow Bed",
     description:
       "Our cozy orthopedic pillow bed ensures restful sleep and support.",
-    img_url: "orthopedic_pillow_bed.jpg",
+    img_url: "orthopedic_pillow_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2336,7 +2028,7 @@ const productsToCreate = [
     name: "Luxury Faux Fur Bed",
     description:
       "Our cozy luxury faux fur bed ensures restful sleep and support.",
-    img_url: "luxury_faux_fur_bed.jpg",
+    img_url: "luxury_faux_fur_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2347,7 +2039,7 @@ const productsToCreate = [
     name: "Canvas Roll-Up Bed",
     description:
       "Our cozy canvas roll-up bed ensures restful sleep and support.",
-    img_url: "canvas_roll_up_bed.jpg",
+    img_url: "canvas_roll_up_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2357,7 +2049,7 @@ const productsToCreate = [
   {
     name: "Cave-Style Bed",
     description: "Our cozy cave-style bed ensures restful sleep and support.",
-    img_url: "cave_style_bed.jpg",
+    img_url: "cave_style_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2368,7 +2060,7 @@ const productsToCreate = [
     name: "Velvet Comfort Bed",
     description:
       "Our cozy velvet comfort bed ensures restful sleep and support.",
-    img_url: "velvet_comfort_bed.jpg",
+    img_url: "velvet_comfort_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2379,7 +2071,7 @@ const productsToCreate = [
     name: "Canvas Raised Bed",
     description:
       "Our cozy canvas raised bed ensures restful sleep and support.",
-    img_url: "canvas_raised_bed.jpg",
+    img_url: "canvas_raised_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2389,7 +2081,7 @@ const productsToCreate = [
   {
     name: "Round Pillow Bed",
     description: "Our cozy round pillow bed ensures restful sleep and support.",
-    img_url: "round_pillow_bed.jpg",
+    img_url: "round_pillow_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2399,7 +2091,7 @@ const productsToCreate = [
   {
     name: "Travel Pad Bed",
     description: "Our cozy travel pad bed ensures restful sleep and support.",
-    img_url: "travel_pad_bed.jpg",
+    img_url: "travel_pad_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2410,7 +2102,7 @@ const productsToCreate = [
     name: "Indoor/Outdoor Bed",
     description:
       "Our cozy indoor/outdoor bed ensures restful sleep and support.",
-    img_url: "indoor/outdoor_bed.jpg",
+    img_url: "indoor/outdoor_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2421,7 +2113,7 @@ const productsToCreate = [
     name: "Deluxe Pillow Bed",
     description:
       "Our cozy deluxe pillow bed ensures restful sleep and support.",
-    img_url: "deluxe_pillow_bed.jpg",
+    img_url: "deluxe_pillow_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2432,7 +2124,7 @@ const productsToCreate = [
     name: "Supportive Pillow Bed",
     description:
       "Our cozy supportive pillow bed ensures restful sleep and support.",
-    img_url: "supportive_pillow_bed.jpg",
+    img_url: "supportive_pillow_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2442,7 +2134,7 @@ const productsToCreate = [
   {
     name: "Chevron Bed",
     description: "Our cozy chevron bed ensures restful sleep and support.",
-    img_url: "chevron_bed.jpg",
+    img_url: "chevron_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2452,7 +2144,7 @@ const productsToCreate = [
   {
     name: "Striped Bed",
     description: "Our cozy striped bed ensures restful sleep and support.",
-    img_url: "striped_bed.jpg",
+    img_url: "striped_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2462,7 +2154,7 @@ const productsToCreate = [
   {
     name: "Plaid Bed",
     description: "Our cozy plaid bed ensures restful sleep and support.",
-    img_url: "plaid_bed.jpg",
+    img_url: "plaid_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2472,7 +2164,7 @@ const productsToCreate = [
   {
     name: "Patchwork Bed",
     description: "Our cozy patchwork bed ensures restful sleep and support.",
-    img_url: "patchwork_bed.jpg",
+    img_url: "patchwork_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2483,7 +2175,7 @@ const productsToCreate = [
     name: "Sailor Stripe Bed",
     description:
       "Our cozy sailor stripe bed ensures restful sleep and support.",
-    img_url: "sailor_stripe_bed.jpg",
+    img_url: "sailor_stripe_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2493,7 +2185,7 @@ const productsToCreate = [
   {
     name: "Floral Bed",
     description: "Our cozy floral bed ensures restful sleep and support.",
-    img_url: "floral_bed.jpg",
+    img_url: "floral_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2503,7 +2195,7 @@ const productsToCreate = [
   {
     name: "Boho Chic Bed",
     description: "Our cozy boho chic bed ensures restful sleep and support.",
-    img_url: "boho_chic_bed.jpg",
+    img_url: "boho_chic_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2514,7 +2206,7 @@ const productsToCreate = [
     name: "Patchwork Canvas Bed",
     description:
       "Our cozy patchwork canvas bed ensures restful sleep and support.",
-    img_url: "patchwork_canvas_bed.jpg",
+    img_url: "patchwork_canvas_bed.png",
     size: "Small",
     includes: "1 Small 24 x 18 inches",
     category: "Beds",
@@ -2525,7 +2217,7 @@ const productsToCreate = [
     name: "Outdoor Lounger Bed",
     description:
       "Our cozy outdoor lounger bed ensures restful sleep and support.",
-    img_url: "outdoor_lounger_bed.jpg",
+    img_url: "outdoor_lounger_bed.png",
     size: "Medium",
     includes: "1 Medium 30 x 20 inches",
     category: "Beds",
@@ -2536,7 +2228,7 @@ const productsToCreate = [
     name: "Indoor Lounger Bed",
     description:
       "Our cozy indoor lounger bed ensures restful sleep and support.",
-    img_url: "indoor_lounger_bed.jpg",
+    img_url: "indoor_lounger_bed.png",
     size: "Large",
     includes: "1 Large 36 x 24 inches",
     category: "Beds",
@@ -2547,7 +2239,7 @@ const productsToCreate = [
     name: "Orthopedic Memory Foam Bed",
     description:
       "Our cozy orthopedic memory foam bed ensures restful sleep and support.",
-    img_url: "orthopedic_memory_foam_bed.jpg",
+    img_url: "orthopedic_memory_foam_bed.png",
     size: "XLarge",
     includes: "1 XLarge 48 x 30 inches",
     category: "Beds",
@@ -2558,7 +2250,7 @@ const productsToCreate = [
     name: "Stainless Steel Bowl",
     description:
       "Our versatile stainless steel bowl is perfect for meals and water.",
-    img_url: "stainless_steel_bowl.jpg",
+    img_url: "stainless_steel_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2568,7 +2260,7 @@ const productsToCreate = [
   {
     name: "Ceramic Bowl",
     description: "Our versatile ceramic bowl is perfect for meals and water.",
-    img_url: "ceramic_bowl.jpg",
+    img_url: "ceramic_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2579,7 +2271,7 @@ const productsToCreate = [
     name: "Silicone Foldable Bowl",
     description:
       "Our versatile silicone foldable bowl is perfect for meals and water.",
-    img_url: "silicone_foldable_bowl.jpg",
+    img_url: "silicone_foldable_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2589,7 +2281,7 @@ const productsToCreate = [
   {
     name: "Elevated Bowl",
     description: "Our versatile elevated bowl is perfect for meals and water.",
-    img_url: "elevated_bowl.jpg",
+    img_url: "elevated_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2599,7 +2291,7 @@ const productsToCreate = [
   {
     name: "Non-Slip Bowl",
     description: "Our versatile non-slip bowl is perfect for meals and water.",
-    img_url: "non_slip_bowl.jpg",
+    img_url: "non_slip_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2610,7 +2302,7 @@ const productsToCreate = [
     name: "Double Bowl Set",
     description:
       "Our versatile double bowl set is perfect for meals and water.",
-    img_url: "double_bowl_set.jpg",
+    img_url: "double_bowl_set.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2621,7 +2313,7 @@ const productsToCreate = [
     name: "Travel Water Bottle Bowl",
     description:
       "Our versatile travel water bottle bowl is perfect for meals and water.",
-    img_url: "travel_water_bottle_bowl.jpg",
+    img_url: "travel_water_bottle_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2632,7 +2324,7 @@ const productsToCreate = [
     name: "Slow Feeder Bowl",
     description:
       "Our versatile slow feeder bowl is perfect for meals and water.",
-    img_url: "slow_feeder_bowl.jpg",
+    img_url: "slow_feeder_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2643,7 +2335,7 @@ const productsToCreate = [
     name: "Collapsible Bowl",
     description:
       "Our versatile collapsible bowl is perfect for meals and water.",
-    img_url: "collapsible_bowl.jpg",
+    img_url: "collapsible_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2653,7 +2345,7 @@ const productsToCreate = [
   {
     name: "Divider Bowl",
     description: "Our versatile divider bowl is perfect for meals and water.",
-    img_url: "divider_bowl.jpg",
+    img_url: "divider_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2663,7 +2355,7 @@ const productsToCreate = [
   {
     name: "Melamine Bowl",
     description: "Our versatile melamine bowl is perfect for meals and water.",
-    img_url: "melamine_bowl.jpg",
+    img_url: "melamine_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2673,7 +2365,7 @@ const productsToCreate = [
   {
     name: "Bamboo Bowl",
     description: "Our versatile bamboo bowl is perfect for meals and water.",
-    img_url: "bamboo_bowl.jpg",
+    img_url: "bamboo_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2683,7 +2375,7 @@ const productsToCreate = [
   {
     name: "Plastic Bowl",
     description: "Our versatile plastic bowl is perfect for meals and water.",
-    img_url: "plastic_bowl.jpg",
+    img_url: "plastic_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2694,7 +2386,7 @@ const productsToCreate = [
     name: "Rust-Resistant Bowl",
     description:
       "Our versatile rust-resistant bowl is perfect for meals and water.",
-    img_url: "rust_resistant_bowl.jpg",
+    img_url: "rust_resistant_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2704,7 +2396,7 @@ const productsToCreate = [
   {
     name: "Insulated Bowl",
     description: "Our versatile insulated bowl is perfect for meals and water.",
-    img_url: "insulated_bowl.jpg",
+    img_url: "insulated_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2714,7 +2406,7 @@ const productsToCreate = [
   {
     name: "Smart Bowl",
     description: "Our versatile smart bowl is perfect for meals and water.",
-    img_url: "smart_bowl.jpg",
+    img_url: "smart_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2724,7 +2416,7 @@ const productsToCreate = [
   {
     name: "Porcelain Bowl",
     description: "Our versatile porcelain bowl is perfect for meals and water.",
-    img_url: "porcelain_bowl.jpg",
+    img_url: "porcelain_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2734,7 +2426,7 @@ const productsToCreate = [
   {
     name: "Stackable Bowl",
     description: "Our versatile stackable bowl is perfect for meals and water.",
-    img_url: "stackable_bowl.jpg",
+    img_url: "stackable_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2745,7 +2437,7 @@ const productsToCreate = [
     name: "Color-Change Bowl",
     description:
       "Our versatile color-change bowl is perfect for meals and water.",
-    img_url: "color_change_bowl.jpg",
+    img_url: "color_change_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2756,7 +2448,7 @@ const productsToCreate = [
     name: "Personalized Bowl",
     description:
       "Our versatile personalized bowl is perfect for meals and water.",
-    img_url: "personalized_bowl.jpg",
+    img_url: "personalized_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2766,7 +2458,7 @@ const productsToCreate = [
   {
     name: "Emoji Bowl",
     description: "Our versatile emoji bowl is perfect for meals and water.",
-    img_url: "emoji_bowl.jpg",
+    img_url: "emoji_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2777,7 +2469,7 @@ const productsToCreate = [
     name: "Travel Scoop Bowl",
     description:
       "Our versatile travel scoop bowl is perfect for meals and water.",
-    img_url: "travel_scoop_bowl.jpg",
+    img_url: "travel_scoop_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2788,7 +2480,7 @@ const productsToCreate = [
     name: "Mesh Feeder Bowl",
     description:
       "Our versatile mesh feeder bowl is perfect for meals and water.",
-    img_url: "mesh_feeder_bowl.jpg",
+    img_url: "mesh_feeder_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2799,7 +2491,7 @@ const productsToCreate = [
     name: "Robot Feeder Bowl",
     description:
       "Our versatile robot feeder bowl is perfect for meals and water.",
-    img_url: "robot_feeder_bowl.jpg",
+    img_url: "robot_feeder_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2809,7 +2501,7 @@ const productsToCreate = [
   {
     name: "Gravity Bowl",
     description: "Our versatile gravity bowl is perfect for meals and water.",
-    img_url: "gravity_bowl.jpg",
+    img_url: "gravity_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2819,7 +2511,7 @@ const productsToCreate = [
   {
     name: "Lidded Bowl",
     description: "Our versatile lidded bowl is perfect for meals and water.",
-    img_url: "lidded_bowl.jpg",
+    img_url: "lidded_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2830,7 +2522,7 @@ const productsToCreate = [
     name: "Portion Control Bowl",
     description:
       "Our versatile portion control bowl is perfect for meals and water.",
-    img_url: "portion_control_bowl.jpg",
+    img_url: "portion_control_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2840,7 +2532,7 @@ const productsToCreate = [
   {
     name: "Stoneware Bowl",
     description: "Our versatile stoneware bowl is perfect for meals and water.",
-    img_url: "stoneware_bowl.jpg",
+    img_url: "stoneware_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2850,7 +2542,7 @@ const productsToCreate = [
   {
     name: "Crystal Bowl",
     description: "Our versatile crystal bowl is perfect for meals and water.",
-    img_url: "crystal_bowl.jpg",
+    img_url: "crystal_bowl.png",
     size: "Small",
     includes: "1 Small 12 oz",
     category: "Bowls",
@@ -2861,7 +2553,7 @@ const productsToCreate = [
     name: "Dishwasher Safe Bowl",
     description:
       "Our versatile dishwasher safe bowl is perfect for meals and water.",
-    img_url: "dishwasher_safe_bowl.jpg",
+    img_url: "dishwasher_safe_bowl.png",
     size: "Medium",
     includes: "1 Medium 24 oz",
     category: "Bowls",
@@ -2872,7 +2564,7 @@ const productsToCreate = [
     name: "Silicone Suction Bowl",
     description:
       "Our versatile silicone suction bowl is perfect for meals and water.",
-    img_url: "silicone_suction_bowl.jpg",
+    img_url: "silicone_suction_bowl.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Bowls",
@@ -2883,7 +2575,7 @@ const productsToCreate = [
     name: "Ceramic Non-Slip Bowl",
     description:
       "Our versatile ceramic non-slip bowl is perfect for meals and water.",
-    img_url: "ceramic_non_slip_bowl.jpg",
+    img_url: "ceramic_non_slip_bowl.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Bowls",
@@ -2894,7 +2586,7 @@ const productsToCreate = [
     name: "Gentle Oatmeal Shampoo",
     description:
       "Our professional-grade gentle oatmeal shampoo keeps your dog looking its best.",
-    img_url: "gentle_oatmeal_shampoo.jpg",
+    img_url: "gentle_oatmeal_shampoo.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -2905,7 +2597,7 @@ const productsToCreate = [
     name: "Flea & Tick Shampoo",
     description:
       "Our professional-grade flea & tick shampoo keeps your dog looking its best.",
-    img_url: "flea_tick_shampoo.jpg",
+    img_url: "flea_tick_shampoo.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -2916,7 +2608,7 @@ const productsToCreate = [
     name: "Hypoallergenic Conditioner",
     description:
       "Our professional-grade hypoallergenic conditioner keeps your dog looking its best.",
-    img_url: "hypoallergenic_conditioner.jpg",
+    img_url: "hypoallergenic_conditioner.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -2927,7 +2619,7 @@ const productsToCreate = [
     name: "Waterless Shampoo",
     description:
       "Our professional-grade waterless shampoo keeps your dog looking its best.",
-    img_url: "waterless_shampoo.jpg",
+    img_url: "waterless_shampoo.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -2938,7 +2630,7 @@ const productsToCreate = [
     name: "Deshedding Tool",
     description:
       "Our professional-grade deshedding tool keeps your dog looking its best.",
-    img_url: "deshedding_tool.jpg",
+    img_url: "deshedding_tool.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -2949,7 +2641,7 @@ const productsToCreate = [
     name: "Nail Clippers",
     description:
       "Our professional-grade nail clippers keeps your dog looking its best.",
-    img_url: "nail_clippers.jpg",
+    img_url: "nail_clippers.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -2960,7 +2652,7 @@ const productsToCreate = [
     name: "Brushing Glove",
     description:
       "Our professional-grade brushing glove keeps your dog looking its best.",
-    img_url: "brushing_glove.jpg",
+    img_url: "brushing_glove.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -2971,7 +2663,7 @@ const productsToCreate = [
     name: "Ear Cleaner",
     description:
       "Our professional-grade ear cleaner keeps your dog looking its best.",
-    img_url: "ear_cleaner.jpg",
+    img_url: "ear_cleaner.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -2982,7 +2674,7 @@ const productsToCreate = [
     name: "Muddy Paws Shampoo",
     description:
       "Our professional-grade muddy paws shampoo keeps your dog looking its best.",
-    img_url: "muddy_paws_shampoo.jpg",
+    img_url: "muddy_paws_shampoo.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -2993,7 +2685,7 @@ const productsToCreate = [
     name: "Teeth Cleaning Gel",
     description:
       "Our professional-grade teeth cleaning gel keeps your dog looking its best.",
-    img_url: "teeth_cleaning_gel.jpg",
+    img_url: "teeth_cleaning_gel.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -3004,7 +2696,7 @@ const productsToCreate = [
     name: "Paw Balm",
     description:
       "Our professional-grade paw balm keeps your dog looking its best.",
-    img_url: "paw_balm.jpg",
+    img_url: "paw_balm.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -3015,7 +2707,7 @@ const productsToCreate = [
     name: "Coat Spray",
     description:
       "Our professional-grade coat spray keeps your dog looking its best.",
-    img_url: "coat_spray.jpg",
+    img_url: "coat_spray.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -3026,7 +2718,7 @@ const productsToCreate = [
     name: "Grooming Scissors",
     description:
       "Our professional-grade grooming scissors keeps your dog looking its best.",
-    img_url: "grooming_scissors.jpg",
+    img_url: "grooming_scissors.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -3037,7 +2729,7 @@ const productsToCreate = [
     name: "Shedding Rake",
     description:
       "Our professional-grade shedding rake keeps your dog looking its best.",
-    img_url: "shedding_rake.jpg",
+    img_url: "shedding_rake.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -3048,7 +2740,7 @@ const productsToCreate = [
     name: "Shampoo & Conditioner Set",
     description:
       "Our professional-grade shampoo & conditioner set keeps your dog looking its best.",
-    img_url: "shampoo_conditioner_set.jpg",
+    img_url: "shampoo_conditioner_set.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -3059,7 +2751,7 @@ const productsToCreate = [
     name: "Travel Grooming Kit",
     description:
       "Our professional-grade travel grooming kit keeps your dog looking its best.",
-    img_url: "travel_grooming_kit.jpg",
+    img_url: "travel_grooming_kit.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -3070,7 +2762,7 @@ const productsToCreate = [
     name: "Brush Set",
     description:
       "Our professional-grade brush set keeps your dog looking its best.",
-    img_url: "brush_set.jpg",
+    img_url: "brush_set.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -3081,7 +2773,7 @@ const productsToCreate = [
     name: "Dematting Comb",
     description:
       "Our professional-grade dematting comb keeps your dog looking its best.",
-    img_url: "dematting_comb.jpg",
+    img_url: "dematting_comb.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -3092,7 +2784,7 @@ const productsToCreate = [
     name: "Grooming Apron",
     description:
       "Our professional-grade grooming apron keeps your dog looking its best.",
-    img_url: "grooming_apron.jpg",
+    img_url: "grooming_apron.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -3103,7 +2795,7 @@ const productsToCreate = [
     name: "Shampoo Brush",
     description:
       "Our professional-grade shampoo brush keeps your dog looking its best.",
-    img_url: "shampoo_brush.jpg",
+    img_url: "shampoo_brush.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -3114,7 +2806,7 @@ const productsToCreate = [
     name: "Conditioning Spray",
     description:
       "Our professional-grade conditioning spray keeps your dog looking its best.",
-    img_url: "conditioning_spray.jpg",
+    img_url: "conditioning_spray.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -3125,7 +2817,7 @@ const productsToCreate = [
     name: "Paw Cleaner",
     description:
       "Our professional-grade paw cleaner keeps your dog looking its best.",
-    img_url: "paw_cleaner.jpg",
+    img_url: "paw_cleaner.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -3136,7 +2828,7 @@ const productsToCreate = [
     name: "Ear Wipes",
     description:
       "Our professional-grade ear wipes keeps your dog looking its best.",
-    img_url: "ear_wipes.jpg",
+    img_url: "ear_wipes.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -3147,7 +2839,7 @@ const productsToCreate = [
     name: "Table Mat",
     description:
       "Our professional-grade table mat keeps your dog looking its best.",
-    img_url: "table_mat.jpg",
+    img_url: "table_mat.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -3158,7 +2850,7 @@ const productsToCreate = [
     name: "Nail File",
     description:
       "Our professional-grade nail file keeps your dog looking its best.",
-    img_url: "nail_file.jpg",
+    img_url: "nail_file.png",
     size: "Small",
     includes: "1 Small 8 oz",
     category: "Grooming",
@@ -3169,7 +2861,7 @@ const productsToCreate = [
     name: "Paw Salve",
     description:
       "Our professional-grade paw salve keeps your dog looking its best.",
-    img_url: "paw_salve.jpg",
+    img_url: "paw_salve.png",
     size: "Medium",
     includes: "1 Medium 16 oz",
     category: "Grooming",
@@ -3180,7 +2872,7 @@ const productsToCreate = [
     name: "Shedding Blade",
     description:
       "Our professional-grade shedding blade keeps your dog looking its best.",
-    img_url: "shedding_blade.jpg",
+    img_url: "shedding_blade.png",
     size: "Large",
     includes: "1 Large 32 oz",
     category: "Grooming",
@@ -3191,7 +2883,7 @@ const productsToCreate = [
     name: "Undercoat Rake",
     description:
       "Our professional-grade undercoat rake keeps your dog looking its best.",
-    img_url: "undercoat_rake.jpg",
+    img_url: "undercoat_rake.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
@@ -3202,12 +2894,320 @@ const productsToCreate = [
     name: "Shampoo Bar",
     description:
       "Our professional-grade shampoo bar keeps your dog looking its best.",
-    img_url: "shampoo_bar.jpg",
+    img_url: "shampoo_bar.png",
     size: "XLarge",
     includes: "1 XLarge 64 oz",
     category: "Grooming",
     price: 25.5,
     stock: 40,
+  },
+  {
+    name: "Bacon Kibble",
+    description:
+      "Premium Small Bacon Kibble, crafted for the ultimate canine experience in the Food category.",
+    img_url: "bacon_kibble.png",
+    size: "Small",
+    includes: "1 bag",
+    category: "Food",
+    price: 19.99,
+    stock: 50
+  },
+  {
+    name: "Pumpkin Wet Food",
+    description:
+      "Premium Medium Pumpkin Wet Food, crafted for the ultimate canine experience in the Food category.",
+    img_url: "pumpkin_wet_food.png",
+    size: "Medium",
+    includes: "1 can",
+    category: "Food",
+    price: 24.5,
+    stock: 30
+  },
+  {
+    name: "Blueberry Jerky Treat",
+    description:
+      "Premium Large Blueberry Jerky Treat, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "blueberry_jerky_treat.png",
+    size: "Large",
+    includes: "1 pack",
+    category: "Treats/Bones",
+    price: 12.75,
+    stock: 75
+  },
+  {
+    name: "Salmon Dental Bone",
+    description:
+      "Premium XLarge Salmon Dental Bone, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "salmon_dental_bone.png",
+    size: "XLarge",
+    includes: "1 bone",
+    category: "Treats/Bones",
+    price: 15.25,
+    stock: 40
+  },
+  {
+    name: "Turkey Rope Toy",
+    description:
+      "Premium Small Turkey Rope Toy, crafted for the ultimate canine experience in the Toys category.",
+    img_url: "turkey_rope_toy.png",
+    size: "Small",
+    includes: "1 rope toy",
+    category: "Toys",
+    price: 18.0,
+    stock: 60
+  },
+  {
+    name: "Lamb Interactive Puzzle",
+    description:
+      "Premium Medium Lamb Interactive Puzzle, crafted for the ultimate canine experience in the Toys category.",
+    img_url: "lamb_interactive_puzzle.png",
+    size: "Medium",
+    includes: "1 puzzle",
+    category: "Toys",
+    price: 22.3,
+    stock: 25
+  },
+  {
+    name: "Chicken Plush Toy",
+    description:
+      "Premium Large Chicken Plush Toy, crafted for the ultimate canine experience in the Toys category.",
+    img_url: "chicken_plush_toy.png",
+    size: "Large",
+    includes: "1 plush toy",
+    category: "Toys",
+    price: 14.6,
+    stock: 80
+  },
+  {
+    name: "Venison Squeaky Toy",
+    description:
+      "Premium XLarge Venison Squeaky Toy, crafted for the ultimate canine experience in the Toys category.",
+    img_url: "venison_squeaky_toy.png",
+    size: "XLarge",
+    includes: "1 squeaky toy",
+    category: "Toys",
+    price: 16.8,
+    stock: 45
+  },
+  {
+    name: "Duck Crate",
+    description:
+      "Premium Small Duck Crate, crafted for the ultimate canine experience in the Crates category.",
+    img_url: "duck_crate.png",
+    size: "Small",
+    includes: "1 crate",
+    category: "Crates",
+    price: 45.0,
+    stock: 20
+  },
+  {
+    name: "Kangaroo Dog Bed",
+    description:
+      "Premium Medium Kangaroo Dog Bed, crafted for the ultimate canine experience in the Beds category.",
+    img_url: "kangaroo_dog_bed.png",
+    size: "Medium",
+    includes: "1 bed",
+    category: "Beds",
+    price: 39.99,
+    stock: 15
+  },
+  {
+    name: "Peanut Butter Collar",
+    description:
+      "Premium Large Peanut Butter Collar, crafted for the ultimate canine experience in the Collars, Harnesses & Leashes category.",
+    img_url: "peanut_butter_collar.png",
+    size: "Large",
+    includes: "1 collar",
+    category: "Collars, Harnesses & Leashes",
+    price: 15.5,
+    stock: 70
+  },
+  {
+    name: "Sweet Potato Harness",
+    description:
+      "Premium XLarge Sweet Potato Harness, crafted for the ultimate canine experience in the Collars, Harnesses & Leashes category.",
+    img_url: "sweet_potato_harness.png",
+    size: "XLarge",
+    includes: "1 harness",
+    category: "Collars, Harnesses & Leashes",
+    price: 22.99,
+    stock: 55
+  },
+  {
+    name: "Venison Leash",
+    description:
+      "Premium Small Venison Leash, crafted for the ultimate canine experience in the Collars, Harnesses & Leashes category.",
+    img_url: "venison_leash.png",
+    size: "Small",
+    includes: "1 leash",
+    category: "Collars, Harnesses & Leashes",
+    price: 18.75,
+    stock: 65
+  },
+  {
+    name: "Salmon Food Bowl",
+    description:
+      "Premium Medium Salmon Food Bowl, crafted for the ultimate canine experience in the Bowls category.",
+    img_url: "salmon_food_bowl.png",
+    size: "Medium",
+    includes: "1 bowl",
+    category: "Bowls",
+    price: 7.99,
+    stock: 90
+  },
+  {
+    name: "Beef Water Bowl",
+    description:
+      "Premium Large Beef Water Bowl, crafted for the ultimate canine experience in the Bowls category.",
+    img_url: "beef_water_bowl.png",
+    size: "Large",
+    includes: "1 bowl",
+    category: "Bowls",
+    price: 6.49,
+    stock: 100
+  },
+  {
+    name: "Duck Shampoo",
+    description:
+      "Premium XLarge Duck Shampoo, crafted for the ultimate canine experience in the Grooming category.",
+    img_url: "duck_shampoo.png",
+    size: "XLarge",
+    includes: "1 bottle",
+    category: "Grooming",
+    price: 12.0,
+    stock: 85
+  },
+  {
+    name: "Turkey Conditioner",
+    description:
+      "Premium Small Turkey Conditioner, crafted for the ultimate canine experience in the Grooming category.",
+    img_url: "turkey_conditioner.png",
+    size: "Small",
+    includes: "1 bottle",
+    category: "Grooming",
+    price: 13.0,
+    stock: 80
+  },
+  {
+    name: "Lamb Brush",
+    description:
+      "Premium Medium Lamb Brush, crafted for the ultimate canine experience in the Grooming category.",
+    img_url: "lamb_brush.png",
+    size: "Medium",
+    includes: "1 brush",
+    category: "Grooming",
+    price: 11.5,
+    stock: 45
+  },
+  {
+    name: "Kangaroo Slow Feeder Bowl",
+    description:
+      "Premium Large Kangaroo Slow Feeder Bowl, crafted for the ultimate canine experience in the Bowls category.",
+    img_url: "kangaroo_slow_feeder_bowl.png",
+    size: "Large",
+    includes: "1 bowl",
+    category: "Bowls",
+    price: 29.99,
+    stock: 35
+  },
+  {
+    name: "Chicken Food Topper",
+    description:
+      "Premium XLarge Chicken Food Topper, crafted for the ultimate canine experience in the Food Toppers category.",
+    img_url: "chicken_food_topper.png",
+    size: "XLarge",
+    includes: "1 jar",
+    category: "Food Toppers",
+    price: 8.99,
+    stock: 95
+  },
+  {
+    name: "Beef & Chicken Jerky Sampler",
+    description:
+      "Premium Small Beef & Chicken Jerky Sampler, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "beef_chicken_jerky_sampler.png",
+    size: "Small",
+    includes: "1 sampler pack",
+    category: "Treats/Bones",
+    price: 19.49,
+    stock: 50
+  },
+  {
+    name: "Salmon & Tuna Wet Food Duo",
+    description:
+      "Premium Medium Salmon & Tuna Wet Food Duo, crafted for the ultimate canine experience in the Food category.",
+    img_url: "salmon_tuna_wet_food_duo.png",
+    size: "Medium",
+    includes: "2 cans",
+    category: "Food",
+    price: 23.99,
+    stock: 25
+  },
+  {
+    name: "Pumpkin Spice Kibble",
+    description:
+      "Premium Large Pumpkin Spice Kibble, crafted for the ultimate canine experience in the Food category.",
+    img_url: "pumpkin_spice_kibble.png",
+    size: "Large",
+    includes: "1 bag",
+    category: "Food",
+    price: 17.25,
+    stock: 60
+  },
+  {
+    name: "Duck & Sweet Potato Jerky",
+    description:
+      "Premium XLarge Duck & Sweet Potato Jerky, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "duck_sweet_potato_jerky.png",
+    size: "XLarge",
+    includes: "1 pack",
+    category: "Treats/Bones",
+    price: 14.75,
+    stock: 30
+  },
+  {
+    name: "Lamb & Venison Bone Mix",
+    description:
+      "Premium Small Lamb & Venison Bone Mix, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "lamb_venison_bone_mix.png",
+    size: "Small",
+    includes: "1 mix pack",
+    category: "Treats/Bones",
+    price: 16.5,
+    stock: 40
+  },
+  {
+    name: "Kangaroo Hide Chew",
+    description:
+      "Premium Medium Kangaroo Hide Chew, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "kangaroo_hide_chew.png",
+    size: "Medium",
+    includes: "1 chew",
+    category: "Treats/Bones",
+    price: 25.0,
+    stock: 20
+  },
+  {
+    name: "Turkey Feathers Plush Toy",
+    description:
+      "Premium Large Turkey Feathers Plush Toy, crafted for the ultimate canine experience in the Toys category.",
+    img_url: "turkey_feathers_plush_toy.png",
+    size: "Large",
+    includes: "1 plush toy",
+    category: "Toys",
+    price: 13.5,
+    stock: 50
+  },
+  {
+    name: "Peanut Butter Dental Stick",
+    description:
+      "Premium XLarge Peanut Butter Dental Stick, crafted for the ultimate canine experience in the Treats/Bones category.",
+    img_url: "peanut_butter_dental_stick.png",
+    size: "XLarge",
+    includes: "1 stick",
+    category: "Treats/Bones",
+    price: 10.99,
+    stock: 100
   },
 ];
 
