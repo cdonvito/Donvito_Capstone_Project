@@ -1,3 +1,4 @@
+import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
 import {
   useAddUserQtyMutation,
@@ -51,6 +52,31 @@ function ProductHome() {
 
   const [subQty] = useSubtractUserQtyMutation();
 
+  // // === DYNAMIC IMAGE MAP ===
+  // // build a map: filename: placedog URL
+  // const imageUrlMap = useMemo(
+  //   () =>
+  //     products.reduce((map, product, idx) => {
+  //       // `product.img_url` is exactly the key your API returned
+  //       map[product.img_url] = `https://placedog.net/1024/1024?random=${idx}`;
+  //       return map;
+  //     }, {}),
+  //   [products]
+  // );
+
+  // === DYNAMIC IMAGE MAP (Unsplash Source) ===
+  // build a map: filename → unsplash random-by-product-name
+  const imageUrlMap = useMemo(() => {
+    return products.reduce((map, product, idx) => {
+      // use product.name as the Unsplash search term
+      const query = encodeURIComponent(product.name);
+      map[
+        product.img_url
+      ] = `https://source.unsplash.com/1024x1024/?${query}&sig=${idx}`;
+      return map;
+    }, {});
+  }, [products]);
+
   async function handleAddtoCart(product_id, name) {
     try {
       const quantity = 1;
@@ -85,6 +111,14 @@ function ProductHome() {
     }
   }
 
+  // console.log("imageUrlMap keys:", Object.keys(imageUrlMap).slice(0, 10));
+  // console.log(
+  //   "first product.img_url:",
+  //   products[0]?.img_url,
+  //   "or imgUrl:",
+  //   products[0]?.imgUrl
+  // );
+
   return (
     <div>
       <div>
@@ -115,7 +149,15 @@ function ProductHome() {
             <div key={product.id} className="ProductsAvailable">
               {/* <img src={tempImg} id="temp_img"></img> */}
               {/* <p>{product.img_url}</p> */}
-              <img src={src} alt={product.name}/>
+              {/* <img src={src} alt={product.name} /> */}
+              <img
+                src={
+                  product.img_url
+                    ? `https://placedog.net/1024/1024?random=${product.id}`
+                    : tempImg
+                }
+                alt={product.name}
+              />
               <p>{product.name}</p>
               <p>{`$${product.price}`}</p>
 

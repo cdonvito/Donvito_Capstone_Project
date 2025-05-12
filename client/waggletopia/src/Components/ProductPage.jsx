@@ -80,8 +80,16 @@ function ProductPage() {
   return (
     <div id="ProductsAvailableList">
       <div key={product.id} className="ProductsAvailable">
-        <img src={tempImg} id="temp_img"></img>
+        {/* <img src={tempImg} id="temp_img"></img> */}
         {/* <p>{product.img_url}</p> */}
+        <img
+          src={
+            product.img_url
+              ? `https://placedog.net/1024/1024?random=${product.id}`
+              : tempImg
+          }
+          alt={product.name}
+        />
         <p>{product.name}</p>
         <p>{product.description}</p>
         <p>{`Size: ${product.size}`}</p>
@@ -89,9 +97,7 @@ function ProductPage() {
         <p>{`Category: ${product.category}`}</p>
         <p>{`$${product.price}`}</p>
         {token && !userProduct && (
-          <button
-            onClick={() => handleAddtoCart(product.id, product.name)}
-          >
+          <button onClick={() => handleAddtoCart(product.id, product.name)}>
             Add to Cart
           </button>
         )}
