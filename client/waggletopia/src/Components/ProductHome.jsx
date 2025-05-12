@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { getToken } from "../Users/userSlice";
 import tempImg from "../assets/Coming_soon.jpg";
+import { imageUrlMap } from "./Images.jsx";
 
 function ProductHome() {
   const token = useSelector(getToken);
@@ -108,10 +109,13 @@ function ProductHome() {
             (userProduct) => userProduct.product_id === product.id
           );
 
+          const src = imageUrlMap[product.img_url] || tempImg;
+
           return (
             <div key={product.id} className="ProductsAvailable">
-              <img src={tempImg} id="temp_img"></img>
+              {/* <img src={tempImg} id="temp_img"></img> */}
               {/* <p>{product.img_url}</p> */}
+              <img src={src} alt={product.name}/>
               <p>{product.name}</p>
               <p>{`$${product.price}`}</p>
 
