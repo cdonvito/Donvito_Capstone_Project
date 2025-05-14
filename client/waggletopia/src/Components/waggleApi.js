@@ -4,7 +4,8 @@ export const waggleApi = createApi({
   reducerPath: "waggleApi",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api",
+    // baseUrl: "http://localhost:3000/api",
+    baseUrl: "https://waggle-topia.onrender.com/api",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().user.token;
       if (token) {

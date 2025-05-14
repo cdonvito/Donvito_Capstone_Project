@@ -47,8 +47,8 @@ function OrderSummary() {
   }
 
   return (
-    <div id="orders">
-      <h2>Order # {order_id}</h2>
+    <div className="ordersList">
+      <h3>Order # {order_id}</h3>
       {orderProducts.map((orderProduct) => {
         const product = products.find((product) => product.id === orderProduct.product_id);
         return (

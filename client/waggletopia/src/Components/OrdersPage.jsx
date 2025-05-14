@@ -21,7 +21,7 @@ function OrdersPage() {
   }
 
   return (
-    <div id="ordersList">
+    <div className="ordersList">
       {orders.map((order) => {
         const date = new Date(order.order_date);
         const formattedDate = date.toLocaleDateString();
