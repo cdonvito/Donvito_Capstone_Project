@@ -10,6 +10,8 @@ const {
 } = require("./db");
 const { productsToCreate } = require("./productSeed");
 const { usersToCreate } = require("./userSeed");
+require('dotenv').config();
+
 
 async function seed() {
   await client.connect();

@@ -204,7 +204,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://craigdonvito@localhost:5432/donvito_capstone?schema=public"
+        "value": "postgresql://waggle_topia_api_user:rx7pC5WMDcARE6AgC2uICIzF2z8ToiO6@dpg-d0huara4d50c73ato3f0-a.ohio-postgres.render.com/waggle_topia_api?=sslmode=require"
       }
     }
   },

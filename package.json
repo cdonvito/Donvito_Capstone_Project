@@ -9,6 +9,9 @@
     "start:dev": "nodemon server/server.js",
     "seed": "node server/seed.js"
   },
+  "prisma": {
+    "seed": "node server/seed.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdonvito/Donvito_Block37.git"
