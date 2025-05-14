@@ -292,6 +292,30 @@ a:hover {
   font-size: 15px;
 }
 
+/* ================== ORDER SUMMARY PAGE ================== */
+.orderSummaryList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  text-align: center;
+  margin: 1% auto 3%; 
+  width: 30%;
+}
+
+.orderSummary {
+  border: 2px solid #00669a;
+  border-radius: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.orderSummaryList button {
+  width: 20%;
+  font-size: 15px;
+}
+
 /* ================== PRODUCTS HOME ================== */
 #ProductsAvailableList {
   display: flex;
