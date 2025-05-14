@@ -1,4 +1,3 @@
-import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
 import {
   useAddUserQtyMutation,
@@ -42,13 +41,10 @@ function ProductHome() {
     userProductsisLoading,
   } = useFetchUserProductsQuery(null, { skip: !token });
 
-  const [productToCart, { error: cartError, isLoading: cartLoading }] =
+  const [productToCart] =
     useCreateUserProductMutation();
-
   const [deleteProduct] = useDeleteUserProductMutation();
-
   const [addQty] = useAddUserQtyMutation();
-
   const [subQty] = useSubtractUserQtyMutation();
 
   async function handleAddtoCart(product_id, name) {
@@ -85,6 +81,14 @@ function ProductHome() {
     }
   }
 
+  if (isLoading || userProductsisLoading) {
+    return <p className="Loading">Loading Products...</p>
+  }
+
+  if (error || userProductserror) {
+    return <p className="Error">Error Loading Products</p>
+  }
+
   return (
     <div>
       <div>
@@ -112,9 +116,7 @@ function ProductHome() {
           return (
             <div key={product.id} className="ProductsAvailable">
               {/* <img src={tempImg} id="temp_img"></img> */}
-              {/* <p>{product.img_url}</p> */}
-              {/* <img src={src} alt={product.name} /> */}
-              <img
+              <img className="ProductImage"
                 src={
                   product.img_url
                     ? `https://placedog.net/1024/1024?random=${product.id}`
@@ -161,7 +163,7 @@ function ProductHome() {
                   </div>
                 </div>
               )}
-              {product.stock <= 10 ? <p>Only {product.stock} left</p> : ""}
+              {product.stock <= 10 ? <p>Only {product.stock} left!</p> : ""}
             </div>
           );
         })}

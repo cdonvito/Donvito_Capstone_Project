@@ -321,31 +321,30 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: space-evenly;
 }
 
 .ProductsAvailable {
-  margin: 0;
   width: 20rem;
-  height: auto;
+  height: 35rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 2rem;
+  border: 3px solid #00669a;
+  border-radius: 4em;
+  margin: 1em 0 2em 0;
   background-color: white;
 }
 
-#temp_img {
-  width: 80%;
-  height: auto;
+.ProductsAvailable button {
+  margin: 0.5em;
 }
 
-img {
+.ProductImage {
   width: 80%;
   height: auto;
+  padding-top: 1rem;
+  border-radius: 4em;
 }
