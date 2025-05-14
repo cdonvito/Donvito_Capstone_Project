@@ -78,10 +78,9 @@ function ProductPage() {
   console.log("data:", product);
 
   return (
-    <div id="ProductsAvailableList">
-      <div key={product.id} className="ProductsAvailable">
-        {/* <img src={tempImg} id="temp_img"></img> */}
-        {/* <p>{product.img_url}</p> */}
+    <div id="SelectedProduct" key={product.id}>
+      {/* <img src={tempImg} id="temp_img"></img> */}
+      <div id="SelectedProductImage">
         <img
           src={
             product.img_url
@@ -90,6 +89,8 @@ function ProductPage() {
           }
           alt={product.name}
         />
+      </div>
+      <div id="SelectedProductDetails">
         <p>{product.name}</p>
         <p>{product.description}</p>
         <p>{`Size: ${product.size}`}</p>
@@ -125,7 +126,7 @@ function ProductPage() {
             </div>
           </div>
         )}
-        {product.stock <= 10 ? <p>Only {product.stock} left</p> : ""}
+        {product.stock <= 10 ? <p>Only {product.stock} left!</p> : ""}
       </div>
     </div>
   );

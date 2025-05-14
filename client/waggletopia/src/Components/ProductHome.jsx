@@ -51,7 +51,6 @@ function ProductHome() {
     try {
       const quantity = 1;
       await productToCart({ product_id, quantity }).unwrap();
-      //setSuccessMessage(`${name} was successfully added to cart!`);
     } catch (error) {
       console.log("Error while adding product to cart", error);
     }
@@ -91,7 +90,8 @@ function ProductHome() {
 
   return (
     <div>
-      <div>
+      <h2>Shop Our One of a Kind Dog Products</h2>
+      {/* <div>
         <h2>Shop By Category</h2>
         <div>
           {categories.map((category) => {
@@ -105,7 +105,7 @@ function ProductHome() {
             return <button key={size}>{size}</button>;
           })}
         </div>
-      </div>
+      </div> */}
 
       <div id="ProductsAvailableList">
         {products.map((product) => {

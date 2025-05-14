@@ -11,6 +11,7 @@ h2,
 h3 {
   font-family: "Comic Sans MS", ComicSans, cursive;
   color: #00669a;
+  text-align: center;
 }
 
 h1 {
@@ -344,6 +345,38 @@ a:hover {
 
 .ProductImage {
   width: 80%;
+  height: auto;
+  padding-top: 1rem;
+  border-radius: 4em;
+}
+
+/* ================== PRODUCTS (1) PAGE ================== */
+#SelectedProduct {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#SelectedProductDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  /* border: 3px solid #00669a;
+  border-radius: 4em; */
+  margin: 1em 0 2em 0;
+  background-color: white;
+}
+
+#SelectedProduct button {
+  margin: 0.5em;
+}
+
+#SelectedProductImage img {
+  width: 30rem;
   height: auto;
   padding-top: 1rem;
   border-radius: 4em;
