@@ -16,15 +16,19 @@ function OrdersPage() {
     return <p className="Error">Please log in to view your orders.</p>;
   }
 
+  if (orders.length === 0) {
+    return <p className="Success">You do not currently have any orders</p>;
+  }
+
   return (
-    <div id="orders">
+    <div id="ordersList">
       {orders.map((order) => {
         const date = new Date(order.order_date);
         const formattedDate = date.toLocaleDateString();
         return (
           <div key={order.id} className="orders">
-            <p>ID: {order.id}</p>
-            <p>Date: {formattedDate}</p>
+            <p>Order ID: {order.id}</p>
+            <p>Order Date: {formattedDate}</p>
 
             <button onClick={() => navigate(`/Orders/${order.id}`)}>
               View Details
