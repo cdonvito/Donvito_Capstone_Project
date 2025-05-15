@@ -275,7 +275,6 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   text-align: center;
   margin: 1% auto 3%; 
   width: 30%;
@@ -294,26 +293,28 @@ a:hover {
 }
 
 /* ================== ORDER SUMMARY PAGE ================== */
-.orderSummaryList {
+#orderSummaryList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: space-evenly;
   text-align: center;
   margin: 1% auto 3%; 
-  width: 30%;
+  width: 100%;
 }
 
-.orderSummary {
+.orders {
+  width: 25%;
+  height: 25rem;
   border: 2px solid #00669a;
   border-radius: 2em;
   margin-bottom: 2em;
   padding: 1em;
 }
 
-.orderSummaryList button {
-  width: 20%;
+.orders button {
+  width: 50%;
   font-size: 15px;
 }
 

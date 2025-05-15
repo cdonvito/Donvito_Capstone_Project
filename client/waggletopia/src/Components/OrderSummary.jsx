@@ -47,27 +47,34 @@ function OrderSummary() {
   }
 
   return (
-    <div className="orderSummaryList">
+    <div>
       <h3>Order # {order_id}</h3>
-      {orderProducts.map((orderProduct) => {
-        const product = products.find((product) => product.id === orderProduct.product_id);
-        return (
-          <div key={orderProduct.id} className="orders">
-              <p>Name: {product.name}</p>
-              <p>Name: {product.description}</p>
+      <div id="orderSummaryList">
+        {orderProducts.map((orderProduct) => {
+          const product = products.find(
+            (product) => product.id === orderProduct.product_id
+          );
+          return (
+            <div key={orderProduct.id} className="orders">
+              <p>{product.name}</p>
+              <p>{product.description}</p>
               <p>Quantity: {orderProduct.quantity}</p>
               <p>Item Price: ${orderProduct.unit_price}</p>
-              <p>Total Price: ${(orderProduct.quantity * orderProduct.unit_price).toFixed(2)}</p>
+              <p>
+                Total Price: $
+                {(orderProduct.quantity * orderProduct.unit_price).toFixed(2)}
+              </p>
               <button onClick={() => navigate(`/Product/${product.id}`)}>
                 View Details
               </button>
-          </div>
-        );
-      })}
+            </div>
+          );
+        })}
+      </div>
 
-      <h2>Sum Total: ${totalAmount.toFixed(2)}</h2>
+      <h3>Sum Total: ${totalAmount.toFixed(2)}</h3>
     </div>
-  )
+  );
 }
 
 export default OrderSummary;
