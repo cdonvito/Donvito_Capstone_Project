@@ -121,7 +121,11 @@ function AdminPage() {
 
   async function handleDeletion(product) {
     try {
-      if (!window.confirm(`Are you sure you want to delete ${product.description}?`))
+      if (
+        !window.confirm(
+          `Are you sure you want to delete ${product.description}?`
+        )
+      )
         return;
 
       await deleteProduct(product.id).unwrap();
@@ -169,7 +173,7 @@ function AdminPage() {
   return (
     <div>
       <h2>Admin Page</h2>
-      <form onSubmit={editingId ? handleUpdate : handleCreate}>
+      <form id="AdminForm" onSubmit={editingId ? handleUpdate : handleCreate}>
         <label>
           Name
           <input
@@ -284,38 +288,47 @@ function AdminPage() {
           </button>
         )}
       </form>
+      <div id="UsersANDProductsList">
+        <div id="AdminProductsList">
+          {products.map((product) => {
+            return (
+              <div key={product.id} className="AdminProduct">
+                <p>Name: {product.name}</p>
+                <p>Description: {product.description}</p>
+                <p>Image URL: {product.img_url}</p>
+                <p>Size: {product.size}</p>
+                <p>Includes: {product.includes}</p>
+                <p>Category: {product.category}</p>
+                <p>Price: {product.price}</p>
+                <p>Stock: {product.stock}</p>
+                <div>
+                  <button onClick={() => handleEditClick(product)}>Edit</button>
+                  <button onClick={() => handleDeletion(product)}>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
-      {users.map((user) => {
-        return (
-          <div key={user.id} className="User">
-            <p>Username: {user.username}</p>
-            <p>Name: {user.name}</p>
-            <p>Email: {user.email_address ? user.email_address : "N/A"}</p>
-            <p>Mailing Address: {user.mailing_address}</p>
-            <p>Phone Number: {user.phone_number ? user.phone_number : "N/A"}</p>
-            <p>Is Admin: {user.is_admin ? "Yes" : "No"}</p>
-          </div>
-        );
-      })}
-
-      {products.map((product) => {
-        return (
-          <div key={product.id} className="User">
-            <p>Name: {product.name}</p>
-            <p>Description: {product.description}</p>
-            <p>Image URL: {product.img_url}</p>
-            <p>Size: {product.size}</p>
-            <p>Includes: {product.includes}</p>
-            <p>Category: {product.category}</p>
-            <p>Price: {product.price}</p>
-            <p>Stock: {product.stock}</p>
-            <div>
-              <button onClick={() => handleEditClick(product)}>Edit</button>
-              <button onClick={() => handleDeletion(product)}>Delete</button>
-            </div>
-          </div>
-        );
-      })}
+        <div id="AdminUsersList">
+          {users.map((user) => {
+            return (
+              <div key={user.id} className="AdminUser">
+                <p>Username: {user.username}</p>
+                <p>Name: {user.name}</p>
+                <p>Email: {user.email_address ? user.email_address : "N/A"}</p>
+                <p>Mailing Address: {user.mailing_address}</p>
+                <p>
+                  Phone Number: {user.phone_number ? user.phone_number : "N/A"}
+                </p>
+                <p>Is Admin: {user.is_admin ? "Yes" : "No"}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

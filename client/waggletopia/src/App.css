@@ -277,7 +277,7 @@ a:hover {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  margin: 1% auto 3%; 
+  margin: 1% auto 3%;
   width: 100%;
 }
 
@@ -303,7 +303,7 @@ a:hover {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  margin: 1% auto 3%; 
+  margin: 1% auto 3%;
   width: 100%;
 }
 
@@ -439,4 +439,94 @@ a:hover {
   font-size: 30px;
   padding: 0.2em;
   width: 50%;
+}
+
+/* ================== ADMIN PAGE ================== */
+#AdminForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#AdminForm input,
+select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 0.8em;
+  border: 3px solid #00669a;
+}
+
+#AdminForm button {
+  width: 10%;
+  font-size: 15px;
+}
+
+#UsersANDProductsList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#AdminUsersList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#AdminProductsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.AdminUser {
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #00669a;
+  border-radius: 4em;
+  margin: 1em 0 2em 0;
+  background-color: white;
+}
+
+.AdminProduct {
+  width: 30rem;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #00669a;
+  border-radius: 4em;
+  margin: 1em 0 2em 0;
+  background-color: white;
+}
+
+.AdminProduct button {
+  margin: 0.5em;
+  font-size: 15px;
+  padding: 0.5em;
+}
+
+.ProductImage {
+  width: 80%;
+  height: auto;
+  padding-top: 1rem;
+  border-radius: 4em;
 }
