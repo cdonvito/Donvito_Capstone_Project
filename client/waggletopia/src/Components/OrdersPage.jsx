@@ -26,8 +26,8 @@ function OrdersPage() {
         const date = new Date(order.order_date);
         const formattedDate = date.toLocaleDateString();
         return (
-          <div key={order.id} className="orders">
-            <p>Order ID: {order.id}</p>
+          <div key={order.id} className="orderOverview">
+            <p>Order # {order.id}</p>
             <p>Order Date: {formattedDate}</p>
 
             <button onClick={() => navigate(`/Orders/${order.id}`)}>

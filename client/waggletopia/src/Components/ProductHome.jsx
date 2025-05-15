@@ -125,7 +125,7 @@ function ProductHome() {
                 alt={product.name}
               />
               <p>{product.name}</p>
-              <p>{`$${product.price}`}</p>
+              <p>{`$${product.price.toFixed(2)}`}</p>
 
               <button onClick={() => navigate(`/Product/${product.id}`)}>
                 View Details
