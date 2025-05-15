@@ -8,7 +8,7 @@ import {
   useUserCheckoutMutation,
 } from "./waggleApi";
 import { getToken } from "../Users/userSlice";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Cart() {
@@ -27,14 +27,11 @@ function Cart() {
     isLoading: productsLoading,
   } = useFetchProductsAvailableQuery();
 
-  const [deleteProduct, { error: deleteError, isLoading: deleteLoading }] =
-    useDeleteUserProductMutation();
+  const [deleteProduct] = useDeleteUserProductMutation();
 
-  const [addQty, { error: addQtyError, isLoading: addQtyLoading }] =
-    useAddUserQtyMutation();
+  const [addQty] = useAddUserQtyMutation();
 
-  const [subQty, { error: subQtyError, isLoading: subQtyLoading }] =
-    useSubtractUserQtyMutation();
+  const [subQty] = useSubtractUserQtyMutation();
 
   const [
     checkout,
@@ -59,7 +56,7 @@ function Cart() {
   if (isLoading) {
     return (
       <section>
-        <h2>Loading...</h2>
+        <h2 className="Loading">Loading...</h2>
       </section>
     );
   }
@@ -68,8 +65,40 @@ function Cart() {
   if (error) {
     return (
       <section>
-        <h2>Error, please try again later.</h2>
+        <h2 className="Error">Error, please try again later.</h2>
       </section>
+    );
+  }
+
+  if (productsLoading) {
+    return (
+      <section>
+        <h2 className="Loading">Products Loading...</h2>
+      </section>
+    );
+  }
+
+  if (productsError) {
+    return (
+      <section>
+        <h2 className="Error">Error, fetching proudcts. Please try again.</h2>
+      </section>
+    );
+  }
+
+  if (checkoutLoading) {
+    return (
+      <div>
+        <h2 className="Loading">Checkout Loading...</h2>
+      </div>
+    );
+  }
+
+  if (checkoutError) {
+    return (
+      <div>
+        <h2 className="Error">Error Checking out. Please try again.</h2>
+      </div>
     );
   }
 
@@ -79,6 +108,7 @@ function Cart() {
       if (!prod) return null;
       return {
         id: prod.id,
+        name: prod.name,
         description: prod.description,
         price: prod.price,
         img_url: prod.img_url,
@@ -113,32 +143,32 @@ function Cart() {
   async function handleDeletion(userProductId) {
     try {
       await deleteProduct(userProductId).unwrap();
-    } catch (error) {
-      console.log("Error while deleting your account", error);
+    } catch (deleteError) {
+      console.log("Error while deleting your product", deleteError);
     }
   }
 
   async function handleQtyAddition(id) {
     try {
       await addQty({ id: id, quantity: 1 }).unwrap();
-    } catch (error) {
-      console.log("Error while adding Qty of Item", error);
+    } catch (addQtyError) {
+      console.log("Error while adding Qty of Item", addQtyError);
     }
   }
 
   async function handleQtySubtraction(id) {
     try {
       await subQty({ id: id, quantity: 1 }).unwrap();
-    } catch (error) {
-      console.log("Error while subtracting Qty of Item", error);
+    } catch (subQtyError) {
+      console.log("Error while subtracting Qty of Item", subQtyError);
     }
   }
 
   async function handleCheckout() {
     try {
       await checkout().unwrap();
-    } catch (error) {
-      console.log("Error while checking out", error);
+    } catch (checkoutError) {
+      console.log("Error while checking out", checkoutError);
     }
   }
 
@@ -151,40 +181,60 @@ function Cart() {
   }
 
   return (
-    <div id="UserProductsList">
-      {cartProducts.map((product) => {
-        return (
-          <div key={product.id} className="UserProduct">
-            <p>Name: {product.description}</p>
-            <p>Quantity: {product.quantity}</p>
-            <p>Unit Price: {`$${product.price}`}</p>
-            <p>Total: {`$${(product.price * product.quantity).toFixed(2)}`}</p>
-            <div>
-              <button
-                onClick={() => handleQtySubtraction(product.userProductId)}
-                disabled={product.quantity <= 1}
-              >
-                -
-              </button>
+    <div>
+      <div id="UserProductsList">
+        {cartProducts.map((product) => {
+          return (
+            <div key={product.id} className="UserProduct">
+              <div className="UserProductImage">
+                <img
+                  src={
+                    product.img_url
+                      ? `https://placedog.net/1024/1024?random=${product.id}`
+                      : tempImg
+                  }
+                  alt={product.name}
+                />
+              </div>
+              <div className="UserProductDetails">
+                <p>{product.name}</p>
+                <p>{product.description}</p>
+                <p>Unit Price: {`$${product.price}`}</p>
+                <p>
+                  Total: {`$${(product.price * product.quantity).toFixed(2)}`}
+                </p>
+                <div>
+                  <button
+                    onClick={() => handleQtySubtraction(product.userProductId)}
+                    disabled={product.quantity <= 1}
+                  >
+                    -
+                  </button>
 
-              {` ${product.quantity} `}
+                  {` ${product.quantity} `}
 
-              <button
-                onClick={() => handleQtyAddition(product.userProductId)}
-                disabled={product.stock <= product.quantity}
-              >
-                +
-              </button>
+                  <button
+                    onClick={() => handleQtyAddition(product.userProductId)}
+                    disabled={product.stock <= product.quantity}
+                  >
+                    +
+                  </button>
+                </div>
+
+                <button onClick={() => handleDeletion(product.userProductId)}>
+                  Delete
+                </button>
+              </div>
             </div>
-
-            <button onClick={() => handleDeletion(product.userProductId)}>
-              Delete
-            </button>
-          </div>
-        );
-      })}
-      <h2>Sum Total: ${totalAmount.toFixed(2)}</h2>
-      <button onClick={() => handleCheckout()}>Checkout</button>
+          );
+        })}
+      </div>
+      <div id="CartSummary">
+        <h2 id="SumText">Sum Total: ${totalAmount.toFixed(2)}</h2>
+        <button onClick={() => handleCheckout()} id="CheckoutBtn">
+          Checkout
+        </button>
+      </div>
     </div>
   );
 }
