@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 function About() {
   return (
     <div id="AboutBody">
@@ -29,18 +31,30 @@ function About() {
       <div>
         <h3>Who We Are</h3>
         <p>-Dog Lovers First</p>
-        <p>-A small team with hands-on experience caring for dogs of all ages and sizes.</p>
+        <p>
+          -A small team with hands-on experience caring for dogs of all ages and
+          sizes.
+        </p>
         <h3>Simple Selection</h3>
-        <p>We choose only reliable, safe products that work—no gimmicks, just good gear.</p>
+        <p>
+          We choose only reliable, safe products that work—no gimmicks, just
+          good gear.
+        </p>
       </div>
 
       <div>
         <h3>Our Promise</h3>
         <p>-Durable & Dependable</p>
-        <p>-If an item fails under normal use, we'll replace it—no fine print.</p>
+        <p>
+          -If an item fails under normal use, we'll replace it—no fine print.
+        </p>
         <p>-Easy Buying</p>
         <p>-Fast shipping & clear pricing.</p>
       </div>
+
+      <button className="ScrollToTopBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        Back to Top
+      </button>
     </div>
   );
 }

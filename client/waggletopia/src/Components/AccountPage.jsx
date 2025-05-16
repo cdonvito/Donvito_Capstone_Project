@@ -38,8 +38,10 @@ function AccountPage() {
     );
   }
 
+  // Handles account deletion
   async function handleDeletion() {
     try {
+      // Prompts user to confirm account deletion
       if (!window.confirm("Are you sure you want to delete your account?"))
         return;
 
@@ -52,6 +54,7 @@ function AccountPage() {
     }
   }
 
+  // shows account information
   return token ? (
     <div id="AccountBody">
       <div>
