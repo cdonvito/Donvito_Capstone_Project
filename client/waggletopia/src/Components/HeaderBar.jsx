@@ -61,17 +61,6 @@ function HeaderBar() {
             ""
           )}
           {token ? (
-            <Link
-              to="/Login"
-              onClick={() => handleLogout()}
-              className="navigation-link"
-            >
-              Logout
-            </Link>
-          ) : (
-            ""
-          )}
-          {token ? (
             <Link to="/Checkout" className="navigation-link">
               Cart
             </Link>
@@ -81,6 +70,17 @@ function HeaderBar() {
           {token && user.is_admin ? (
             <Link to="/Admin-Page" className="navigation-link">
               Admin
+            </Link>
+          ) : (
+            ""
+          )}
+          {token ? (
+            <Link
+              to="/Login"
+              onClick={() => handleLogout()}
+              className="navigation-link"
+            >
+              Logout
             </Link>
           ) : (
             ""

@@ -161,6 +161,7 @@ function AdminPage() {
       price: product.price,
       stock: product.stock,
     });
+    window.scrollTo({ top: 500, behavior: "smooth" });
   }
 
   function handleCancel() {
