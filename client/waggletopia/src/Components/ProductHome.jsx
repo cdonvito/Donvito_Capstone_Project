@@ -41,12 +41,12 @@ function ProductHome() {
     userProductsisLoading,
   } = useFetchUserProductsQuery(null, { skip: !token });
 
-  const [productToCart] =
-    useCreateUserProductMutation();
+  const [productToCart] = useCreateUserProductMutation();
   const [deleteProduct] = useDeleteUserProductMutation();
   const [addQty] = useAddUserQtyMutation();
   const [subQty] = useSubtractUserQtyMutation();
 
+  // Handles adding a product to the cart
   async function handleAddtoCart(product_id, name) {
     try {
       const quantity = 1;
@@ -56,6 +56,7 @@ function ProductHome() {
     }
   }
 
+  // Handles deleting a product from the cart
   async function handleDeletion(userProductId) {
     try {
       await deleteProduct(userProductId).unwrap();
@@ -64,6 +65,7 @@ function ProductHome() {
     }
   }
 
+  // Handles adding qty of an exising userproduct to the cart
   async function handleQtyAddition(id) {
     try {
       await addQty({ id: id, quantity: 1 }).unwrap();
@@ -72,6 +74,7 @@ function ProductHome() {
     }
   }
 
+  // Handles subtracting qty of an exising userproduct to the cart
   async function handleQtySubtraction(id) {
     try {
       await subQty({ id: id, quantity: 1 }).unwrap();
@@ -81,11 +84,11 @@ function ProductHome() {
   }
 
   if (isLoading || userProductsisLoading) {
-    return <p className="Loading">Loading Products...</p>
+    return <p className="Loading">Loading Products...</p>;
   }
 
   if (error || userProductserror) {
-    return <p className="Error">Error Loading Products</p>
+    return <p className="Error">Error Loading Products</p>;
   }
 
   return (
@@ -115,8 +118,8 @@ function ProductHome() {
 
           return (
             <div key={product.id} className="ProductsAvailable">
-              {/* <img src={tempImg} id="temp_img"></img> */}
-              <img className="ProductImage"
+              <img
+                className="ProductImage"
                 src={
                   product.img_url
                     ? `https://placedog.net/1024/1024?random=${product.id}`
@@ -168,6 +171,12 @@ function ProductHome() {
           );
         })}
       </div>
+      <button
+        className="ScrollToTopBtn"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        Back to Top
+      </button>
     </div>
   );
 }

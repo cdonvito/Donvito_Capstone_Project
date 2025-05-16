@@ -14,39 +14,29 @@ import tempImg from "../assets/Coming_soon.jpg";
 function ProductPage() {
   const token = useSelector(getToken);
   const { id } = useParams();
-  const {
-    data: product = {},
-    error,
-    isLoading,
-  } = useFetchSingleProductQuery(id);
+  const { data: product = {}, error } = useFetchSingleProductQuery(id);
 
-  const [productToCart, { error: cartError, isLoading: cartLoading }] =
-    useCreateUserProductMutation();
+  const [productToCart, { error: cartError }] = useCreateUserProductMutation();
 
-  const {
-    data: userProducts = [],
-    userProductserror,
-    userProductsisLoading,
-  } = useFetchUserProductsQuery();
+  const { data: userProducts = [], userProductserror } =
+    useFetchUserProductsQuery();
 
-  const [deleteProduct, { error: deleteError, isLoading: deleteLoading }] =
+  const [deleteProduct, { error: deleteError }] =
     useDeleteUserProductMutation();
 
-  const [addQty, { error: addQtyError, isLoading: addQtyLoading }] =
-    useAddUserQtyMutation();
+  const [addQty, { error: addQtyError }] = useAddUserQtyMutation();
 
-  const [subQty, { error: subQtyError, isLoading: subQtyLoading }] =
-    useSubtractUserQtyMutation();
+  const [subQty, { error: subQtyError }] = useSubtractUserQtyMutation();
 
   async function handleAddtoCart() {
     try {
       await productToCart({ product_id: product.id, quantity: 1 }).unwrap();
-      //setSuccessMessage(`${name} was successfully added to cart!`);
     } catch (error) {
       console.log("Error while adding product to cart", error);
     }
   }
 
+  // Handles deletion of a userProduct from cart
   async function handleDeletion(userProductId) {
     try {
       await deleteProduct(userProductId).unwrap();
@@ -55,6 +45,7 @@ function ProductPage() {
     }
   }
 
+  // Handles adding a qty of an existing userProduct to the cart
   async function handleQtyAddition(id) {
     try {
       await addQty({ id: id, quantity: 1 }).unwrap();
@@ -63,6 +54,7 @@ function ProductPage() {
     }
   }
 
+  // Handles subtracting a qty of an existing userProduct to the cart
   async function handleQtySubtraction(id) {
     try {
       await subQty({ id: id, quantity: 1 }).unwrap();
@@ -71,15 +63,21 @@ function ProductPage() {
     }
   }
 
+  // finds matching product for the userProduct
   const userProduct = userProducts.find(
     (userProduct) => userProduct.product_id === product.id
   );
 
-  console.log("data:", product);
+  if (deleteError || addQtyError || subQtyError || cartError) {
+    console.log("Error while modifying cart", error);
+  }
+
+  if (userProductserror) {
+    console.log("Error while fetching current cart items");
+  }
 
   return (
     <div id="SelectedProduct" key={product.id}>
-      {/* <img src={tempImg} id="temp_img"></img> */}
       <div id="SelectedProductImage">
         <img
           src={
