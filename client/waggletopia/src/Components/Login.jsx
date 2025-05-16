@@ -82,12 +82,12 @@ function Login() {
                 required
               />
             </label>
-            <button type="submit" id="LoginButton">Log in</button>
+            <button type="submit" id="LoginButton">
+              Log in
+            </button>
           </form>
           {loginError && (
-            <p className="Error">
-              Login failed. Check your credentials.
-            </p>
+            <p className="Error">Login failed. Check your credentials.</p>
           )}
         </>
       )}

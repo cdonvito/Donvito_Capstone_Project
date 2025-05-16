@@ -52,7 +52,10 @@ function About() {
         <p>-Fast shipping & clear pricing.</p>
       </div>
 
-      <button className="ScrollToTopBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      <button
+        className="ScrollToTopBtn"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         Back to Top
       </button>
     </div>

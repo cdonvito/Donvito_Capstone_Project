@@ -66,14 +66,19 @@ function Home() {
       </div>
 
       <div id="shopButtonDiv">
-        <button id="shopButton" onClick={() => navigate("/Product-Home")}>Shop Our Products</button>
+        <button id="shopButton" onClick={() => navigate("/Product-Home")}>
+          Shop Our Products
+        </button>
       </div>
 
       <div id="dogHomeBanner">
         <img src={dogHome} alt="dogHome"></img>
       </div>
 
-      <button className="ScrollToTopBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      <button
+        className="ScrollToTopBtn"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         Back to Top
       </button>
     </div>

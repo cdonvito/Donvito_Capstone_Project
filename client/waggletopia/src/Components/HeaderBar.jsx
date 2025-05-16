@@ -61,7 +61,11 @@ function HeaderBar() {
             ""
           )}
           {token ? (
-            <Link to="/Login" onClick={() => handleLogout()} className="navigation-link">
+            <Link
+              to="/Login"
+              onClick={() => handleLogout()}
+              className="navigation-link"
+            >
               Logout
             </Link>
           ) : (

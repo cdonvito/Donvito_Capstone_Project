@@ -51,9 +51,9 @@ function AdminPage() {
   ] = useDeleteProductMutation();
 
   const { data: user = {} } = useFetchUserQuery(null, {
-      skip: !token,
-      refetchOnMountOrArgChange: true,
-    });
+    skip: !token,
+    refetchOnMountOrArgChange: true,
+  });
 
   const emptyForm = {
     name: "",

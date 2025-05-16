@@ -70,7 +70,6 @@ function Cart() {
     );
   }
 
-
   // Show a loading message while products loading
   if (productsLoading) {
     return (
@@ -125,7 +124,6 @@ function Cart() {
     })
     .filter(Boolean);
 
-  
   if (!cartProducts.length) {
     // Success Message after checking out is successful
     if (checkoutSuccess) {

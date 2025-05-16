@@ -17,15 +17,11 @@ function OrderSummary() {
     isLoading: orderProductsLoading,
   } = useFetchOrderSummaryQuery(order_id);
 
-  console.log(orderProducts);
-
   const {
     data: products = [],
     error: productsError,
     isLoading: productsLoading,
   } = useFetchProductsAvailableQuery();
-
-  console.log(products);
 
   const totalAmount = orderProducts.reduce(
     (sum, item) => sum + item.unit_price * item.quantity,
@@ -36,19 +32,27 @@ function OrderSummary() {
     return <p>Please log in to view your orders.</p>;
   }
 
-  // shows loading message 
+  // shows loading message
   if (orderProductsLoading || productsLoading) {
     return <p className="Loading">Loading order summary…</p>;
   }
 
   // shows error message if orderProducts fetch fails
   if (orderProductsError) {
-    return <p className="Error">Error loading order: {orderProductsError.toString()}</p>;
+    return (
+      <p className="Error">
+        Error loading order: {orderProductsError.toString()}
+      </p>
+    );
   }
 
   // shows error message if products fetch fails
   if (productsError) {
-    return <p className="Error">Error loading products: {productsError.toString()}</p>;
+    return (
+      <p className="Error">
+        Error loading products: {productsError.toString()}
+      </p>
+    );
   }
 
   return (
