@@ -3,6 +3,7 @@ import {
   useCreateProductMutation,
   useDeleteProductMutation,
   useFetchProductsQuery,
+  useFetchUserQuery,
   useFetchUsersQuery,
   useModifyProductMutation,
 } from "./waggleApi";
@@ -48,6 +49,10 @@ function AdminPage() {
       isSuccess: deletionSuccess,
     },
   ] = useDeleteProductMutation();
+
+  const { data: user = {} } = useFetchUserQuery(null, {
+      skip: !token,
+    });
 
   const emptyForm = {
     name: "",
@@ -162,7 +167,7 @@ function AdminPage() {
     setProdInfo(emptyForm);
   }
 
-  if (!token) {
+  if (!token || !user.is_admin) {
     return (
       <div>
         <p>Unauthorized</p>

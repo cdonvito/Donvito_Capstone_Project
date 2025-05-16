@@ -1,5 +1,5 @@
 import logo from "../assets/WaggleTopia_logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import dogBanner from "../assets/dogs_playing.jpg";
 import headerText from "../assets/WaggleTopia_Header.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,6 +10,7 @@ import { useFetchUserQuery } from "./waggleApi";
 function HeaderBar() {
   const token = useSelector(getToken);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { data: user = {}, isLoading } = useFetchUserQuery(null, {
     skip: !token,
@@ -17,6 +18,8 @@ function HeaderBar() {
 
   function handleLogout() {
     dispatch(logout());
+    localStorage.removeItem("token");
+    navigate("/Login");
   }
 
   return (
@@ -57,7 +60,7 @@ function HeaderBar() {
             ""
           )}
           {token ? (
-            <Link onClick={() => handleLogout()} className="navigation-link">
+            <Link to="/Login" onClick={() => handleLogout()} className="navigation-link">
               Logout
             </Link>
           ) : (
