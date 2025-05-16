@@ -20,9 +20,18 @@ function OrdersPage() {
     return <p className="Success">You do not currently have any orders</p>;
   }
 
+  if (ordersLoading) {
+    return <p className="Loading">Order Loading...</p>;
+  }
+
+  if (ordersError) {
+    return <p className="Error">Error loading your orders. Please try again</p>;
+  }
+
   return (
     <div className="ordersList">
       {orders.map((order) => {
+        // getting date into the right format
         const date = new Date(order.order_date);
         const formattedDate = date.toLocaleDateString();
         return (

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import dogHome from "../assets/dog_home.jpg";
-import ScrollToTop from "./ScrollToTop";
 
 function Home() {
   const navigate = useNavigate();
@@ -73,6 +72,10 @@ function Home() {
       <div id="dogHomeBanner">
         <img src={dogHome} alt="dogHome"></img>
       </div>
+
+      <button className="ScrollToTopBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        Back to Top
+      </button>
     </div>
   );
 }

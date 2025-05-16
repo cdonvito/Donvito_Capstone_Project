@@ -36,14 +36,19 @@ function OrderSummary() {
     return <p>Please log in to view your orders.</p>;
   }
 
+  // shows loading message 
   if (orderProductsLoading || productsLoading) {
-    return <p>Loading order summary…</p>;
+    return <p className="Loading">Loading order summary…</p>;
   }
+
+  // shows error message if orderProducts fetch fails
   if (orderProductsError) {
-    return <p>Error loading order: {orderProductsError.toString()}</p>;
+    return <p className="Error">Error loading order: {orderProductsError.toString()}</p>;
   }
+
+  // shows error message if products fetch fails
   if (productsError) {
-    return <p>Error loading products: {productsError.toString()}</p>;
+    return <p className="Error">Error loading products: {productsError.toString()}</p>;
   }
 
   return (
@@ -73,6 +78,8 @@ function OrderSummary() {
       </div>
 
       <h3>Sum Total: ${totalAmount.toFixed(2)}</h3>
+
+      <button onClick={() => navigate("/Orders")}>Back to Orders</button>
     </div>
   );
 }

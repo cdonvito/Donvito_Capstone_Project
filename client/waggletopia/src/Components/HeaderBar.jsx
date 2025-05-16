@@ -12,7 +12,7 @@ function HeaderBar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { data: user = {}, isLoading } = useFetchUserQuery(null, {
+  const { data: user = {} } = useFetchUserQuery(null, {
     skip: !token,
     refetchOnMountOrArgChange: true,
   });
