@@ -14,6 +14,7 @@ function HeaderBar() {
 
   const { data: user = {}, isLoading } = useFetchUserQuery(null, {
     skip: !token,
+    refetchOnMountOrArgChange: true,
   });
 
   function handleLogout() {

@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import dogHome from "../assets/dog_home.jpg";
 import ScrollToTop from "./ScrollToTop";
 
 function Home() {
-  const scrollToTop = ScrollToTop()
+  const navigate = useNavigate();
 
   return (
     <div id="HomeBody">
@@ -66,7 +67,7 @@ function Home() {
       </div>
 
       <div id="shopButtonDiv">
-        <button id="shopButton" onClick={() => scrollToTop("/Product-Home")}>Shop Our Products</button>
+        <button id="shopButton" onClick={() => navigate("/Product-Home")}>Shop Our Products</button>
       </div>
 
       <div id="dogHomeBanner">

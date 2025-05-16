@@ -1,19 +1,27 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
-function ScrollToTop(page) {
-  const navigate = useNavigate();
+// function ScrollToTop() {
+//   const navigate = useNavigate();
   
-  
-  return (page) => {
-    const header = document.getElementById("header_bar");
-    if (header) {
-      setTimeout(() => header.scrollIntoView({ behavior: "smooth" }), 1000);
-    } else {
-      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 1000);
-    }
+//   return (page) => {
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//     setTimeout(() => navigate(page, { replace: true }), 400);
+//   };
+// }
 
-    navigate(page);
-  };
+// export default ScrollToTop;
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
 }
 
 export default ScrollToTop;

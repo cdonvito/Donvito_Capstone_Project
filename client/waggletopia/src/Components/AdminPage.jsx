@@ -52,6 +52,7 @@ function AdminPage() {
 
   const { data: user = {} } = useFetchUserQuery(null, {
       skip: !token,
+      refetchOnMountOrArgChange: true,
     });
 
   const emptyForm = {

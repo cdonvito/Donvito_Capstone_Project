@@ -8,10 +8,18 @@ function AccountPage() {
   const navigate = useNavigate();
   const token = useSelector(getToken);
   const dispatch = useDispatch();
-  const { data: user = {} , error, isLoading } = useFetchUserQuery();
-  const [ deleteUser, { isLoading: deletionLoading, error: deletionError }] = useDeleteUserMutation();
+  const {
+    data: user = {},
+    error,
+    isLoading,
+  } = useFetchUserQuery(null, {
+    skip: !token,
+    refetchOnMountOrArgChange: true,
+  });
+  const [deleteUser, { isLoading: deletionLoading, error: deletionError }] =
+    useDeleteUserMutation();
   const [successMessage, setSuccessMessage] = useState("");
-  
+
   // Show a loading message while data is being fetched
   if (isLoading) {
     return (
@@ -30,18 +38,19 @@ function AccountPage() {
     );
   }
 
-  async function handleDeletion () {
+  async function handleDeletion() {
     try {
-      if (!window.confirm("Are you sure you want to delete your account?")) return;
+      if (!window.confirm("Are you sure you want to delete your account?"))
+        return;
 
       await deleteUser(user.id).unwrap();
-      setSuccessMessage(`Your account has been successfully deleted.`)
+      setSuccessMessage(`Your account has been successfully deleted.`);
       setTimeout(() => navigate("/"), 2000);
-      setTimeout(() => dispatch(logout()), 2000); 
+      setTimeout(() => dispatch(logout()), 2000);
     } catch (error) {
       console.log("Error while deleting your account", error);
     }
-  };
+  }
 
   return token ? (
     <div id="AccountBody">
@@ -49,12 +58,24 @@ function AccountPage() {
         <button onClick={() => navigate("/Orders")}>Order History</button>
       </div>
 
-      <p><strong>Username:</strong> {user.username}</p>
-      <p><strong>Name:</strong> {user.name}</p>
-      <p><strong>Email Address:</strong> {user.email_address}</p>
-      <p><strong>Mailing Address:</strong> {user.mailing_address}</p>
-      <p><strong>Phone Number:</strong> {user.phone_number}</p>
-      <p><strong>Billing Address:</strong> {user.billing_address}</p>
+      <p>
+        <strong>Username:</strong> {user.username}
+      </p>
+      <p>
+        <strong>Name:</strong> {user.name}
+      </p>
+      <p>
+        <strong>Email Address:</strong> {user.email_address}
+      </p>
+      <p>
+        <strong>Mailing Address:</strong> {user.mailing_address}
+      </p>
+      <p>
+        <strong>Phone Number:</strong> {user.phone_number}
+      </p>
+      <p>
+        <strong>Billing Address:</strong> {user.billing_address}
+      </p>
 
       {deletionError && <p className="Error">Failed to delete account.</p>}
       {successMessage && <p className="Success">{successMessage}</p>}

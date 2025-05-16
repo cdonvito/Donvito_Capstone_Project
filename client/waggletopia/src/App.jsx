@@ -15,11 +15,13 @@ import ProductPage from './Components/ProductPage';
 import Register from './Components/Register';
 import TermsOfUse from './Components/TermsOfUse';
 import OrderSummary from './Components/OrderSummary';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
 
   return (
     <>
+      <ScrollToTop />
       <HeaderBar />
 
       <Routes>
