@@ -52,7 +52,7 @@ function Cart() {
     }
   }, [checkoutSuccess, navigate]);
 
-  // Show a loading message while data is being fetched
+  // Show a loading message while userProducts are being fetched
   if (isLoading) {
     return (
       <section>
@@ -61,7 +61,7 @@ function Cart() {
     );
   }
 
-  // Show an error message if the fetch failed
+  // Show an error message if userProducts fetch failed
   if (error) {
     return (
       <section>
@@ -70,6 +70,8 @@ function Cart() {
     );
   }
 
+
+  // Show a loading message while products loading
   if (productsLoading) {
     return (
       <section>
@@ -78,6 +80,7 @@ function Cart() {
     );
   }
 
+  // Show an error message if products don't load
   if (productsError) {
     return (
       <section>
@@ -86,6 +89,7 @@ function Cart() {
     );
   }
 
+  // Shows an loading message while checkout is processing
   if (checkoutLoading) {
     return (
       <div>
@@ -94,6 +98,7 @@ function Cart() {
     );
   }
 
+  // Shows an error message if checkout fails
   if (checkoutError) {
     return (
       <div>
@@ -102,6 +107,7 @@ function Cart() {
     );
   }
 
+  // returns the product associated with each cart userProduct
   const cartProducts = userProducts
     .map((userProduct) => {
       const prod = products.find((p) => p.id === userProduct.product_id);
@@ -119,7 +125,9 @@ function Cart() {
     })
     .filter(Boolean);
 
+  
   if (!cartProducts.length) {
+    // Success Message after checking out is successful
     if (checkoutSuccess) {
       return (
         <div>
@@ -128,6 +136,7 @@ function Cart() {
       );
     }
 
+    // Empty cart message if there are aren't any cartProducts
     return (
       <section>
         <h2>Your cart is empty.</h2>
@@ -135,11 +144,13 @@ function Cart() {
     );
   }
 
+  // Sums total cost of all products in cart
   const totalAmount = cartProducts.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
 
+  // Handles deletion of an item in the cart
   async function handleDeletion(userProductId) {
     try {
       await deleteProduct(userProductId).unwrap();
@@ -148,6 +159,7 @@ function Cart() {
     }
   }
 
+  // Handles adding qty of an item in the cart
   async function handleQtyAddition(id) {
     try {
       await addQty({ id: id, quantity: 1 }).unwrap();
@@ -156,6 +168,7 @@ function Cart() {
     }
   }
 
+  // Handles subtracting qty of an item in the cart
   async function handleQtySubtraction(id) {
     try {
       await subQty({ id: id, quantity: 1 }).unwrap();
@@ -164,6 +177,7 @@ function Cart() {
     }
   }
 
+  // Handles the checkout process
   async function handleCheckout() {
     try {
       await checkout().unwrap();
@@ -172,6 +186,7 @@ function Cart() {
     }
   }
 
+  // If user does not have token then message saying to log in
   if (!token) {
     return (
       <div>
