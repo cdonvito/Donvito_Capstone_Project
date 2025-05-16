@@ -47,7 +47,7 @@ function Register() {
       dispatch(setUser({ token: response.token, user: response.user }));
       localStorage.setItem("token", response.token);
     } catch (error) {
-      console.log({ error: "Error While registering" });
+      console.log({ error: "Error While registering", error });
     }
   };
 
