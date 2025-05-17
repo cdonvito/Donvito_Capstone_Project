@@ -70,6 +70,9 @@ function AdminPage() {
 
   const [editingId, setEditingId] = useState(null);
 
+  const [seeUsers, setSeeUsers] = useState(false);
+  const [seeProducts, setSeeProducts] = useState(false);
+
   useEffect(() => {
     if (isSuccess) {
       setProdInfo({
@@ -161,12 +164,31 @@ function AdminPage() {
       price: product.price,
       stock: product.stock,
     });
+    setSeeProducts(false);
     window.scrollTo({ top: 500, behavior: "smooth" });
   }
 
   function handleCancel() {
     setEditingId(null);
     setProdInfo(emptyForm);
+  }
+
+  function handleSeeProducts() {
+    if (!seeProducts) {
+      setSeeProducts(true);
+      setSeeUsers(false);
+    } else if (seeProducts) {
+      setSeeProducts(false);
+    }
+  }
+
+  function handleSeeUsers() {
+    if (!seeUsers) {
+      setSeeUsers(true);
+      setSeeProducts(false);
+    } else if (seeUsers) {
+      setSeeUsers(false);
+    }
   }
 
   if (!token || !user.is_admin) {
@@ -295,46 +317,72 @@ function AdminPage() {
           </button>
         )}
       </form>
-      <div id="UsersANDProductsList">
-        <div id="AdminProductsList">
-          {products.map((product) => {
-            return (
-              <div key={product.id} className="AdminProduct">
-                <p>Name: {product.name}</p>
-                <p>Description: {product.description}</p>
-                <p>Image URL: {product.img_url}</p>
-                <p>Size: {product.size}</p>
-                <p>Includes: {product.includes}</p>
-                <p>Category: {product.category}</p>
-                <p>Price: {product.price}</p>
-                <p>Stock: {product.stock}</p>
-                <div>
-                  <button onClick={() => handleEditClick(product)}>Edit</button>
-                  <button onClick={() => handleDeletion(product)}>
-                    Delete
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+      {!seeProducts ? (
+        <button onClick={() => handleSeeProducts()}>View/Edit Products</button>
+      ) : (
+        <button onClick={() => handleSeeProducts()}>
+          Done Editing Products
+        </button>
+      )}
 
-        <div id="AdminUsersList">
-          {users.map((user) => {
-            return (
-              <div key={user.id} className="AdminUser">
-                <p>Username: {user.username}</p>
-                <p>Name: {user.name}</p>
-                <p>Email: {user.email_address ? user.email_address : "N/A"}</p>
-                <p>Mailing Address: {user.mailing_address}</p>
-                <p>
-                  Phone Number: {user.phone_number ? user.phone_number : "N/A"}
-                </p>
-                <p>Is Admin: {user.is_admin ? "Yes" : "No"}</p>
-              </div>
-            );
-          })}
-        </div>
+      {!seeUsers ? (
+        <button onClick={() => handleSeeUsers()}>See Users</button>
+      ) : (
+        <button onClick={() => handleSeeUsers()}>Hide Users</button>
+      )}
+      <div id="UsersANDProductsList">
+        {seeProducts ? (
+          <div id="AdminProductsList">
+            {products.map((product) => {
+              return (
+                <div key={product.id} className="AdminProduct">
+                  <p>Name: {product.name}</p>
+                  <p>Description: {product.description}</p>
+                  <p>Image URL: {product.img_url}</p>
+                  <p>Size: {product.size}</p>
+                  <p>Includes: {product.includes}</p>
+                  <p>Category: {product.category}</p>
+                  <p>Price: {product.price}</p>
+                  <p>Stock: {product.stock}</p>
+                  <div>
+                    <button onClick={() => handleEditClick(product)}>
+                      Edit
+                    </button>
+                    <button onClick={() => handleDeletion(product)}>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
+
+        {seeUsers ? (
+          <div id="AdminUsersList">
+            {users.map((user) => {
+              return (
+                <div key={user.id} className="AdminUser">
+                  <p>Username: {user.username}</p>
+                  <p>Name: {user.name}</p>
+                  <p>
+                    Email: {user.email_address ? user.email_address : "N/A"}
+                  </p>
+                  <p>Mailing Address: {user.mailing_address}</p>
+                  <p>
+                    Phone Number:{" "}
+                    {user.phone_number ? user.phone_number : "N/A"}
+                  </p>
+                  <p>Is Admin: {user.is_admin ? "Yes" : "No"}</p>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
