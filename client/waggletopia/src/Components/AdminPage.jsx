@@ -9,23 +9,17 @@ import {
 } from "./waggleApi";
 import { useSelector } from "react-redux";
 import { getToken } from "../Users/userSlice";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
   const token = useSelector(getToken);
   const navigate = useNavigate();
-  const [createProduct, { data, error, isLoading, isSuccess }] =
-    useCreateProductMutation();
+  const [createProduct, { isSuccess }] = useCreateProductMutation();
+  const [createSuccessMsg, setCreateSuccessMsg] = useState("");
 
-  const [
-    modifyProduct,
-    {
-      data: modifyData,
-      error: modifyError,
-      isLoading: modifyLoading,
-      isSuccess: modifySuccess,
-    },
-  ] = useModifyProductMutation();
+  const [modifyProduct, { isSuccess: modifySuccess }] =
+    useModifyProductMutation();
+  const [modifySuccessMsg, setModifySuccessMsg] = useState("");
 
   const {
     data: userObj = {},
@@ -34,6 +28,14 @@ function AdminPage() {
   } = useFetchUsersQuery();
   const users = Object.values(userObj);
 
+  if (usersError) {
+    return <p className="Error">Unable to load users. Please try again</p>;
+  }
+
+  if (usersLoading) {
+    return <p className="Loading">Loading Users...</p>;
+  }
+
   const {
     data: prodObj = {},
     error: productsError,
@@ -41,14 +43,15 @@ function AdminPage() {
   } = useFetchProductsQuery();
   const products = Object.values(prodObj);
 
-  const [
-    deleteProduct,
-    {
-      isLoading: deletionLoading,
-      error: deletionError,
-      isSuccess: deletionSuccess,
-    },
-  ] = useDeleteProductMutation();
+  if (productsError) {
+    return <p className="Error">Unable to load products. Please try again</p>;
+  }
+
+  if (productsLoading) {
+    return <p className="Loading">Loading Products...</p>;
+  }
+
+  const [deleteProduct] = useDeleteProductMutation();
 
   const { data: user = {} } = useFetchUserQuery(null, {
     skip: !token,
@@ -85,6 +88,7 @@ function AdminPage() {
         price: "",
         stock: "",
       });
+      setCreateSuccessMsg("Product successfully created!");
     }
   }, [isSuccess, navigate]);
 
@@ -102,6 +106,7 @@ function AdminPage() {
         price: "",
         stock: "",
       });
+      setModifySuccessMsg("Product successfully modified!");
     }
   }, [modifySuccess, navigate]);
 
@@ -177,8 +182,12 @@ function AdminPage() {
     if (!seeProducts) {
       setSeeProducts(true);
       setSeeUsers(false);
+      setCreateSuccessMsg("");
+      setModifySuccessMsg("");
     } else if (seeProducts) {
       setSeeProducts(false);
+      setCreateSuccessMsg("");
+      setModifySuccessMsg("");
     }
   }
 
@@ -186,8 +195,12 @@ function AdminPage() {
     if (!seeUsers) {
       setSeeUsers(true);
       setSeeProducts(false);
+      setCreateSuccessMsg("");
+      setModifySuccessMsg("");
     } else if (seeUsers) {
       setSeeUsers(false);
+      setCreateSuccessMsg("");
+      setModifySuccessMsg("");
     }
   }
 
@@ -202,6 +215,8 @@ function AdminPage() {
   return (
     <div>
       <h2>Admin Page</h2>
+      {createSuccessMsg ? <p className="Success">{createSuccessMsg}</p> : ""}
+      {modifySuccessMsg ? <p className="Success">{modifySuccessMsg}</p> : ""}
       <form id="AdminForm" onSubmit={editingId ? handleUpdate : handleCreate}>
         <label>
           Name
