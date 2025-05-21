@@ -10,8 +10,7 @@ const {
 } = require("./db");
 const { productsToCreate } = require("./productSeed");
 const { usersToCreate } = require("./userSeed");
-require('dotenv').config();
-
+require("dotenv").config();
 
 async function seed() {
   await client.connect();
@@ -19,79 +18,78 @@ async function seed() {
   await createTables();
   console.log("tables created");
 
-  const [craig, madie, penny, scooby, comb, spray, bag] =
-    await Promise.all([
-      createUser(
-        "craigdonvito",
-        "password123",
-        true,
-        "Craig Donvito",
-        "donvitocraig@gmail.com",
-        "123 Coding Lane",
-        "",
-        ""
-      ),
-      createUser(
-        "madiewilson",
-        "abc123",
-        false,
-        "Madie Wilson",
-        "test@gmail.com",
-        "345 Hacker Way",
-        "",
-        ""
-      ),
-      createUser(
-        "penny",
-        "ruffabc",
-        false,
-        "Penny",
-        "",
-        "456 Hacker Way",
-        "",
-        ""
-      ),
-      createUser(
-        "scooby",
-        "123bark",
-        false,
-        "Scooby",
-        "",
-        "567 Coding Lane",
-        "",
-        ""
-      ),
-      createProduct(
-        "Comb Set",
-        "Our professional-grade comb set keeps your dog looking its best.",
-        "comb_set.jpg",
-        "Small",
-        "1 Small 8 oz",
-        "Grooming",
-        9.67,
-        115,
-      ),
-      createProduct(
-        "Deodorizing Spray",
-        "Our professional-grade deodorizing spray keeps your dog looking its best.",
-        "deodorizing_spray.jpg",
-        "Large",
-        "1 Large 32 oz",
-        "Grooming",
-        19.84,
-        75,
-      ),
-      createProduct(
-        "Waterproof Bag",
-        "Our professional-grade waterproof bag keeps your dog looking its best.",
-        "waterproof_bag.jpg",
-        "Medium",
-        "1 Medium 16 oz",
-        "Grooming",
-        16.25,
-        2,
-      ),
-    ]);
+  const [craig, madie, penny, scooby, comb, spray, bag] = await Promise.all([
+    createUser(
+      "craigdonvito",
+      "password123",
+      true,
+      "Craig Donvito",
+      "donvitocraig@gmail.com",
+      "123 Coding Lane",
+      "",
+      ""
+    ),
+    createUser(
+      "madiewilson",
+      "abc123",
+      false,
+      "Madie Wilson",
+      "test@gmail.com",
+      "345 Hacker Way",
+      "",
+      ""
+    ),
+    createUser(
+      "penny",
+      "ruffabc",
+      false,
+      "Penny",
+      "",
+      "456 Hacker Way",
+      "",
+      ""
+    ),
+    createUser(
+      "scooby",
+      "123bark",
+      false,
+      "Scooby",
+      "",
+      "567 Coding Lane",
+      "",
+      ""
+    ),
+    createProduct(
+      "Comb Set",
+      "Our professional-grade comb set keeps your dog looking its best.",
+      "comb_set.jpg",
+      "Small",
+      "1 Small 8 oz",
+      "Grooming",
+      9.67,
+      115
+    ),
+    createProduct(
+      "Deodorizing Spray",
+      "Our professional-grade deodorizing spray keeps your dog looking its best.",
+      "deodorizing_spray.jpg",
+      "Large",
+      "1 Large 32 oz",
+      "Grooming",
+      19.84,
+      75
+    ),
+    createProduct(
+      "Waterproof Bag",
+      "Our professional-grade waterproof bag keeps your dog looking its best.",
+      "waterproof_bag.jpg",
+      "Medium",
+      "1 Medium 16 oz",
+      "Grooming",
+      16.25,
+      2
+    ),
+  ]);
 
   console.log("users created");
   console.log(await fetchUsers());

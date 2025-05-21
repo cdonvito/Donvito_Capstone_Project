@@ -2,7 +2,7 @@
 
 // function ScrollToTop() {
 //   const navigate = useNavigate();
-  
+
 //   return (page) => {
 //     window.scrollTo({ top: 0, behavior: "smooth" });
 //     setTimeout(() => navigate(page, { replace: true }), 400);

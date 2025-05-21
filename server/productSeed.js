@@ -2910,7 +2910,7 @@ const productsToCreate = [
     includes: "1 bag",
     category: "Food",
     price: 19.99,
-    stock: 50
+    stock: 50,
   },
   {
     name: "Pumpkin Wet Food",
@@ -2921,7 +2921,7 @@ const productsToCreate = [
     includes: "1 can",
     category: "Food",
     price: 24.5,
-    stock: 30
+    stock: 30,
   },
   {
     name: "Blueberry Jerky Treat",
@@ -2932,7 +2932,7 @@ const productsToCreate = [
     includes: "1 pack",
     category: "Treats/Bones",
     price: 12.75,
-    stock: 75
+    stock: 75,
   },
   {
     name: "Salmon Dental Bone",
@@ -2943,7 +2943,7 @@ const productsToCreate = [
     includes: "1 bone",
     category: "Treats/Bones",
     price: 15.25,
-    stock: 40
+    stock: 40,
   },
   {
     name: "Turkey Rope Toy",
@@ -2954,7 +2954,7 @@ const productsToCreate = [
     includes: "1 rope toy",
     category: "Toys",
     price: 18.0,
-    stock: 60
+    stock: 60,
   },
   {
     name: "Lamb Interactive Puzzle",
@@ -2965,7 +2965,7 @@ const productsToCreate = [
     includes: "1 puzzle",
     category: "Toys",
     price: 22.3,
-    stock: 25
+    stock: 25,
   },
   {
     name: "Chicken Plush Toy",
@@ -2976,7 +2976,7 @@ const productsToCreate = [
     includes: "1 plush toy",
     category: "Toys",
     price: 14.6,
-    stock: 80
+    stock: 80,
   },
   {
     name: "Venison Squeaky Toy",
@@ -2987,7 +2987,7 @@ const productsToCreate = [
     includes: "1 squeaky toy",
     category: "Toys",
     price: 16.8,
-    stock: 45
+    stock: 45,
   },
   {
     name: "Duck Crate",
@@ -2998,7 +2998,7 @@ const productsToCreate = [
     includes: "1 crate",
     category: "Crates",
     price: 45.0,
-    stock: 20
+    stock: 20,
   },
   {
     name: "Kangaroo Dog Bed",
@@ -3009,7 +3009,7 @@ const productsToCreate = [
     includes: "1 bed",
     category: "Beds",
     price: 39.99,
-    stock: 15
+    stock: 15,
   },
   {
     name: "Peanut Butter Collar",
@@ -3020,7 +3020,7 @@ const productsToCreate = [
     includes: "1 collar",
     category: "Collars, Harnesses & Leashes",
     price: 15.5,
-    stock: 70
+    stock: 70,
   },
   {
     name: "Sweet Potato Harness",
@@ -3031,7 +3031,7 @@ const productsToCreate = [
     includes: "1 harness",
     category: "Collars, Harnesses & Leashes",
     price: 22.99,
-    stock: 55
+    stock: 55,
   },
   {
     name: "Venison Leash",
@@ -3042,7 +3042,7 @@ const productsToCreate = [
     includes: "1 leash",
     category: "Collars, Harnesses & Leashes",
     price: 18.75,
-    stock: 65
+    stock: 65,
   },
   {
     name: "Salmon Food Bowl",
@@ -3053,7 +3053,7 @@ const productsToCreate = [
     includes: "1 bowl",
     category: "Bowls",
     price: 7.99,
-    stock: 90
+    stock: 90,
   },
   {
     name: "Beef Water Bowl",
@@ -3064,7 +3064,7 @@ const productsToCreate = [
     includes: "1 bowl",
     category: "Bowls",
     price: 6.49,
-    stock: 100
+    stock: 100,
   },
   {
     name: "Duck Shampoo",
@@ -3075,7 +3075,7 @@ const productsToCreate = [
     includes: "1 bottle",
     category: "Grooming",
     price: 12.0,
-    stock: 85
+    stock: 85,
   },
   {
     name: "Turkey Conditioner",
@@ -3086,7 +3086,7 @@ const productsToCreate = [
     includes: "1 bottle",
     category: "Grooming",
     price: 13.0,
-    stock: 80
+    stock: 80,
   },
   {
     name: "Lamb Brush",
@@ -3097,7 +3097,7 @@ const productsToCreate = [
     includes: "1 brush",
     category: "Grooming",
     price: 11.5,
-    stock: 45
+    stock: 45,
   },
   {
     name: "Kangaroo Slow Feeder Bowl",
@@ -3108,7 +3108,7 @@ const productsToCreate = [
     includes: "1 bowl",
     category: "Bowls",
     price: 29.99,
-    stock: 35
+    stock: 35,
   },
   {
     name: "Chicken Food Topper",
@@ -3119,7 +3119,7 @@ const productsToCreate = [
     includes: "1 jar",
     category: "Food Toppers",
     price: 8.99,
-    stock: 95
+    stock: 95,
   },
   {
     name: "Beef & Chicken Jerky Sampler",
@@ -3130,7 +3130,7 @@ const productsToCreate = [
     includes: "1 sampler pack",
     category: "Treats/Bones",
     price: 19.49,
-    stock: 50
+    stock: 50,
   },
   {
     name: "Salmon & Tuna Wet Food Duo",
@@ -3141,7 +3141,7 @@ const productsToCreate = [
     includes: "2 cans",
     category: "Food",
     price: 23.99,
-    stock: 25
+    stock: 25,
   },
   {
     name: "Pumpkin Spice Kibble",
@@ -3152,7 +3152,7 @@ const productsToCreate = [
     includes: "1 bag",
     category: "Food",
     price: 17.25,
-    stock: 60
+    stock: 60,
   },
   {
     name: "Duck & Sweet Potato Jerky",
@@ -3163,7 +3163,7 @@ const productsToCreate = [
     includes: "1 pack",
     category: "Treats/Bones",
     price: 14.75,
-    stock: 30
+    stock: 30,
   },
   {
     name: "Lamb & Venison Bone Mix",
@@ -3174,7 +3174,7 @@ const productsToCreate = [
     includes: "1 mix pack",
     category: "Treats/Bones",
     price: 16.5,
-    stock: 40
+    stock: 40,
   },
   {
     name: "Kangaroo Hide Chew",
@@ -3185,7 +3185,7 @@ const productsToCreate = [
     includes: "1 chew",
     category: "Treats/Bones",
     price: 25.0,
-    stock: 20
+    stock: 20,
   },
   {
     name: "Turkey Feathers Plush Toy",
@@ -3196,7 +3196,7 @@ const productsToCreate = [
     includes: "1 plush toy",
     category: "Toys",
     price: 13.5,
-    stock: 50
+    stock: 50,
   },
   {
     name: "Peanut Butter Dental Stick",
@@ -3207,7 +3207,7 @@ const productsToCreate = [
     includes: "1 stick",
     category: "Treats/Bones",
     price: 10.99,
-    stock: 100
+    stock: 100,
   },
 ];
 

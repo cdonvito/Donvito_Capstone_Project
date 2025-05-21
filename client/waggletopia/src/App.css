@@ -247,7 +247,7 @@ a:hover {
 }
 
 #LoginButton {
-  width: auto
+  width: auto;
 }
 
 /* ================== REGISTER PAGE ================== */
@@ -376,7 +376,7 @@ a:hover {
 }
 
 .ProductsAvailable button {
-  margin: 0.5rem
+  margin: 0.5rem;
 }
 
 .ProductImage {

@@ -64,7 +64,16 @@ export const waggleApi = createApi({
       }) => ({
         url: "/product",
         method: "POST",
-        body: { name, description, img_url, size, includes, category, price, stock },
+        body: {
+          name,
+          description,
+          img_url,
+          size,
+          includes,
+          category,
+          price,
+          stock,
+        },
       }),
     }),
 

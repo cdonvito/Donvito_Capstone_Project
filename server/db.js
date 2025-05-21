@@ -119,7 +119,16 @@ async function fetchUser(id) {
   return response.rows[0];
 }
 
-async function createProduct(name, description, img_url, size, includes, category, price, stock) {
+async function createProduct(
+  name,
+  description,
+  img_url,
+  size,
+  includes,
+  category,
+  price,
+  stock
+) {
   const SQL = `INSERT INTO products(id, name, description, img_url, size, includes, category, price, stock) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;`;
   const response = await client.query(SQL, [
     uuid.v4(),
@@ -144,7 +153,7 @@ async function modifyProduct(
   includes,
   category,
   price,
-  stock,
+  stock
 ) {
   const SQL = `UPDATE products SET name = $2, description = $3, img_url = $4, size = $5, includes = $6, category = $7, price = $8, stock = $9 WHERE id = $1 RETURNING *;`;
   const response = await client.query(SQL, [
