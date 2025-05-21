@@ -94,21 +94,6 @@ function ProductHome() {
   return (
     <div>
       <h2>Shop Our One of a Kind Dog Products</h2>
-      {/* <div>
-        <h2>Shop By Category</h2>
-        <div>
-          {categories.map((category) => {
-            return <button key={category}>{category}</button>;
-          })}
-        </div>
-
-        <h2>Shop By Size</h2>
-        <div>
-          {sizes.map((size) => {
-            return <button key={size}>{size}</button>;
-          })}
-        </div>
-      </div> */}
 
       <div id="ProductsAvailableList">
         {products.map((product) => {
