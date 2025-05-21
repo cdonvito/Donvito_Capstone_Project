@@ -14,19 +14,6 @@ import tempImg from "../assets/Coming_soon.jpg";
 function ProductHome() {
   const token = useSelector(getToken);
   const navigate = useNavigate();
-  const categories = [
-    "Food",
-    "Treats",
-    "Toys",
-    "Food Toppers",
-    "Crates",
-    "Collars, Harnesses & Leashes",
-    "Beds",
-    "Bowls",
-    "Grooming",
-  ];
-
-  const sizes = ["Small", "Medium", "Large", "XLarge"];
 
   const {
     data: productsObj = {},
