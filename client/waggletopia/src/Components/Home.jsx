@@ -50,9 +50,8 @@ function Home() {
         <p className="HomeSummary">
           <strong>
             Join thousands of happy pet parents who trust Waggle Topia to keep
-            their dogs healthy, happy, and thriving. Browse our collections or
-            take our quick “Find Your Fit” quiz to discover the perfect products
-            tailored to your dog's unique needs.
+            their dogs healthy, happy, and thriving. Browse our collections to
+            discover the perfect products tailored to your dog's unique needs.
           </strong>
         </p>
         <br></br>
