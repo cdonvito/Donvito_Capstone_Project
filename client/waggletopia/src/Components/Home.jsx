@@ -7,7 +7,7 @@ function Home() {
   return (
     <div id="HomeBody">
       <div>
-        <h1>Welcome to Waggle Topia</h1>
+        <h2>Welcome to Waggle Topia</h2>
         <p className="HomeSummary">
           <strong>
             At Waggle Topia, we understand that your dog is more than a
