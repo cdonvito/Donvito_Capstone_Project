@@ -82,8 +82,9 @@ function OrderSummary() {
       </div>
 
       <h3>Sum Total: ${totalAmount.toFixed(2)}</h3>
-
-      <button onClick={() => navigate("/Orders")}>Back to Orders</button>
+      <div id="BackToOrders">
+        <button onClick={() => navigate("/Orders")}>Back to Orders</button>
+      </div>
     </div>
   );
 }

@@ -36,6 +36,8 @@ ol,
 button,
 input,
 label,
+textarea,
+select,
 .navigation-bar,
 .footer-bar {
   font-family: "Open Sans", sans-serif;
@@ -54,6 +56,8 @@ img {
 
 button {
   border-radius: 0.8em;
+  width: auto;
+  margin: 1rem;
 }
 
 button:hover {
@@ -64,6 +68,20 @@ button:hover {
 a:hover {
   cursor: pointer;
   color: #00669a;
+}
+
+.ScrollToTopBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.ScrollToTopBtn button {
+  width: auto;
+  height: 2rem;
+  font-size: 15px;
 }
 
 /* ================== STANDARD MESSAGES ================== */
@@ -159,7 +177,7 @@ a:hover {
 }
 
 #shopButton {
-  width: 30%;
+  width: auto;
   font-size: 3rem;
   margin: 2rem 0;
 }
@@ -229,7 +247,7 @@ a:hover {
 }
 
 #LoginButton {
-  width: 5%;
+  width: auto
 }
 
 /* ================== REGISTER PAGE ================== */
@@ -255,7 +273,7 @@ a:hover {
 }
 
 #RegisterButton {
-  width: 5%;
+  width: auto;
 }
 
 /* ================== ACCOUNT PAGE ================== */
@@ -265,7 +283,7 @@ a:hover {
 }
 
 #AccountBody button {
-  width: 20%;
+  width: auto;
   font-size: 15px;
 }
 
@@ -287,11 +305,11 @@ a:hover {
   margin-bottom: 2em;
   padding: 1em;
   width: 30%;
-  height: 10rem;
+  height: auto;
 }
 
 .orderOverview button {
-  width: 40%;
+  width: auto;
   font-size: 20px;
 }
 
@@ -309,7 +327,7 @@ a:hover {
 
 .orders {
   width: 25%;
-  height: 25rem;
+  height: auto;
   border: 2px solid #00669a;
   border-radius: 2em;
   margin-bottom: 2em;
@@ -317,7 +335,21 @@ a:hover {
 }
 
 .orders button {
-  width: 50%;
+  width: auto;
+  font-size: 15px;
+}
+
+#BackToOrders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+#BackToOrders button {
+  width: auto;
+  height: 2rem;
   font-size: 15px;
 }
 
@@ -344,7 +376,7 @@ a:hover {
 }
 
 .ProductsAvailable button {
-  margin: 0.5em;
+  margin: 0.5rem
 }
 
 .ProductImage {
@@ -374,7 +406,7 @@ a:hover {
 }
 
 #SelectedProduct button {
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 
 #SelectedProductImage img {
@@ -421,7 +453,7 @@ a:hover {
 }
 
 .UserProduct button {
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 
 #CartSummary {
@@ -445,12 +477,15 @@ a:hover {
 #AdminForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  align-items: stretch;
+  width: 30rem;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 #AdminForm input,
-select {
+#AdminForm select,
+#AdminForm textarea {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -459,7 +494,7 @@ select {
 }
 
 #AdminForm button {
-  width: 10%;
+  width: auto;
   font-size: 15px;
 }
 
@@ -518,15 +553,24 @@ select {
   background-color: white;
 }
 
+form button,
 .AdminProduct button {
   margin: 0.5em;
   font-size: 15px;
   padding: 0.5em;
 }
 
-.ProductImage {
-  width: 80%;
-  height: auto;
-  padding-top: 1rem;
-  border-radius: 4em;
+#AdminDataToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+#AdminDataToggle button {
+  width: auto;
+  height: 2rem;
+  font-size: 15px;
+  margin: 1rem;
 }

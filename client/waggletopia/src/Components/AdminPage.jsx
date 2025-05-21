@@ -26,30 +26,12 @@ function AdminPage() {
     error: usersError,
     isLoading: usersLoading,
   } = useFetchUsersQuery();
-  const users = Object.values(userObj);
-
-  if (usersError) {
-    return <p className="Error">Unable to load users. Please try again</p>;
-  }
-
-  if (usersLoading) {
-    return <p className="Loading">Loading Users...</p>;
-  }
 
   const {
     data: prodObj = {},
     error: productsError,
     isLoading: productsLoading,
   } = useFetchProductsQuery();
-  const products = Object.values(prodObj);
-
-  if (productsError) {
-    return <p className="Error">Unable to load products. Please try again</p>;
-  }
-
-  if (productsLoading) {
-    return <p className="Loading">Loading Products...</p>;
-  }
 
   const [deleteProduct] = useDeleteProductMutation();
 
@@ -212,6 +194,25 @@ function AdminPage() {
     );
   }
 
+  if (usersError) {
+    return <p className="Error">Unable to load users. Please try again</p>;
+  }
+
+  if (usersLoading) {
+    return <p className="Loading">Loading Users...</p>;
+  }
+
+  if (productsError) {
+    return <p className="Error">Unable to load products. Please try again</p>;
+  }
+
+  if (productsLoading) {
+    return <p className="Loading">Loading Products...</p>;
+  }
+
+  const users = Object.values(userObj);
+  const products = Object.values(prodObj);
+
   return (
     <div>
       <h2>Admin Page</h2>
@@ -231,14 +232,16 @@ function AdminPage() {
         </label>
         <label>
           Description
-          <input
-            type="text"
+          <textarea
             placeholder="Description"
             name="description"
             value={prodInfo.description}
-            onChange={handleChange}
+            onChange={(e) => {
+              handleChange(e);
+              autoGrow(e.target);
+            }}
             required
-          ></input>
+          ></textarea>
         </label>
         <label>
           Image URL:
@@ -332,19 +335,24 @@ function AdminPage() {
           </button>
         )}
       </form>
-      {!seeProducts ? (
-        <button onClick={() => handleSeeProducts()}>View/Edit Products</button>
-      ) : (
-        <button onClick={() => handleSeeProducts()}>
-          Done Editing Products
-        </button>
-      )}
+      <div id="AdminDataToggle">
+        {!seeProducts ? (
+          <button onClick={() => handleSeeProducts()}>
+            View/Edit Products
+          </button>
+        ) : (
+          <button onClick={() => handleSeeProducts()}>
+            Done Editing Products
+          </button>
+        )}
 
-      {!seeUsers ? (
-        <button onClick={() => handleSeeUsers()}>See Users</button>
-      ) : (
-        <button onClick={() => handleSeeUsers()}>Hide Users</button>
-      )}
+        {!seeUsers ? (
+          <button onClick={() => handleSeeUsers()}>See Users</button>
+        ) : (
+          <button onClick={() => handleSeeUsers()}>Hide Users</button>
+        )}
+      </div>
+
       <div id="UsersANDProductsList">
         {seeProducts ? (
           <div id="AdminProductsList">

@@ -74,13 +74,11 @@ function Home() {
       <div id="dogHomeBanner">
         <img src={dogHome} alt="dogHome"></img>
       </div>
-
-      <button
-        className="ScrollToTopBtn"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        Back to Top
-      </button>
+      <div className="ScrollToTopBtn">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          Back to Top
+        </button>
+      </div>
     </div>
   );
 }

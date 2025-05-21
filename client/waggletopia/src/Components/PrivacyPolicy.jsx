@@ -94,13 +94,11 @@ function PrivacyPolicy() {
           <p>Questions or requests? Email us at privacy@waggletopia.com.</p>
         </li>
       </ol>
-
-      <button
-        className="ScrollToTopBtn"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        Back to Top
-      </button>
+      <div className="ScrollToTopBtn">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          Back to Top
+        </button>
+      </div>
     </div>
   );
 }
