@@ -22,6 +22,7 @@ function ProductHome() {
   } = useFetchProductsAvailableQuery();
   const products = Object.values(productsObj);
 
+  // gets user Products in order to display + and - if added to cart
   const {
     data: userProducts = [],
     userProductserror,
