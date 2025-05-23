@@ -16,6 +16,7 @@ function OrdersPage() {
     return <p className="Error">Please log in to view your orders.</p>;
   }
 
+  // Shows the user that they don't have any current orders if they have not previously checked a cart out
   if (orders.length === 0) {
     return <p className="Success">You do not currently have any orders</p>;
   }

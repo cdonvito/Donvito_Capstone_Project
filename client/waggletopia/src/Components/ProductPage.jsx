@@ -28,6 +28,7 @@ function ProductPage() {
 
   const [subQty, { error: subQtyError }] = useSubtractUserQtyMutation();
 
+  // Handles adding a product to the cart
   async function handleAddtoCart() {
     try {
       await productToCart({ product_id: product.id, quantity: 1 }).unwrap();

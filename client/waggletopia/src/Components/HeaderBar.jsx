@@ -17,6 +17,7 @@ function HeaderBar() {
     refetchOnMountOrArgChange: true,
   });
 
+  // Logs out the current user and returns to login page
   function handleLogout() {
     dispatch(logout());
     localStorage.removeItem("token");
