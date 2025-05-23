@@ -363,10 +363,10 @@ server.post("/api/user/checkout", async (req, res, next) => {
 
     const order_date = new Date();
 
-    // Step 1: Create a new order
+    // Create a new order
     const order = await checkoutOrder(req.user.id, order_date);
 
-    // Step 2: Insert all products tied to the order & update product quantity
+    // Insert all products tied to the order & update product quantity - to keep stock count accurate
     const checkoutResults = await Promise.all(
       userProducts.map(async (item) => {
         const orderProduct = await checkoutProducts(
@@ -380,7 +380,7 @@ server.post("/api/user/checkout", async (req, res, next) => {
       })
     );
 
-    // Step 3: Clear user's cart
+    // Clear user's cart
     await destroyAllUserProducts(req.user.id);
 
     res.status(201).send({
