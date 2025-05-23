@@ -201,6 +201,7 @@ function Cart() {
             <div key={product.id} className="UserProduct">
               <div className="UserProductImage">
                 <img
+                //  gets random image from placedog.net for each product or temp image if no img_url found
                   src={
                     product.img_url
                       ? `https://placedog.net/1024/1024?random=${product.id}`

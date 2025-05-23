@@ -93,6 +93,7 @@ function ProductHome() {
               <img
                 className="ProductImage"
                 src={
+                  //  gets random image from placedog.net for each product or temp image if no img_url found
                   product.img_url
                     ? `https://placedog.net/1024/1024?random=${product.id}`
                     : tempImg
