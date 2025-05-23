@@ -40,6 +40,7 @@ function AdminPage() {
     refetchOnMountOrArgChange: true,
   });
 
+  // Starts with an empty form
   const emptyForm = {
     name: "",
     description: "",
@@ -58,6 +59,7 @@ function AdminPage() {
   const [seeUsers, setSeeUsers] = useState(false);
   const [seeProducts, setSeeProducts] = useState(false);
 
+  // Resets the form to blank after successful product creation or navigation
   useEffect(() => {
     if (isSuccess) {
       setProdInfo({
@@ -74,6 +76,7 @@ function AdminPage() {
     }
   }, [isSuccess, navigate]);
 
+  // Resets the form to blank after successful product modification or navigation
   useEffect(() => {
     if (modifySuccess) {
       setEditingId(null);
@@ -92,6 +95,7 @@ function AdminPage() {
     }
   }, [modifySuccess, navigate]);
 
+  // Handles creating a new product after submitting the create product form
   async function handleCreate(event) {
     event.preventDefault();
     try {
@@ -102,6 +106,7 @@ function AdminPage() {
     }
   }
 
+  // Handles modifying a product aftet submitting the form to modify
   async function handleUpdate(event) {
     event.preventDefault();
     try {
@@ -115,6 +120,7 @@ function AdminPage() {
     }
   }
 
+  // Delete product after user confirms they want to delete it
   async function handleDeletion(product) {
     try {
       if (
@@ -130,6 +136,7 @@ function AdminPage() {
     }
   }
 
+  // Updates Product info as the form is filled out
   async function handleChange(event) {
     const { name, value } = event.target;
 
@@ -139,6 +146,7 @@ function AdminPage() {
     }));
   }
 
+  // Copies the data from the product being edited into the form
   function handleEditClick(product) {
     setEditingId(product.id);
     setProdInfo({
@@ -155,11 +163,13 @@ function AdminPage() {
     window.scrollTo({ top: 500, behavior: "smooth" });
   }
 
+  // Handles when canceling modifying a product
   function handleCancel() {
     setEditingId(null);
     setProdInfo(emptyForm);
   }
 
+  //Handles when clicking see products
   function handleSeeProducts() {
     if (!seeProducts) {
       setSeeProducts(true);
